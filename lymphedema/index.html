@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lymphedema &amp; Lipedema — Total Body Therapy &amp; Wellness</title>
+<meta name="description" content="Lymphedema &amp; Lipedema — Total Body Therapy &amp; Wellness">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --deep:#025462; --teal:#028090; --mid:#1C7293; --sea:#00A896;
+  --slate:#36454F; --mist:#F4F8F9; --line:#DCE6E8; --ink:#1B2A30;
+  --amber:#B8730A; --rose:#9E3A5A;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+     color:var(--ink);background:var(--mist);line-height:1.65;font-size:16px}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+a{color:var(--teal)}
+
+/* ---- header ---- */
+.top{background:var(--deep);color:#fff;padding:16px 0;position:sticky;top:0;z-index:50;
+     box-shadow:0 1px 8px rgba(0,0,0,.16)}
+.top .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.top .brand{font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+            font-weight:700;color:#8FD3DE;text-decoration:none}
+.top nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.top nav a{color:#DCEEF2;text-decoration:none;font-size:13px;font-weight:600;
+           padding:7px 12px;border-radius:8px;background:rgba(255,255,255,.09)}
+.top nav a.on{background:#fff;color:var(--deep)}
+
+/* ---- hero ---- */
+.hero{background:var(--deep);color:#fff;padding:46px 0 52px}
+.hero .kick{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+            color:#8FD3DE;font-weight:700;margin-bottom:14px}
+.hero h1{font-size:30px;line-height:1.24;font-weight:700;letter-spacing:-.015em}
+.hero .sub{margin-top:14px;color:#CBE6EB;font-size:17px}
+.hero .who{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);
+           font-size:15px;color:#E4F2F5}
+.hero .who b{color:#fff}
+.hero .who .cred{font-size:13px;color:#A8CFD8}
+
+/* ---- QR ---- */
+.qr{background:#fff;border-radius:18px;padding:26px 20px 22px;text-align:center;
+    margin:0 auto;max-width:520px;box-shadow:0 6px 26px rgba(0,0,0,.13)}
+.qr h2{font-size:15px;color:var(--deep);letter-spacing:.1em;text-transform:uppercase;
+       margin-bottom:6px}
+.qr p{font-size:13px;color:var(--slate);margin-bottom:16px}
+.qr img{width:100%;max-width:400px;height:auto;display:block;margin:0 auto}
+.qr .url{margin-top:14px;font-size:12px;color:var(--slate);word-break:break-all;
+         font-family:ui-monospace,Menlo,Consolas,monospace}
+@media print{.qr img{max-width:300px}}
+
+/* ---- content ---- */
+main{padding:34px 0 70px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;
+      padding:24px;margin-bottom:16px}
+.kick{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--teal);font-weight:700;margin-bottom:8px}
+h2.sec{font-size:23px;color:var(--deep);font-weight:700;line-height:1.25;
+       letter-spacing:-.01em;margin-bottom:12px}
+.lead{font-size:16px;color:var(--slate);margin-bottom:18px}
+h3.blk{font-size:15px;color:var(--deep);font-weight:700;margin:20px 0 9px}
+ul.pts{list-style:none}
+ul.pts li{position:relative;padding:6px 0 6px 20px;font-size:15px;
+          border-bottom:1px solid var(--line)}
+ul.pts li:last-child{border-bottom:none}
+ul.pts li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;
+                 border-radius:50%;background:var(--sea)}
+ol.num{list-style:none;counter-reset:n}
+ol.num li{counter-increment:n;position:relative;padding:10px 0 10px 40px;font-size:15px;
+          border-bottom:1px solid var(--line)}
+ol.num li:last-child{border-bottom:none}
+ol.num li:before{content:counter(n);position:absolute;left:0;top:10px;width:26px;height:26px;
+                 border-radius:50%;background:var(--deep);color:#fff;font-size:13px;
+                 font-weight:700;display:flex;align-items:center;justify-content:center}
+.note{margin-top:18px;padding:14px 16px;background:var(--mist);
+      border-radius:10px;font-size:14px;color:var(--slate)}
+.note b{color:var(--deep)}
+figure{margin:18px 0 4px}
+figure img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+figcaption{font-size:12px;color:var(--slate);margin-top:7px;font-style:italic}
+.slot{margin:16px 0 4px;padding:16px;border:2px dashed var(--line);border-radius:10px;
+      font-size:13px;color:var(--slate);text-align:center}
+.slot b{display:block;color:var(--deep);font-size:12px;letter-spacing:.1em;
+        text-transform:uppercase;margin-bottom:4px}
+.stagetag{display:inline-block;background:var(--deep);color:#fff;font-size:12px;
+          font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+          padding:5px 12px;border-radius:999px;margin-bottom:10px}
+
+/* ---- tables ---- */
+.tw{overflow-x:auto;margin:16px 0 4px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+th{background:var(--deep);color:#fff;text-align:left;padding:11px 12px;
+   font-size:13px;font-weight:700}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:var(--mist)}
+td:first-child{font-weight:700;color:var(--deep)}
+.hint{font-size:12px;color:var(--slate);margin-top:6px;font-style:italic}
+
+/* ---- stage cards ---- */
+.stages{display:grid;gap:14px;margin-top:16px}
+.stage{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fff}
+.stage .n{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+          color:#fff;background:var(--teal);display:inline-block;padding:4px 11px;
+          border-radius:999px;margin-bottom:8px}
+.stage h4{font-size:17px;color:var(--deep);margin-bottom:10px}
+
+/* ---- pillars ---- */
+.pillars{display:grid;gap:12px;margin-top:16px}
+@media(min-width:640px){.pillars{grid-template-columns:1fr 1fr}}
+.pill{background:var(--deep);color:#fff;border-radius:12px;padding:18px}
+.pill .n{width:30px;height:30px;border-radius:50%;background:#fff;color:var(--deep);
+         font-weight:700;display:flex;align-items:center;justify-content:center;
+         margin-bottom:10px;font-size:15px}
+.pill h4{font-size:16px;margin-bottom:6px}
+.pill p{font-size:13.5px;color:#CBE6EB}
+
+/* ---- quiz ---- */
+.q{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;
+   overflow:hidden}
+.q .qq{padding:18px;font-size:15.5px;font-weight:600;color:var(--ink)}
+.q .qn{display:inline-block;background:var(--teal);color:#fff;font-size:12px;
+       font-weight:700;width:24px;height:24px;border-radius:50%;text-align:center;
+       line-height:24px;margin-right:9px}
+.q button{width:100%;border:none;background:var(--mist);color:var(--deep);
+          font-size:14px;font-weight:700;padding:13px;cursor:pointer;
+          border-top:1px solid var(--line);font-family:inherit;text-align:center}
+.q button:hover{background:#E6F1F3}
+.q .qa{display:none;padding:18px;background:#F2F9FA;font-size:15px;color:var(--slate);
+       border-top:1px solid var(--line)}
+.q.open .qa{display:block}
+.q.open button{background:var(--deep);color:#fff}
+.qbar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.qbar button{flex:1;min-width:130px;border:1px solid var(--line);background:#fff;
+             color:var(--deep);font-weight:700;font-size:13.5px;padding:11px;
+             border-radius:9px;cursor:pointer;font-family:inherit}
+.qbar button:hover{background:var(--mist)}
+
+/* ---- outline / hub ---- */
+.olist{list-style:none;counter-reset:o}
+.olist li{counter-increment:o;border-bottom:1px solid var(--line)}
+.olist li:last-child{border-bottom:none}
+.olist a{display:flex;gap:14px;align-items:baseline;padding:13px 4px;
+         text-decoration:none;color:var(--ink)}
+.olist a:hover{background:var(--mist)}
+.olist .on{color:var(--teal);font-weight:700;font-size:13px;min-width:26px}
+.olist .ot{font-weight:600;font-size:15.5px}
+.olist .od{font-size:13px;color:var(--slate);margin-top:2px}
+.olist .cut{font-size:11px;color:var(--amber);font-weight:700;letter-spacing:.06em;
+            text-transform:uppercase;margin-left:6px}
+.pcard{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;
+       padding:22px;text-decoration:none;color:var(--ink);margin-bottom:14px}
+.pcard:hover{border-color:var(--teal)}
+.pcard h3{font-size:19px;color:var(--deep);margin-bottom:6px}
+.pcard p{font-size:14px;color:var(--slate)}
+.pcard .go{margin-top:12px;font-size:13px;font-weight:700;color:var(--teal)}
+
+/* ---- capabilities ---- */
+.cap{margin-bottom:16px}
+.cap .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;
+            text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.b-live{background:#E1F5EF;color:#046B5D}
+.b-ready{background:#E3EEF6;color:#1C5A85}
+.b-service{background:#FBEEDA;color:#8A5606}
+.b-avoid{background:#FAE7EC;color:#8C2F4C}
+.cap dl{margin-top:4px}
+.cap dt{font-weight:700;font-size:14.5px;color:var(--deep);margin-top:13px}
+.cap dd{font-size:14px;color:var(--slate);margin-top:2px}
+
+footer{border-top:1px solid var(--line);padding:26px 0 50px;font-size:13px;color:#6B7C84}
+footer b{color:var(--slate)}
+footer .dis{margin-top:8px;font-style:italic}
+@media(min-width:700px){.hero h1{font-size:38px}h2.sec{font-size:26px}}
+@media print{.top,.qbar{display:none}.q .qa{display:block}.card{break-inside:avoid}}
+</style>
+</head><body>
+<header class="top"><div class="wrap">
+<a href="../index.html" class="brand">Total Body Therapy &amp; Wellness</a>
+<nav><a href="../index.html" class="">Home</a><a href="../lymphedema/index.html" class="on">Presentation</a><a href="../lymphedema/outline.html" class="">Outline</a><a href="../lymphedema/quiz.html" class="">Quiz</a><a href="../capabilities.html" class="">Capabilities</a></nav>
+</div></header>
+<div class="hero"><div class="wrap">
+<div class="kick">Total Body Therapy &amp; Wellness</div>
+<h1>Lymphedema &amp; Lipedema</h1>
+<p class="sub">Staging, Differential Diagnosis, and Physical Therapy Management</p>
+<div class="who"><b>Dr. Sara S. Morrison</b>, PT, DPT, CDT, Cert DN, PCES, CFT, FMT<br><span class="cred">Founder &amp; Lead Physical Therapist</span></div>
+</div></div>
+<main class="wrap">
+<div class="qr"><h2>Follow along</h2><p>Scan to open this presentation on your own device</p><img src="../assets/qr.svg" alt="QR code linking to this presentation"><div class="url">https://information-vs-energy-vs-matter.github.io/Total_body_therapy_-_wellness/lymphedema/</div></div>
+<section class="card" id="about"><div class="kick">About</div><h2 class="sec">About Total Body Therapy &amp; Wellness</h2><p class="lead">Founded in Lillington, NC in 2008 with the goal of bringing exceptional &quot;Big City Care&quot; to a small-town community. Physical therapy in Harnett County since 2002.</p><ul class="pts"><li>Patient-centered, one-on-one treatment every visit</li><li>Certified Lymphedema Therapists (CLT) on staff</li><li>Whole-person approach — we treat the total body, not just the part</li><li>Patient education as a core part of the plan of care</li></ul></section>
+<section class="card" id="objectives"><div class="kick">Objectives</div><h2 class="sec">On completion you will be able to</h2><ol class="num"><li>Describe the structure and function of the lymphatic system</li><li>Differentiate primary from secondary lymphedema and identify risk factors</li><li>Recognize the symptomatology and clinical presentation of lymphedema</li><li>Perform and interpret key diagnostic tests, including Stemmer&#x27;s sign</li><li>Stage lymphedema using ISL criteria, Stage 0 through Stage III</li><li>Apply the four components of Complete Decongestive Therapy</li><li>Distinguish lipedema from lymphedema and stage lipedema appropriately</li><li>Identify red flags requiring physician referral</li></ol></section>
+<section class="card" id="anatomy">
+<div class="kick">Foundations</div>
+<h2 class="sec">The Lymphatic System</h2>
+<p class="lead">A one-way drainage network running parallel to the venous system, returning fluid, protein, and immune cells to circulation.</p>
+<figure><img src="../assets/lymph_pathway.png" alt="The Lymphatic System" loading="lazy"></figure>
+<h3 class="blk">Three jobs</h3><ul class="pts">
+<li><strong>Fluid balance</strong> — returns roughly 2–4 L of interstitial fluid to the bloodstream daily</li>
+<li><strong>Protein transport</strong> — the only route by which large interstitial proteins return to circulation</li>
+<li><strong>Immune surveillance</strong> — lymph nodes filter pathogens and host lymphocytes</li>
+</ul>
+<h3 class="blk">The pathway</h3><ul class="pts">
+<li>Initial lymphatics (blind-ended capillaries) collect interstitial fluid</li>
+<li>Precollectors and collectors move lymph via lymphangions — segments that contract 6–10x/min</li>
+<li>Regional lymph nodes filter the load</li>
+<li>Trunks drain to the thoracic duct (left, and entire lower body) and right lymphatic duct</li>
+<li>Both empty at the subclavian veins — back into venous circulation</li>
+</ul>
+<div class="note">Lymphangion contraction is the primary pump. It is stimulated by stretch, muscle contraction, arterial pulsation, and breathing — which is exactly why exercise and diaphragmatic breathing are treatment, not just adjuncts.</div>
+</section>
+<section class="card" id="load_capacity">
+<div class="kick">Foundations</div>
+<h2 class="sec">Lymph Load vs. Transport Capacity</h2>
+<p class="lead">Every case of lymphedema is a mismatch between how much fluid needs to move and how much the system can move.</p>
+<figure><img src="../assets/load_capacity.png" alt="Lymph Load vs. Transport Capacity" loading="lazy"></figure>
+<h3 class="blk">The three states</h3><ul class="pts">
+<li><strong>Normal</strong> — transport capacity comfortably exceeds lymph load. Large functional reserve.</li>
+<li><strong>Dynamic insufficiency</strong> — normal lymphatics, but load exceeds capacity. This is ordinary edema (CHF, venous insufficiency, hypoproteinemia). Low protein.</li>
+<li><strong>Mechanical insufficiency</strong> — capacity drops below even a normal load. This is lymphedema. High protein.</li>
+</ul>
+<h3 class="blk">Why the protein matters</h3><ul class="pts">
+<li>Retained interstitial protein is osmotically active — it pulls in more water</li>
+<li>It triggers chronic inflammation and fibroblast activity</li>
+<li>That fibrosis further reduces transport capacity — a self-reinforcing loop</li>
+<li>This is why untreated lymphedema progresses, and why early intervention changes the trajectory</li>
+</ul>
+<div class="note">Combined insufficiency — high load AND damaged system — is common in the patients you will actually see.</div>
+</section>
+<section class="card" id="etiology">
+<div class="kick">Etiology</div>
+<h2 class="sec">Primary vs. Secondary Lymphedema</h2>
+<p class="lead">Primary lymphedema arises from congenital lymphatic dysplasia. Secondary lymphedema follows anatomical disruption of a previously normal system.</p>
+<h3 class="blk">Primary — developmental</h3><ul class="pts">
+<li><strong>Congenital</strong> — present at birth or within the first 2 years. Includes Milroy disease.</li>
+<li><strong>Praecox</strong> — onset at puberty through age 35. The most common primary form.</li>
+<li><strong>Tarda</strong> — onset after age 35</li>
+<li>Mechanisms: aplasia, hypoplasia, hyperplasia, or valvular incompetence of lymphatics</li>
+</ul>
+<h3 class="blk">Secondary — acquired</h3><ul class="pts">
+<li><strong>Cancer treatment</strong> — lymph node dissection and/or radiation. The leading cause in developed countries.</li>
+<li><strong>Filariasis</strong> — <em>Wuchereria bancrofti</em>. The leading cause worldwide.</li>
+<li><strong>Trauma or surgery</strong> — burns, vein harvest, orthopedic procedures</li>
+<li><strong>Chronic venous insufficiency</strong> — progresses to phlebolymphedema</li>
+<li><strong>Recurrent infection</strong> — each episode of cellulitis causes further lymphatic damage</li>
+<li><strong>Obesity</strong> — central obesity significantly raises risk independently</li>
+</ul>
+<div class="note">Risk multipliers after cancer treatment: extent of node dissection, regional radiation, elevated BMI, post-op infection, wound complications, and taxane-based chemotherapy.</div>
+</section>
+<section class="card" id="symptoms">
+<div class="kick">Presentation</div>
+<h2 class="sec">Symptomatology</h2>
+<p class="lead">Subjective symptoms frequently precede visible swelling by months. Do not wait for a measurable difference to take a patient seriously.</p>
+<h3 class="blk">Early — often reported before anything is visible</h3><ul class="pts">
+<li>Heaviness, fullness, or tightness in the limb</li>
+<li>Clothing, sleeves, rings, or shoes fitting differently</li>
+<li>Aching or discomfort without a clear mechanical cause</li>
+<li>Reduced flexibility at the wrist, hand, or ankle</li>
+<li>Transient swelling that resolves overnight</li>
+</ul>
+<h3 class="blk">Established</h3><ul class="pts">
+<li>Persistent swelling, initially distal, that no longer resolves with elevation</li>
+<li>Pitting edema — later becoming non-pitting as fibrosis develops</li>
+<li>Skin feels thickened, firm, or leathery</li>
+<li>Positive Stemmer&#x27;s sign</li>
+<li>Deepened natural skin folds</li>
+<li>Recurrent cellulitis</li>
+</ul>
+<h3 class="blk">Do not overlook</h3><ul class="pts">
+<li>Psychosocial burden — body image, clothing, social withdrawal, anxiety</li>
+<li>Functional loss — grip, reach, gait, footwear, ADLs</li>
+<li>Occupational impact and cost of ongoing garments</li>
+</ul>
+<div class="note">Lymphedema is typically painless early. New or significant pain suggests infection, DVT, malignancy — or lipedema, which is painful by definition.</div>
+</section>
+<section class="card" id="diagnosis">
+<div class="kick">Assessment</div>
+<h2 class="sec">Diagnosis and Measurement</h2>
+<p class="lead">Diagnosis is primarily clinical. History and physical examination identify the great majority of cases.</p>
+<figure><img src="../assets/stemmer.png" alt="Diagnosis and Measurement" loading="lazy"></figure>
+<h3 class="blk">History</h3><ul class="pts">
+<li>Onset, duration, progression, and whether it resolves overnight</li>
+<li>Surgical and oncologic history — nodes removed, radiation fields</li>
+<li>Infection history — every episode of cellulitis</li>
+<li>Family history (suggests primary lymphedema or lipedema)</li>
+<li>Travel history (filariasis), cardiac, renal, and hepatic history</li>
+</ul>
+<h3 class="blk">Physical examination</h3><ul class="pts">
+<li><strong>Stemmer&#x27;s sign</strong> — attempt to pinch and lift the skin fold at the base of the 2nd toe or finger. Cannot lift = <strong>positive</strong> = lymphedema. Positive is diagnostic; negative does not rule it out.</li>
+<li><strong>Pitting assessment</strong> — depth and rebound time, graded 1+ to 4+</li>
+<li><strong>Skin inspection</strong> — texture, temperature, color, papillomas, fissures, wounds, fungal infection between digits</li>
+<li><strong>Bilateral comparison</strong> — symmetry, foot involvement, where the swelling stops</li>
+</ul>
+<h3 class="blk">Objective measurement</h3><ul class="pts">
+<li><strong>Circumferential tape</strong> — at fixed 4 cm intervals from a bony landmark. Low cost, good reliability if landmarks are consistent.</li>
+<li><strong>Volumetry</strong> — water displacement. Historically the gold standard; impractical with open wounds.</li>
+<li><strong>Perometry</strong> — infrared optical scanning. Fast and reproducible.</li>
+<li><strong>Bioimpedance spectroscopy (L-Dex)</strong> — detects extracellular fluid change; can identify subclinical Stage 0.</li>
+</ul>
+<h3 class="blk">Imaging — when the picture is unclear</h3><ul class="pts">
+<li><strong>Lymphoscintigraphy</strong> — the imaging standard for confirming lymphatic dysfunction</li>
+<li><strong>ICG lymphography</strong> — maps superficial lymphatics; guides MLD and surgical planning</li>
+<li><strong>Duplex ultrasound</strong> — rule out DVT and venous insufficiency</li>
+<li><strong>MRI / CT</strong> — rule out malignancy or extrinsic compression</li>
+</ul>
+<div class="note">Severity by volume difference vs. the contralateral limb: minimal &lt;20%, moderate 20–40%, severe &gt;40%.</div>
+</section>
+<section class="card" id="differential_general">
+<div class="kick">Assessment</div>
+<h2 class="sec">What Else Swells a Limb</h2>
+<p class="lead">Before you treat it as lymphedema, rule these out.</p>
+<div class="tw"><table><thead><tr>
+<th>Condition</th>
+<th>Distinguishing features</th>
+</tr></thead><tbody>
+<tr><td>Deep vein thrombosis</td><td>Acute unilateral onset, pain, warmth, erythema. URGENT — do not perform MLD.</td></tr>
+<tr><td>Chronic venous insufficiency</td><td>Hemosiderin staining, varicosities, medial malleolar ulceration, improves with elevation</td></tr>
+<tr><td>Congestive heart failure</td><td>Bilateral, dependent, pitting, dyspnea, JVD, orthopnea</td></tr>
+<tr><td>Hypoproteinemia</td><td>Bilateral, generalized, may include ascites/periorbital edema</td></tr>
+<tr><td>Lipedema</td><td>Bilateral, symmetrical, painful, bruises easily, SPARES THE FEET, negative Stemmer</td></tr>
+<tr><td>Malignant lymphedema</td><td>Rapid onset, pain, proximal-first, neurologic signs. Requires imaging.</td></tr>
+<tr><td>Cellulitis</td><td>Fever, spreading erythema, heat, pain. Antibiotics first — MLD contraindicated.</td></tr>
+<tr><td>Medication-induced</td><td>Calcium channel blockers, NSAIDs, steroids, gabapentin, some diabetes drugs</td></tr>
+</tbody></table></div>
+<p class="hint">Scroll the table sideways on a phone.</p>
+<div class="note">Malignant lymphedema and DVT are the two that must not be missed. Both are referrals, not treatment plans.</div>
+</section>
+<section class="card" id="staging_overview">
+<div class="kick">Staging</div>
+<h2 class="sec">ISL Staging — Overview</h2>
+<p class="lead">The International Society of Lymphology defines four stages. Stage 0 is latent — the lymphatics are already impaired before anything is visible.</p>
+<figure><img src="../assets/stage_progression.png" alt="ISL Staging — Overview" loading="lazy"></figure>
+<div class="note">Staging describes tissue condition, not size. A small Stage III limb is still Stage III. Severity is graded separately by volume difference.</div>
+</section>
+<section class="card" id="stage_0">
+<div class="kick">Staging</div>
+<span class="stagetag">Stage 0</span>
+<h2 class="sec">Latent / Subclinical</h2>
+<p class="lead">Lymph transport is already impaired. No visible swelling. May persist for months or years before progressing.</p>
+<h3 class="blk">Findings</h3><ul class="pts">
+<li>No visible or palpable edema</li>
+<li>Subjective heaviness, tightness, or fullness may be reported</li>
+<li>Reduced transport capacity detectable by bioimpedance or lymphoscintigraphy</li>
+<li>Normal tissue consistency</li>
+<li>Negative Stemmer&#x27;s sign</li>
+</ul>
+<h3 class="blk">PT implications</h3><ul class="pts">
+<li>This is the highest-value window for intervention</li>
+<li>Baseline measurement pre-operatively makes this stage detectable at all</li>
+<li>Surveillance program, risk-reduction education, early compression if indicated</li>
+<li>Prophylactic PT after node dissection has been shown to reduce progression</li>
+</ul>
+<div class="slot"><b>Clinical photo</b>Stage 0 — no visible change; consider a limb-surveillance/measurement photo instead</div>
+</section>
+<section class="card" id="stage_1">
+<div class="kick">Staging</div>
+<span class="stagetag">Stage I</span>
+<h2 class="sec">Spontaneously Reversible</h2>
+<p class="lead">Early accumulation of protein-rich fluid. Swelling reduces with elevation — often resolving completely overnight.</p>
+<h3 class="blk">Findings</h3><ul class="pts">
+<li>Soft, <strong>pitting</strong> edema</li>
+<li>Subsides with elevation; frequently gone by morning</li>
+<li><strong>No secondary tissue changes</strong> — no fibrosis yet</li>
+<li>Stemmer&#x27;s sign usually negative</li>
+<li>Limb feels heavy; may be visibly larger by end of day</li>
+</ul>
+<h3 class="blk">PT implications</h3><ul class="pts">
+<li>Highly responsive to CDT</li>
+<li>Compression garments often sufficient for maintenance</li>
+<li>Patient education on self-management is decisive here</li>
+<li>Goal: prevent the transition to fibrosis</li>
+</ul>
+<div class="slot"><b>Clinical photo</b>Stage I — soft pitting edema, dorsum of foot or hand</div>
+</section>
+<section class="card" id="stage_2">
+<div class="kick">Staging</div>
+<span class="stagetag">Stage II</span>
+<h2 class="sec">Spontaneously Irreversible</h2>
+<p class="lead">Elevation alone no longer reduces the swelling. Lymphostatic fibrosis has begun and the tissue is changing character.</p>
+<h3 class="blk">Findings</h3><ul class="pts">
+<li>Elevation rarely reduces the limb</li>
+<li><strong>Early Stage II</strong> — pitting is manifest and pronounced</li>
+<li><strong>Late Stage II</strong> — pitting may be absent as fibrosis replaces fluid</li>
+<li>Tissue feels firm; <strong>Stemmer&#x27;s sign becomes positive</strong></li>
+<li>Increasing frequency of cellulitis</li>
+<li>Skin thickening becomes apparent</li>
+</ul>
+<h3 class="blk">PT implications</h3><ul class="pts">
+<li>Full intensive-phase CDT is indicated</li>
+<li>Fibrosis requires manual work plus foam/chip padding under bandaging</li>
+<li>Realistic goal is volume reduction and stabilization, not cure</li>
+<li>Aggressive infection-prevention education</li>
+</ul>
+<div class="slot"><b>Clinical photo</b>Stage II — firm non-pitting swelling, positive Stemmer, early skin thickening</div>
+<div class="note">The presence or absence of pitting is what separates early from late Stage II — not the size of the limb.</div>
+</section>
+<section class="card" id="stage_3">
+<div class="kick">Staging</div>
+<span class="stagetag">Stage III</span>
+<h2 class="sec">Lymphostatic Elephantiasis</h2>
+<p class="lead">Extreme volume increase with characteristic trophic skin changes. Pitting is typically absent.</p>
+<h3 class="blk">Findings</h3><ul class="pts">
+<li>Marked volume increase and limb distortion</li>
+<li><strong>Pitting absent</strong></li>
+<li>Trophic skin changes — acanthosis, hyperkeratosis</li>
+<li><strong>Papillomas</strong> and warty overgrowth</li>
+<li><strong>Deep skin folds</strong>, fat deposition</li>
+<li>Lymphorrhea — weeping of lymph fluid through the skin</li>
+<li>Strongly positive Stemmer&#x27;s sign</li>
+<li>Frequent, sometimes life-threatening infection</li>
+</ul>
+<h3 class="blk">PT implications</h3><ul class="pts">
+<li>Extended intensive phase; often requires wound care alongside CDT</li>
+<li>Meaningful volume reduction is still achievable — do not write these patients off</li>
+<li>Multilayer bandaging with substantial padding</li>
+<li>Coordinate with physician; surgical options may be considered after conservative management</li>
+</ul>
+<div class="slot"><b>Clinical photo</b>Stage III — elephantiasis, papillomas, deep skin folds</div>
+<div class="note">Stage III is not a treatment failure to be managed passively. Significant reduction is well documented with sustained CDT.</div>
+</section>
+<section class="card" id="cdt_overview">
+<div class="kick">Treatment</div>
+<h2 class="sec">Complete Decongestive Therapy</h2>
+<p class="lead">CDT is the internationally accepted standard of care. It has four components, delivered in two phases.</p>
+<figure><img src="../assets/cdt_pillars.png" alt="Complete Decongestive Therapy" loading="lazy"></figure>
+<h3 class="blk">Phase I — Intensive / Reductive</h3><ul class="pts">
+<li>Typically 3–6 weeks, treatment 4–5x/week, sessions 1–2 hours</li>
+<li>MLD, multilayer short-stretch bandaging worn 23 hours/day, exercise, skin care</li>
+<li>Re-measure at every visit</li>
+<li>Ends when volume plateaus across consecutive sessions</li>
+</ul>
+<h3 class="blk">Phase II — Maintenance / Self-Management</h3><ul class="pts">
+<li>Fitted compression garment during the day; night garment or bandaging as needed</li>
+<li>Self-MLD and home exercise program</li>
+<li>Daily skin care and self-inspection</li>
+<li>Ongoing surveillance; garments replaced every 4–6 months</li>
+<li>Return for a short intensive phase if the limb regresses</li>
+</ul>
+<div class="pillars">
+<div class="pill"><div class="n">1</div><h4>Skin &amp; Nail Care</h4><p>Reduce bacterial and fungal load; protect the primary infection barrier</p></div>
+<div class="pill"><div class="n">2</div><h4>Manual Lymphatic Drainage</h4><p>Redirect lymph to functioning territories via light, specific manual technique</p></div>
+<div class="pill"><div class="n">3</div><h4>Compression Therapy</h4><p>Counter refilling, soften fibrosis, sustain the reduction achieved</p></div>
+<div class="pill"><div class="n">4</div><h4>Remedial Exercise</h4><p>Use the muscle pump under compression to drive lymph transport</p></div>
+</div>
+<div class="note">Phase II is where outcomes are actually won or lost. Adherence, not technique, is the usual determinant of long-term result.</div>
+</section>
+<section class="card" id="skin_care">
+<div class="kick">Treatment · CDT 1 of 4</div>
+<h2 class="sec">Skin &amp; Nail Care</h2>
+<p class="lead">A lymphedematous limb is immunocompromised tissue. The skin is the last barrier, and every infection causes further lymphatic damage.</p>
+<h3 class="blk">Daily routine</h3><ul class="pts">
+<li>Wash with low-pH, fragrance-free cleanser — lymphedematous skin is alkaline-shifted</li>
+<li>Dry thoroughly, especially <strong>between the toes and in skin folds</strong></li>
+<li>Apply low-pH emollient to keep the barrier intact</li>
+<li>Inspect the entire limb daily, including between digits and the posterior surface</li>
+</ul>
+<h3 class="blk">Prevention</h3><ul class="pts">
+<li>Treat tinea pedis and onychomycosis aggressively — a common cellulitis entry point</li>
+<li>Nails cut straight across; avoid cutting cuticles</li>
+<li>Avoid blood draws, IVs, and BP cuffs on the at-risk limb where an alternative exists</li>
+<li>Protect during gardening, cooking, pet handling; gloves and insect repellent</li>
+<li>Prompt antiseptic care for any break in the skin</li>
+</ul>
+<h3 class="blk">Teach the patient to recognize cellulitis</h3><ul class="pts">
+<li>Spreading redness, heat, tenderness, sudden limb enlargement</li>
+<li>Fever, chills, malaise, flu-like onset</li>
+<li><strong>Seek care same-day. Stop MLD and compression until treated.</strong></li>
+<li>Recurrent cellulitis may warrant prophylactic antibiotics — physician decision</li>
+</ul>
+<div class="slot"><b>Clinical photo</b>Skin care — emollient application, interdigital inspection</div>
+</section>
+<section class="card" id="mld">
+<div class="kick">Treatment · CDT 2 of 4</div>
+<h2 class="sec">Manual Lymphatic Drainage</h2>
+<p class="lead">A specific, very light manual technique that stimulates lymphangion contraction and redirects lymph across watersheds into functioning territories.</p>
+<figure><img src="../assets/mld_flow.png" alt="Manual Lymphatic Drainage" loading="lazy"></figure>
+<h3 class="blk">Technique principles</h3><ul class="pts">
+<li><strong>Very light pressure</strong> — stretches skin only. Heavy pressure collapses initial lymphatics and is counterproductive.</li>
+<li>Slow, rhythmic — roughly one stroke per second, matching lymphangion contraction rate</li>
+<li><strong>Clear proximal before distal.</strong> Empty the receiving area first or there is nowhere for fluid to go.</li>
+<li>Begin with the neck/terminus, then trunk quadrants, then the affected limb</li>
+<li>Work root-to-tip to clear, then tip-to-root to drain</li>
+<li>Skin must move with the hand — no gliding, no lubricant</li>
+</ul>
+<h3 class="blk">Sequence for an affected limb</h3><ul class="pts">
+<li>Diaphragmatic breathing — drives thoracic duct flow</li>
+<li>Terminus (supraclavicular) clearing</li>
+<li>Contralateral, then ipsilateral trunk quadrants</li>
+<li>Anastomoses — axillo-axillary, axillo-inguinal, inguino-inguinal</li>
+<li>Proximal limb, then progressively distal</li>
+<li>Finish with a distal-to-proximal drainage sequence</li>
+</ul>
+<h3 class="blk">Contraindications</h3><ul class="pts">
+<li><strong>Acute cellulitis or active infection</strong></li>
+<li><strong>Acute DVT</strong></li>
+<li><strong>Decompensated congestive heart failure</strong></li>
+<li>Acute renal failure</li>
+<li>Caution with active untreated malignancy — coordinate with oncology</li>
+<li>Caution with carotid sinus hypersensitivity for neck work</li>
+</ul>
+<div class="note">MLD alone produces modest results. Its value is greatest when combined with compression — the evidence supports CDT as a package, not MLD in isolation.</div>
+</section>
+<section class="card" id="compression">
+<div class="kick">Treatment · CDT 3 of 4</div>
+<h2 class="sec">Compression Therapy</h2>
+<p class="lead">The single most important component for maintaining reduction. Without compression, gains from MLD reverse within hours.</p>
+<h3 class="blk">Phase I — short-stretch bandaging</h3><ul class="pts">
+<li><strong>Short-stretch</strong> bandages: low resting pressure, high working pressure</li>
+<li>Never use long-stretch/ACE — high resting pressure risks a tourniquet effect</li>
+<li>Layered: stockinette, digit wrap, padding, then short-stretch</li>
+<li>Foam or chip padding over fibrotic areas to soften tissue</li>
+<li>Gradient must be higher distally than proximally</li>
+<li>Worn 23 hours/day, reapplied at each visit</li>
+</ul>
+<h3 class="blk">Phase II — garments</h3><ul class="pts">
+<li><strong>Class 1: 20–30 mmHg</strong> — mild/early, upper limb, prophylaxis</li>
+<li><strong>Class 2: 30–40 mmHg</strong> — most lower limb lymphedema</li>
+<li><strong>Class 3: 40–50 mmHg</strong> — severe lower limb</li>
+<li>Flat-knit generally preferred over circular-knit for lymphedema — better containment, no tourniquet at folds</li>
+<li>Custom fit for irregular limb shape</li>
+<li>Replace every 4–6 months; two garments so one is always clean</li>
+</ul>
+<h3 class="blk">Precautions</h3><ul class="pts">
+<li><strong>Check arterial status.</strong> ABI &lt; 0.8 requires caution; &lt; 0.5 is a contraindication to standard compression.</li>
+<li>Decompensated heart failure — sudden fluid return can precipitate overload</li>
+<li>Acute DVT, acute infection, severe peripheral neuropathy</li>
+<li>Recheck skin integrity at every application</li>
+</ul>
+<div class="slot"><b>Clinical photo</b>Compression — short-stretch bandaging layers and flat-knit garment</div>
+<div class="note">Intermittent pneumatic compression may be a useful adjunct but does not replace MLD or bandaging, and must not be used over an untreated proximal obstruction.</div>
+</section>
+<section class="card" id="exercise">
+<div class="kick">Treatment · CDT 4 of 4</div>
+<h2 class="sec">Remedial Exercise</h2>
+<p class="lead">The skeletal muscle pump is a primary driver of lymph transport. Exercise performed under compression is decongestive therapy.</p>
+<h3 class="blk">Principles</h3><ul class="pts">
+<li><strong>Always perform with compression in place</strong> — bandages or garment</li>
+<li>Begin with diaphragmatic breathing to open the thoracic duct</li>
+<li><strong>Proximal to distal</strong> — clear the trunk and proximal limb first</li>
+<li>Slow, rhythmic, controlled; no breath-holding or Valsalva</li>
+<li>Low resistance, higher repetition</li>
+<li>End with elevation and further breathing</li>
+</ul>
+<h3 class="blk">Programme components</h3><ul class="pts">
+<li>Diaphragmatic breathing — 5–10 repetitions to start and finish</li>
+<li>Cervical and shoulder girdle mobility (upper limb cases)</li>
+<li>Trunk and core activation</li>
+<li>Active ROM progressing proximal to distal through the limb</li>
+<li>Ankle pumps and calf work for lower limb cases</li>
+<li>Aerobic conditioning — walking, cycling, aquatic therapy</li>
+</ul>
+<h3 class="blk">The resistance training question — settled</h3><ul class="pts">
+<li>Slowly progressive resistance training does <strong>not</strong> cause or worsen lymphedema</li>
+<li>The PAL trial demonstrated safety in breast cancer survivors</li>
+<li>It may reduce flare incidence and improve limb symptoms</li>
+<li>Progress gradually, wear compression, monitor and stop for symptom change</li>
+<li><strong>Do not tell patients to avoid using the limb.</strong> That advice is outdated and causes deconditioning.</li>
+</ul>
+<div class="slot"><b>Clinical photo</b>Exercise — patient exercising in compression garment</div>
+<div class="note">Aquatic exercise is particularly effective — hydrostatic pressure provides uniform external compression while the patient moves.</div>
+</section>
+<section class="card" id="lipedema_intro">
+<div class="kick">Lipedema</div>
+<h2 class="sec">Lipedema — A Different Disease</h2>
+<p class="lead">A chronic disorder of adipose tissue, almost exclusively affecting women, routinely misdiagnosed as obesity or lymphedema for years before recognition.</p>
+<figure><img src="../assets/lipedema_cuff.png" alt="Lipedema — A Different Disease" loading="lazy"></figure>
+<h3 class="blk">Defining features</h3><ul class="pts">
+<li><strong>Bilateral and symmetrical</strong> fat deposition — legs, hips, buttocks, sometimes arms</li>
+<li><strong>Painful</strong> — tenderness, aching, pressure sensitivity. This is diagnostic, not incidental.</li>
+<li><strong>Bruises easily</strong> — capillary fragility</li>
+<li><strong>Spares the feet</strong> — a sharp cuff or &#x27;bracelet&#x27; at the ankle</li>
+<li><strong>Disproportionate</strong> — lower body markedly larger than trunk</li>
+<li><strong>Diet-resistant</strong> — the affected fat does not respond to caloric restriction or exercise</li>
+<li><strong>Negative Stemmer&#x27;s sign</strong> (until lymphatic involvement develops)</li>
+</ul>
+<h3 class="blk">Etiology</h3><ul class="pts">
+<li>Cause is unknown; strong familial pattern suggests genetic contribution</li>
+<li><strong>Hormonally triggered</strong> — onset and acceleration cluster at puberty, pregnancy, and menopause</li>
+<li>Evidence points toward a connective tissue disorder component</li>
+<li>Reported in up to ~11% of women</li>
+<li>Men are affected rarely, usually with hormonal alteration</li>
+</ul>
+<h3 class="blk">Why the misdiagnosis matters</h3><ul class="pts">
+<li>Patients are frequently told to lose weight — which does not resolve the affected fat</li>
+<li>Years of unnecessary shame and ineffective treatment</li>
+<li>Delayed diagnosis allows progression toward lymphatic involvement</li>
+<li>A correct diagnosis is itself therapeutic — it reframes the patient&#x27;s understanding</li>
+</ul>
+<div class="note">Sarah Bramblette and patient advocacy groups have driven recent recognition, but average time to diagnosis remains measured in years.</div>
+</section>
+<section class="card" id="lipedema_staging">
+<div class="kick">Lipedema</div>
+<h2 class="sec">Lipedema Staging</h2>
+<p class="lead">Classically staged 1 through 3 by skin and tissue architecture. A fourth stage — lipo-lymphedema — is widely used clinically but is contested.</p>
+<div class="stages">
+<div class="stage"><span class="n">Stage 1</span><h4>Smooth skin surface</h4><ul class="pts">
+<li>Skin surface normal and smooth</li>
+<li>Enlarged hypodermis; homogeneous thickening of subcutaneous tissue</li>
+<li>Fat is often soft; small nodules may be palpable — described as rice-like or pearl-sized</li>
+<li>Fat accumulation around pelvis, buttocks, and hips</li>
+<li>Limbs tender and prone to bruising</li>
+<li>Swelling may improve with rest and elevation</li>
+</ul></div>
+<div class="stage"><span class="n">Stage 2</span><h4>Uneven, dimpled skin</h4><ul class="pts">
+<li>Skin surface becomes bumpy and wave-like with indentations</li>
+<li>Nodular structures in the thickened subcutis — lipomas, angiolipomas</li>
+<li>Subcutaneous tissue feels tougher and more nodular</li>
+<li>Fat build-up extends down the legs toward the ankles</li>
+<li>Swelling less responsive to rest and elevation than Stage 1</li>
+<li>Symptoms range from mild to severe</li>
+</ul></div>
+<div class="stage"><span class="n">Stage 3</span><h4>Large deformations</h4><ul class="pts">
+<li>Further hardening of connective tissue</li>
+<li>Bulky, overhanging extrusions of skin and fat</li>
+<li>Marked deformation of thighs and around the knees</li>
+<li>Persistent swelling not resolving with rest or elevation</li>
+<li>Mobility significantly impaired; highest rate of orthopedic complication</li>
+<li>May be associated with secondary lymphedema</li>
+</ul></div>
+<div class="stage"><span class="n">Stage 4</span><h4>Lipo-lymphedema</h4><ul class="pts">
+<li>Lipedema plus secondary lymphedema in the same limbs</li>
+<li><strong>The feet begin to swell</strong> — the defining change</li>
+<li><strong>Stemmer&#x27;s sign becomes positive</strong></li>
+<li>Skin over the toes thickens; pitting appears</li>
+<li>Diagnosis moves from lipedema to lipo-lymphedema</li>
+<li>Lymphoscintigraphy can document the degree of drainage impairment</li>
+</ul></div>
+</div>
+<div class="slot"><b>Clinical photo</b>Lipedema stages 1–4 — four-panel comparison</div>
+<div class="note">IMPORTANT CAVEAT: The Lipedema Foundation no longer uses a &#x27;Stage 4&#x27; designation, on the grounds that the lymphatic system can be compromised at any stage — lymphatic impairment is documented in Stages 2 and 3. Present Stage 4 as lipo-lymphedema, and note the debate. This is the intellectually honest framing and it will be the question a sharp student asks.</div>
+</section>
+<section class="card" id="differential_lip">
+<div class="kick">Lipedema</div>
+<h2 class="sec">Lipedema vs. Lymphedema</h2>
+<p class="lead">The differential that matters most in practice — and the one most often gotten wrong.</p>
+<figure><img src="../assets/lip_vs_lymph.png" alt="Lipedema vs. Lymphedema" loading="lazy"></figure>
+<div class="tw"><table><thead><tr>
+<th>Feature</th>
+<th>Lipedema</th>
+<th>Lymphedema</th>
+</tr></thead><tbody>
+<tr><td>Sex</td><td>Almost exclusively women</td><td>Either sex</td></tr>
+<tr><td>Symmetry</td><td>Bilateral, symmetrical</td><td>Often unilateral; symmetry not required</td></tr>
+<tr><td>Feet</td><td>SPARED — sharp ankle cuff</td><td>INVOLVED — swelling includes feet/toes</td></tr>
+<tr><td>Stemmer&#x27;s sign</td><td>Negative</td><td>Positive</td></tr>
+<tr><td>Pain</td><td>Painful, tender to pressure</td><td>Painless early; tension pain when advanced</td></tr>
+<tr><td>Bruising</td><td>Bruises easily</td><td>Not characteristic</td></tr>
+<tr><td>Pitting</td><td>Typically non-pitting</td><td>Pitting early; non-pitting when fibrotic</td></tr>
+<tr><td>Distribution</td><td>Proximal-dominant, disproportionate</td><td>Distal parts always more affected</td></tr>
+<tr><td>Family history</td><td>Commonly positive</td><td>Positive only in primary lymphedema</td></tr>
+<tr><td>Response to diet</td><td>Affected fat is diet-resistant</td><td>Not primarily fat; weight loss reduces risk</td></tr>
+<tr><td>Onset trigger</td><td>Puberty, pregnancy, menopause</td><td>Surgery, radiation, infection, trauma</td></tr>
+</tbody></table></div>
+<p class="hint">Scroll the table sideways on a phone.</p>
+<div class="note">They co-exist. Lipedema does not itself cause lymphedema — but central obesity, which frequently accompanies it, substantially raises lymphedema risk. Treat what you find.</div>
+</section>
+<section class="card" id="lipedema_treatment">
+<div class="kick">Lipedema</div>
+<h2 class="sec">PT Management of Lipedema</h2>
+<p class="lead">Conservative management does not remove lipedema fat. It manages pain, controls fluid, preserves mobility, and slows progression.</p>
+<h3 class="blk">What PT can achieve</h3><ul class="pts">
+<li>Pain reduction — often the patient&#x27;s highest priority</li>
+<li>Control of any fluid component through MLD and compression</li>
+<li>Preservation of joint mechanics and gait</li>
+<li>Prevention of progression to lipo-lymphedema</li>
+<li>Weight-bearing tolerance and conditioning</li>
+</ul>
+<h3 class="blk">Interventions</h3><ul class="pts">
+<li>Compression — flat-knit garments, generally better tolerated than in lymphedema</li>
+<li>MLD for the fluid component and for pain relief</li>
+<li>Aquatic exercise — highly effective; buoyancy plus hydrostatic compression</li>
+<li>Low-impact aerobic and resistance conditioning</li>
+<li>Manual therapy for associated joint dysfunction</li>
+<li>Nutritional referral — anti-inflammatory patterns, not caloric restriction alone</li>
+</ul>
+<h3 class="blk">Set expectations honestly</h3><ul class="pts">
+<li>Conservative care does not eliminate the fat</li>
+<li>Liposuction (tumescent/water-assisted) is the only intervention that removes it</li>
+<li>PT before and after liposuction improves outcomes</li>
+<li>Insurance coverage remains inconsistent — this is a real barrier</li>
+</ul>
+<div class="note">The single most valuable thing you may do is tell the patient this is a recognized disease and not a personal failure of willpower.</div>
+</section>
+<section class="card" id="red_flags">
+<div class="kick">Safety</div>
+<h2 class="sec">Red Flags &amp; Referral</h2>
+<p class="lead">Stop treatment and refer when you see these.</p>
+<h3 class="blk">Urgent — same day</h3><ul class="pts">
+<li><strong>Cellulitis</strong> — spreading erythema, heat, fever, sudden limb enlargement</li>
+<li><strong>Suspected DVT</strong> — acute unilateral swelling, calf pain, warmth</li>
+<li><strong>Decompensated heart failure</strong> — dyspnea, orthopnea, rapid bilateral swelling</li>
+<li>Systemic illness — fever, rigors, malaise, hypotension</li>
+</ul>
+<h3 class="blk">Refer for workup</h3><ul class="pts">
+<li>Rapid-onset or proximal-first swelling — possible malignant lymphedema</li>
+<li>Any new neurological deficit in the limb</li>
+<li>Non-healing wound or ulceration</li>
+<li>Unexplained weight loss, night sweats, palpable mass</li>
+<li>Failure to respond to appropriately delivered CDT</li>
+</ul>
+<h3 class="blk">Screen before starting</h3><ul class="pts">
+<li>Arterial status — ABI before lower limb compression</li>
+<li>Cardiac and renal status</li>
+<li>Active malignancy — coordinate with oncology</li>
+<li>Peripheral neuropathy and sensory testing</li>
+</ul>
+<div class="note">MLD is contraindicated in acute infection, acute DVT, and decompensated heart failure. When in doubt, do not treat — refer.</div>
+</section>
+<section class="card" id="takeaways">
+<div class="kick">Close</div>
+<h2 class="sec">Key Takeaways</h2>
+<ol class="num">
+<li>Lymphedema is mechanical insufficiency — high-protein, progressive, and self-reinforcing if untreated.</li>
+<li>Symptoms precede visible swelling. Stage 0 is real and is the best time to intervene.</li>
+<li>Stemmer&#x27;s sign is fast, free, and diagnostic when positive.</li>
+<li>Four ISL stages: 0 latent, I reversible, II irreversible/fibrotic, III elephantiasis.</li>
+<li>CDT has four components. Compression is the one that holds the result.</li>
+<li>Exercise under compression is treatment. Resistance training is safe.</li>
+<li>Lipedema is painful, symmetrical, spares the feet, and has a negative Stemmer.</li>
+<li>Lipedema is staged 1–3, with lipo-lymphedema as a contested Stage 4.</li>
+<li>Every episode of cellulitis makes the underlying disease worse.</li>
+<li>Patient education and Phase II adherence determine long-term outcome.</li>
+</ol>
+</section>
+<section class="card"><div class="kick">References</div><h2 class="sec">Sources</h2><ul class="pts"><li><strong>International Society of Lymphology</strong> — The Diagnosis and Treatment of Peripheral Lymphedema: 2023 Consensus Document <em>Lymphology 56 (2023) 133–151</em></li><li><strong>Zuther, J. &amp; Norton, S.</strong> — Lymphedema Management: The Comprehensive Guide for Practitioners <em>Thieme</em></li><li><strong>Lipedema Foundation</strong> — Staging of Lipedema <em>lipedema.org/staging</em></li><li><strong>Schmitz, K. et al.</strong> — Physical Activity and Lymphedema (PAL) Trial <em>NEJM / JAMA</em></li><li><strong>Koehler, L.</strong> — Lymphedema: Overview and Treatment Considerations <em>University of Minnesota</em></li><li><strong>Reich-Schupke, S. et al.</strong> — Differential diagnostics of lipedema and lymphedema: A practical guideline <em>PubMed 30280233</em></li></ul></section>
+</main>
+<footer><div class="wrap">
+<b>Total Body Therapy &amp; Wellness</b> &middot; 260 Pine State Street, Lillington, NC 27546 &middot; (910) 893-2850
+<div class="dis">Educational use only. Not a substitute for individualized medical evaluation or care.</div>
+</div></footer>
+</body></html>

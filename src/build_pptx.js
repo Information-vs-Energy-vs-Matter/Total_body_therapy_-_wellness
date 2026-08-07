@@ -60,7 +60,7 @@ function richRun(s, opt) {
 
 // ---- text metrics: estimate wrapped line count so cards can be auto-fitted ----
 function estLines(t, size, wIn) {
-  const cpl = Math.max(8, Math.floor((wIn * 96) / (size * 0.47)));
+  const cpl = Math.max(8, Math.floor((wIn * 96) / (size * 0.50)));
   return Math.max(1, Math.ceil(t.length / cpl));
 }
 
@@ -70,7 +70,7 @@ function blockH(b, size, wIn) {
   b.items.forEach((it) => {
     h += estLines(clean(it), size, wIn - 0.30) * lh + 0.06;
   });
-  return h + 0.28;                            // bottom padding
+  return h + 0.40;   // bottom padding + slack for estimator error
 }
 
 /** largest size in `sizes` where every block fits its allotted height */
@@ -96,6 +96,12 @@ function notes(slide, s, extra) {
   if (s && s.cuttable) { bits.push("[OPTIONAL — safe to cut]"); CUT.push(n + ". " + s.title); }
   if (s && s.note) bits.push(clean(s.note));
   if (extra) bits.push(extra);
+  if (s && s.photo_links && !secPhoto(s)) {
+    const fn = (s.photos || []).map((x) => x + ".png").join(", ");
+    bits.push("SUGGESTED IMAGES FOR THIS SLIDE"
+      + (fn ? "\nSave as: " + fn : "")
+      + "\n" + s.photo_links.map((l) => "· " + l[0] + "\n  " + l[1]).join("\n"));
+  }
   if (bits.length) slide.addNotes(bits.join("\n\n"));
 }
 
@@ -297,8 +303,9 @@ function contentSlide(id, opt) {
     blocks.forEach((b, i) => {
       const x = MX + (i % cols) * (cw + gap);
       const cy = y + Math.floor(i / cols) * (rh + gap);
-      // card hugs its content, but never exceeds the row height
-      const h = Math.min(rh, Math.max(1.1, blockH(b, size, cw - 0.48)));
+      // uniform row height: fitSize already guarantees every block fits rh,
+      // so a full-height card can never be overflowed by its own text
+      const h = rh;
       card(s, x, cy, cw, h);
       s.addText(b.h, {
         x: x + 0.24, y: cy + 0.14, w: cw - 0.48, h: 0.32, fontSize: size + 1.5,
@@ -399,7 +406,7 @@ function stageSlide(id) {
   const size = fitSize(sec.blocks, cw - 0.52, ch, [13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5]);
   sec.blocks.forEach((b, i) => {
     const x = MX + i * (cw + gap);
-    const h = Math.min(ch, Math.max(1.2, blockH(b, size, cw - 0.52)));
+    const h = ch;
     card(s, x, y, cw, h);
     s.addText(b.h, {
       x: x + 0.26, y: y + 0.16, w: cw - 0.52, h: 0.32, fontSize: size + 1.5, bold: true,
@@ -509,6 +516,45 @@ contentSlide("lipedema_intro", { title: "Lipedema — Etiology & Misdiagnosis", 
 tableSlide("differential_lip", { colW: [2.6, 4.75, 4.76], size: 11, rowH: 0.33 });
 contentSlide("lipedema_treatment");
 contentSlide("red_flags");
+
+
+// ==================================================== REFERENCE DECKS
+(function () {
+  const rd = C.reference_decks;
+  if (!rd) return;
+  const per = 5;
+  for (let g = 0; g < rd.items.length; g += per) {
+    const grp = rd.items.slice(g, g + per);
+    const s = newSlide();
+    head(s, rd.kicker, rd.title + (rd.items.length > per
+      ? "  (" + (Math.floor(g / per) + 1) + " of " + Math.ceil(rd.items.length / per) + ")" : ""));
+    let y = g === 0 ? lead(s, rd.lead, 1.72) : 1.85;
+    const rowH = 0.86;
+    grp.forEach((it, i) => {
+      const [t, dsc, u, k] = it;
+      const cy = y + i * (rowH + 0.12);
+      card(s, MX, cy, CW, rowH);
+      s.addText(t, {
+        x: MX + 0.26, y: cy + 0.1, w: CW - 2.6, h: 0.28, fontSize: 13, bold: true,
+        color: P.deep, fontFace: "Calibri", margin: 0, valign: "middle",
+      });
+      s.addText(k, {
+        x: W - MX - 2.3, y: cy + 0.1, w: 2.0, h: 0.28, fontSize: 9.5, bold: true,
+        color: P.teal, align: "right", fontFace: "Calibri", margin: 0, valign: "middle",
+      });
+      s.addText(dsc, {
+        x: MX + 0.26, y: cy + 0.36, w: CW - 0.52, h: 0.22, fontSize: 10.5,
+        color: P.slate, fontFace: "Calibri", margin: 0, valign: "middle",
+      });
+      s.addText([{ text: u, options: { hyperlink: { url: u }, fontSize: 8.5,
+                   color: "1C7293", underline: true } }], {
+        x: MX + 0.26, y: cy + 0.58, w: CW - 0.52, h: 0.22,
+        fontFace: "Calibri", margin: 0, valign: "middle",
+      });
+    });
+    s.addNotes(clean(rd.note) + "\n\nLinks are clickable in slideshow mode.");
+  }
+})();
 
 // ============================================================ TAKEAWAYS
 (function () {

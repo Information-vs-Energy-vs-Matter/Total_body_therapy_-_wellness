@@ -91,6 +91,24 @@
         "anat_lymphatic_system",
         "anat_openstax_system",
         "anat_grays_thoracic_duct"
+      ],
+      "photo_links": [
+        [
+          "Servier (CC BY) — “lymphatic system”",
+          "https://smart.servier.com/?s=lymphatic%20system"
+        ],
+        [
+          "OpenStax Ch.21 (CC BY)",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-1-anatomy-of-the-lymphatic-and-immune-systems"
+        ],
+        [
+          "Wikimedia — “lymphatic system diagram”",
+          "https://commons.wikimedia.org/w/index.php?search=lymphatic%20system%20diagram&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "NCI (public domain) — “lymphatic system”",
+          "https://visualsonline.cancer.gov/search.cfm?criteria=lymphatic%20system"
+        ]
       ]
     },
     {
@@ -122,6 +140,20 @@
       "diagram": "load_capacity",
       "photos": [
         "anat_lymph_capillary"
+      ],
+      "photo_links": [
+        [
+          "Servier (CC BY) — “lymphatic capillary”",
+          "https://smart.servier.com/?s=lymphatic%20capillary"
+        ],
+        [
+          "Wikimedia — “lymph capillary interstitial fluid”",
+          "https://commons.wikimedia.org/w/index.php?search=lymph%20capillary%20interstitial%20fluid&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "OpenStax Ch.21 (CC BY)",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-1-anatomy-of-the-lymphatic-and-immune-systems"
+        ]
       ]
     },
     {
@@ -157,6 +189,20 @@
       "photos": [
         "anat_axillary_nodes",
         "anat_node_regions"
+      ],
+      "photo_links": [
+        [
+          "NCI (public domain) — “axillary lymph node”",
+          "https://visualsonline.cancer.gov/search.cfm?criteria=axillary%20lymph%20node"
+        ],
+        [
+          "Servier (CC BY) — “lymph node”",
+          "https://smart.servier.com/?s=lymph%20node"
+        ],
+        [
+          "Wikimedia — “lymph node dissection”",
+          "https://commons.wikimedia.org/w/index.php?search=lymph%20node%20dissection&title=Special:MediaSearch&type=image"
+        ]
       ]
     },
     {
@@ -200,6 +246,20 @@
       "diagram": null,
       "photos": [
         "stage_clinical_leg"
+      ],
+      "photo_links": [
+        [
+          "Wikimedia — “lymphedema arm”",
+          "https://commons.wikimedia.org/w/index.php?search=lymphedema%20arm&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “lymphedema leg”",
+          "https://commons.wikimedia.org/w/index.php?search=lymphedema%20leg&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Servier (CC BY) — “edema”",
+          "https://smart.servier.com/?s=edema"
+        ]
       ]
     },
     {
@@ -251,6 +311,24 @@
       "diagram": "stemmer",
       "photos": [
         "dx_stemmer_positive"
+      ],
+      "photo_links": [
+        [
+          "Wikimedia — “Stemmer sign”",
+          "https://commons.wikimedia.org/w/index.php?search=Stemmer%20sign&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “pitting edema”",
+          "https://commons.wikimedia.org/w/index.php?search=pitting%20edema&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Servier (CC BY) — “lymphoscintigraphy”",
+          "https://smart.servier.com/?s=lymphoscintigraphy"
+        ],
+        [
+          "Wikimedia — “limb circumference measurement”",
+          "https://commons.wikimedia.org/w/index.php?search=limb%20circumference%20measurement&title=Special:MediaSearch&type=image"
+        ]
       ]
     },
     {
@@ -300,7 +378,21 @@
         ]
       },
       "note": "Malignant lymphedema and DVT are the two that must not be missed. Both are referrals, not treatment plans.",
-      "diagram": null
+      "diagram": null,
+      "photo_links": [
+        [
+          "Wikimedia — “deep vein thrombosis leg”",
+          "https://commons.wikimedia.org/w/index.php?search=deep%20vein%20thrombosis%20leg&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “chronic venous insufficiency”",
+          "https://commons.wikimedia.org/w/index.php?search=chronic%20venous%20insufficiency&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “cellulitis leg”",
+          "https://commons.wikimedia.org/w/index.php?search=cellulitis%20leg&title=Special:MediaSearch&type=image"
+        ]
+      ]
     },
     {
       "id": "staging_overview",
@@ -312,6 +404,16 @@
       "diagram": "stage_progression",
       "photos": [
         "stage_clinical_leg"
+      ],
+      "photo_links": [
+        [
+          "Wikimedia — “lymphedema stages”",
+          "https://commons.wikimedia.org/w/index.php?search=lymphedema%20stages&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Servier (CC BY) — “lymphedema”",
+          "https://smart.servier.com/?s=lymphedema"
+        ]
       ]
     },
     {
@@ -343,7 +445,17 @@
         }
       ],
       "photo_slot": "Stage 0 — no visible change; consider a limb-surveillance/measurement photo instead",
-      "photos": []
+      "photos": [],
+      "photo_links": [
+        [
+          "Wikimedia — “bioimpedance lymphedema”",
+          "https://commons.wikimedia.org/w/index.php?search=bioimpedance%20lymphedema&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “limb measurement tape”",
+          "https://commons.wikimedia.org/w/index.php?search=limb%20measurement%20tape&title=Special:MediaSearch&type=image"
+        ]
+      ]
     },
     {
       "id": "stage_1",
@@ -376,6 +488,16 @@
       "photo_slot": "Stage I — soft pitting edema, dorsum of foot or hand",
       "photos": [
         "stage1_photo"
+      ],
+      "photo_links": [
+        [
+          "Wikimedia — “pitting edema foot”",
+          "https://commons.wikimedia.org/w/index.php?search=pitting%20edema%20foot&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “lymphedema early stage”",
+          "https://commons.wikimedia.org/w/index.php?search=lymphedema%20early%20stage&title=Special:MediaSearch&type=image"
+        ]
       ]
     },
     {
@@ -411,6 +533,16 @@
       "photo_slot": "Stage II — firm non-pitting swelling, positive Stemmer, early skin thickening",
       "photos": [
         "stage2_photo"
+      ],
+      "photo_links": [
+        [
+          "Wikimedia — “lymphedema fibrosis”",
+          "https://commons.wikimedia.org/w/index.php?search=lymphedema%20fibrosis&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “Stemmer sign positive”",
+          "https://commons.wikimedia.org/w/index.php?search=Stemmer%20sign%20positive&title=Special:MediaSearch&type=image"
+        ]
       ]
     },
     {
@@ -448,6 +580,20 @@
       "photo_slot": "Stage III — elephantiasis, papillomas, deep skin folds",
       "photos": [
         "stage3_photo"
+      ],
+      "photo_links": [
+        [
+          "Wikimedia — “elephantiasis leg”",
+          "https://commons.wikimedia.org/w/index.php?search=elephantiasis%20leg&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “lymphostatic elephantiasis”",
+          "https://commons.wikimedia.org/w/index.php?search=lymphostatic%20elephantiasis&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “papillomatosis skin”",
+          "https://commons.wikimedia.org/w/index.php?search=papillomatosis%20skin&title=Special:MediaSearch&type=image"
+        ]
       ]
     },
     {
@@ -503,6 +649,16 @@
       "diagram": "cdt_pillars",
       "photos": [
         "tx_before_after"
+      ],
+      "photo_links": [
+        [
+          "Wikimedia — “complete decongestive therapy”",
+          "https://commons.wikimedia.org/w/index.php?search=complete%20decongestive%20therapy&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “lymphedema before after treatment”",
+          "https://commons.wikimedia.org/w/index.php?search=lymphedema%20before%20after%20treatment&title=Special:MediaSearch&type=image"
+        ]
       ]
     },
     {
@@ -542,7 +698,21 @@
         }
       ],
       "photo_slot": "Skin care — emollient application, interdigital inspection",
-      "photos": []
+      "photos": [],
+      "photo_links": [
+        [
+          "Wikimedia — “emollient application skin”",
+          "https://commons.wikimedia.org/w/index.php?search=emollient%20application%20skin&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “tinea pedis”",
+          "https://commons.wikimedia.org/w/index.php?search=tinea%20pedis&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “cellulitis leg”",
+          "https://commons.wikimedia.org/w/index.php?search=cellulitis%20leg&title=Special:MediaSearch&type=image"
+        ]
+      ]
     },
     {
       "id": "mld",
@@ -589,6 +759,20 @@
       "diagram": "mld_flow",
       "photos": [
         "tx_mld_hands"
+      ],
+      "photo_links": [
+        [
+          "Wikimedia — “manual lymphatic drainage”",
+          "https://commons.wikimedia.org/w/index.php?search=manual%20lymphatic%20drainage&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Servier (CC BY) — “lymphatic drainage”",
+          "https://smart.servier.com/?s=lymphatic%20drainage"
+        ],
+        [
+          "Wikimedia — “lymphatic watershed”",
+          "https://commons.wikimedia.org/w/index.php?search=lymphatic%20watershed&title=Special:MediaSearch&type=image"
+        ]
       ]
     },
     {
@@ -635,6 +819,20 @@
       "photos": [
         "tx_bandaging",
         "tx_garment_flatknit"
+      ],
+      "photo_links": [
+        [
+          "Wikimedia — “compression bandage leg”",
+          "https://commons.wikimedia.org/w/index.php?search=compression%20bandage%20leg&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “compression stocking”",
+          "https://commons.wikimedia.org/w/index.php?search=compression%20stocking&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “short stretch bandage”",
+          "https://commons.wikimedia.org/w/index.php?search=short%20stretch%20bandage&title=Special:MediaSearch&type=image"
+        ]
       ]
     },
     {
@@ -679,7 +877,21 @@
       ],
       "note": "Aquatic exercise is particularly effective — hydrostatic pressure provides uniform external compression while the patient moves.",
       "photo_slot": "Exercise — patient exercising in compression garment",
-      "photos": []
+      "photos": [],
+      "photo_links": [
+        [
+          "Wikimedia — “aquatic therapy pool”",
+          "https://commons.wikimedia.org/w/index.php?search=aquatic%20therapy%20pool&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “resistance training rehabilitation”",
+          "https://commons.wikimedia.org/w/index.php?search=resistance%20training%20rehabilitation&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “diaphragmatic breathing”",
+          "https://commons.wikimedia.org/w/index.php?search=diaphragmatic%20breathing&title=Special:MediaSearch&type=image"
+        ]
+      ]
     },
     {
       "id": "lipedema_intro",
@@ -724,6 +936,20 @@
       "diagram": "lipedema_cuff",
       "photos": [
         "lip_clinical_legs"
+      ],
+      "photo_links": [
+        [
+          "Wikimedia — “lipedema”",
+          "https://commons.wikimedia.org/w/index.php?search=lipedema&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “lipedema legs”",
+          "https://commons.wikimedia.org/w/index.php?search=lipedema%20legs&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Servier (CC BY) — “adipose tissue”",
+          "https://smart.servier.com/?s=adipose%20tissue"
+        ]
       ]
     },
     {
@@ -789,6 +1015,20 @@
         "lip_stage2",
         "lip_stage3",
         "lip_stage4"
+      ],
+      "photo_links": [
+        [
+          "Lipedema Foundation — staging photos (ask permission)",
+          "https://www.lipedema.org/staging"
+        ],
+        [
+          "Wikimedia — “lipedema stages”",
+          "https://commons.wikimedia.org/w/index.php?search=lipedema%20stages&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “lipedema legs”",
+          "https://commons.wikimedia.org/w/index.php?search=lipedema%20legs&title=Special:MediaSearch&type=image"
+        ]
       ]
     },
     {
@@ -863,7 +1103,17 @@
       },
       "note": "They co-exist. Lipedema does not itself cause lymphedema — but central obesity, which frequently accompanies it, substantially raises lymphedema risk. Treat what you find.",
       "diagram": "lip_vs_lymph",
-      "photos": []
+      "photos": [],
+      "photo_links": [
+        [
+          "Wikimedia — “lipedema lymphedema comparison”",
+          "https://commons.wikimedia.org/w/index.php?search=lipedema%20lymphedema%20comparison&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “Stemmer sign”",
+          "https://commons.wikimedia.org/w/index.php?search=Stemmer%20sign&title=Special:MediaSearch&type=image"
+        ]
+      ]
     },
     {
       "id": "lipedema_treatment",
@@ -904,7 +1154,17 @@
         }
       ],
       "note": "The single most valuable thing you may do is tell the patient this is a recognized disease and not a personal failure of willpower.",
-      "photos": []
+      "photos": [],
+      "photo_links": [
+        [
+          "Wikimedia — “compression stocking leg”",
+          "https://commons.wikimedia.org/w/index.php?search=compression%20stocking%20leg&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “aquatic therapy”",
+          "https://commons.wikimedia.org/w/index.php?search=aquatic%20therapy&title=Special:MediaSearch&type=image"
+        ]
+      ]
     },
     {
       "id": "red_flags",
@@ -942,7 +1202,17 @@
           ]
         }
       ],
-      "note": "MLD is contraindicated in acute infection, acute DVT, and decompensated heart failure. When in doubt, do not treat — refer."
+      "note": "MLD is contraindicated in acute infection, acute DVT, and decompensated heart failure. When in doubt, do not treat — refer.",
+      "photo_links": [
+        [
+          "Wikimedia — “cellulitis leg”",
+          "https://commons.wikimedia.org/w/index.php?search=cellulitis%20leg&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “deep vein thrombosis”",
+          "https://commons.wikimedia.org/w/index.php?search=deep%20vein%20thrombosis&title=Special:MediaSearch&type=image"
+        ]
+      ]
     },
     {
       "id": "takeaways",
@@ -1192,5 +1462,334 @@
       "Differential diagnostics of lipedema and lymphedema: A practical guideline",
       "PubMed 30280233"
     ]
-  ]
+  ],
+  "image_list": {
+    "lead": "Tap a source to open it. Tap a row to mark it done — your progress is saved on this device.",
+    "howto": [
+      "Pick the images you want from the sources below",
+      "Save each one using the exact filename shown",
+      "Send them back to be added to the deck and this site",
+      "Skipped items just stay as they are — nothing breaks"
+    ],
+    "format_note": "PNG or JPG, 1200px wide or larger. Bigger is fine.",
+    "priority": [
+      "anat_lymphatic_system",
+      "anat_lymph_node",
+      "dx_stemmer_positive",
+      "tbtw_clinic_exterior",
+      "tbtw_sara",
+      "tx_bandaging",
+      "lip_clinical_legs",
+      "stage_clinical_leg"
+    ],
+    "groups": [
+      {
+        "h": "Servier Medical Art",
+        "tier": "free",
+        "lic": "CC BY 4.0 — free to use, adapt, and use commercially. Credit is added automatically.",
+        "url": "https://smart.servier.com/category/medical-specialties/cardiology-phlebology/",
+        "url_label": "Open Servier → Cardiology & Phlebology",
+        "note": "Best single source. Some images download as editable PowerPoint files.",
+        "items": [
+          [
+            "Full lymphatic system, whole body",
+            "anat_lymphatic_system.png",
+            "Anatomy → Lymphatic system"
+          ],
+          [
+            "Lymph node structure, cutaway",
+            "anat_lymph_node.png",
+            "Cardiology → Lymph node"
+          ],
+          [
+            "Lymphatic circulation / vessel",
+            "anat_lymph_circulation.png",
+            "Cardiology → Lymphatic circulation"
+          ],
+          [
+            "Lymphatic capillary + interstitium",
+            "anat_lymph_capillary.png",
+            "Search “lymphatic vessel”"
+          ],
+          [
+            "Thoracic duct / subclavian junction",
+            "anat_thoracic_duct.png",
+            "Search “thoracic duct”"
+          ]
+        ]
+      },
+      {
+        "h": "OpenStax Anatomy & Physiology",
+        "tier": "free",
+        "lic": "CC BY — free to use. Textbook quality, projects well.",
+        "url": "https://openstax.org/details/books/anatomy-and-physiology-2e",
+        "url_label": "Open OpenStax → Ch. 21 Lymphatic System",
+        "items": [
+          [
+            "Whole-body lymphatic system figure",
+            "anat_openstax_system.png",
+            "Chapter 21"
+          ],
+          [
+            "Lymphatic capillaries / fluid movement",
+            "anat_openstax_capillary.png",
+            "Chapter 21"
+          ]
+        ]
+      },
+      {
+        "h": "NCI Visuals Online / SEER",
+        "tier": "free",
+        "lic": "US government — public domain. No attribution needed.",
+        "url": "https://visualsonline.cancer.gov/",
+        "url_label": "Open NCI Visuals Online",
+        "items": [
+          [
+            "Lymph node regions / drainage map",
+            "anat_node_regions.png",
+            "Search “lymphatic system”"
+          ],
+          [
+            "Axillary node levels",
+            "anat_axillary_nodes.png",
+            "Search “axillary lymph node”"
+          ]
+        ]
+      },
+      {
+        "h": "Wikimedia Commons",
+        "tier": "check",
+        "lic": "Mixed. Use only images marked CC BY, CC BY-SA, or Public domain. Skip “all rights reserved.”",
+        "url": "https://commons.wikimedia.org/w/index.php?search=lymphedema&title=Special:MediaSearch&type=image",
+        "url_label": "Search Commons for “lymphedema”",
+        "items": [
+          [
+            "Stemmer’s sign, positive",
+            "dx_stemmer_positive.png",
+            "Search “Stemmer sign”"
+          ],
+          [
+            "Lymphedema of the leg, clinical",
+            "stage_clinical_leg.png",
+            "Search “lymphedema”"
+          ],
+          [
+            "Lipedema legs, clinical",
+            "lip_clinical_legs.png",
+            "Search “lipedema”"
+          ],
+          [
+            "Thoracic duct, Gray’s 1918 plate",
+            "anat_grays_thoracic_duct.png",
+            "Public domain, zero restrictions"
+          ]
+        ]
+      },
+      {
+        "h": "Lipedema Foundation",
+        "tier": "ask",
+        "lic": "Not open-licensed — email and ask. They are a patient-advocacy nonprofit and routinely grant permission for clinician education.",
+        "url": "https://www.lipedema.org/staging",
+        "url_label": "Open Lipedema Foundation staging page",
+        "note": "The best lipedema staging photos anywhere. Worth the email — nothing else compares.",
+        "items": [
+          [
+            "Lipedema Stage 1",
+            "lip_stage1.png",
+            ""
+          ],
+          [
+            "Lipedema Stage 2",
+            "lip_stage2.png",
+            ""
+          ],
+          [
+            "Lipedema Stage 3",
+            "lip_stage3.png",
+            ""
+          ],
+          [
+            "Lipo-lymphedema (Stage 4)",
+            "lip_stage4.png",
+            ""
+          ]
+        ]
+      },
+      {
+        "h": "Garment & bandage manufacturers",
+        "tier": "ask",
+        "lic": "Juzo, Medi, Sigvaris, Lohmann & Rauscher, Jobst all have education image libraries and usually say yes to a clinician for teaching use.",
+        "url": "https://www.juzousa.com/",
+        "url_label": "Open Juzo",
+        "items": [
+          [
+            "Short-stretch bandaging, layered on a leg",
+            "tx_bandaging.png",
+            ""
+          ],
+          [
+            "Flat-knit compression garment",
+            "tx_garment_flatknit.png",
+            ""
+          ],
+          [
+            "MLD hand technique",
+            "tx_mld_hands.png",
+            ""
+          ]
+        ]
+      },
+      {
+        "h": "TBTW’s own photos",
+        "tier": "own",
+        "lic": "Sara owns these outright. No licensing question — and they beat stock every time.",
+        "url": "https://www.instagram.com/tbtwnc/",
+        "url_label": "Open Instagram @tbtwnc (1,077 posts)",
+        "note": "The new clinic photos are almost certainly already on the Instagram.",
+        "items": [
+          [
+            "NEW CLINIC — 260 Pine State St, exterior",
+            "tbtw_clinic_exterior.jpg",
+            ""
+          ],
+          [
+            "New clinic — interior / reception",
+            "tbtw_clinic_interior.jpg",
+            ""
+          ],
+          [
+            "Treatment room",
+            "tbtw_treatment_room.jpg",
+            ""
+          ],
+          [
+            "Dr. Sara Morrison headshot",
+            "tbtw_sara.jpg",
+            ""
+          ],
+          [
+            "Dr. Andie Cahoon headshot",
+            "tbtw_andie.jpg",
+            ""
+          ],
+          [
+            "TBTW logo, high resolution",
+            "tbtw_logo.png",
+            ""
+          ],
+          [
+            "Lymphedema treatment in progress",
+            "tbtw_lymph_treatment.jpg",
+            ""
+          ],
+          [
+            "Gym floor / equipment",
+            "tbtw_gym.jpg",
+            ""
+          ]
+        ]
+      },
+      {
+        "h": "Sara’s own patient photos",
+        "tier": "own",
+        "lic": "Requires WRITTEN CONSENT. Crop or mask anything identifying. For an in-service to her own staff these are the most persuasive images available.",
+        "url": "",
+        "url_label": "",
+        "items": [
+          [
+            "Stage I — soft pitting edema",
+            "stage1_photo.jpg",
+            ""
+          ],
+          [
+            "Stage II — firm, positive Stemmer",
+            "stage2_photo.jpg",
+            ""
+          ],
+          [
+            "Stage III — skin changes",
+            "stage3_photo.jpg",
+            ""
+          ],
+          [
+            "Before / after CDT",
+            "tx_before_after.jpg",
+            ""
+          ]
+        ]
+      }
+    ],
+    "avoid": {
+      "h": "Please don’t use",
+      "body": "Figures pulled from other people’s slide decks, textbooks, or journal articles without permission. This site is public and carries the practice name — the exposure would be Sara’s. Everything listed above is either openly licensed, public domain, hers, or a permission request worth making."
+    }
+  },
+  "reference_decks": {
+    "kicker": "Appendix",
+    "title": "Source Decks & Reference Material",
+    "lead": "The existing presentations and documents this deck was built from. Open any of them to review how others have structured the same material.",
+    "note": "Reviewing these is fine. Reusing their figures in a published deck is not — most contain third-party images the authors did not clear for redistribution. Use the per-slide image links instead; those are openly licensed. Structure, sequencing, and teaching approach are free to borrow from anyone.",
+    "items": [
+      [
+        "ISL 2023 Consensus Document",
+        "The staging authority. Stages 0–III, diagnosis, and treatment.",
+        "https://www.isl.arizona.edu/sites/default/files/2024-11/THE-DIAGNOSIS-AND-TREATMENT-OF-PERIPHERAL-LYMPHEDEMA-2023-CONSENSUS-DOCUMENT-OF-THE-INTERNATIONAL-SOCIETY-OF-LYMPHOLOGY.pdf",
+        "PDF · primary source"
+      ],
+      [
+        "Linda Koehler, PT, CLT-LANA — Univ. of Minnesota",
+        "Best PT-focused deck found. CDT components, wound care, pain management.",
+        "https://www.slideserve.com/collin/lymphedema-overview-and-treatment-considerations",
+        "Slide deck"
+      ],
+      [
+        "Christina Hankins, PT, CLT, CWS — Lymphedema",
+        "Good objectives and outline structure to model.",
+        "https://www.slideserve.com/lilly/lymphedema",
+        "Slide deck"
+      ],
+      [
+        "Lymphedema Therapy (compiled decks)",
+        "Several decks on one page, incl. stage descriptions and exercise evidence.",
+        "https://www.slideserve.com/lael/lymphedema-therapy",
+        "Slide deck"
+      ],
+      [
+        "Lymphedema — assorted author decks",
+        "Ernandez, Richter, Arslan, Johansson. Mixed quality; useful for framing.",
+        "https://www.slideserve.com/shoshana-reynolds/lymphedema-powerpoint-ppt-presentation",
+        "Slide deck"
+      ],
+      [
+        "Clinical Outcomes After PT for Secondary Lymphedema",
+        "Zuther & Norton staging language in plain English.",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6666846/",
+        "Case report"
+      ],
+      [
+        "Lipedema Foundation — Staging",
+        "Best lipedema staging photos. Note: they no longer use “Stage 4”.",
+        "https://www.lipedema.org/staging",
+        "Reference + photos"
+      ],
+      [
+        "Understanding Stage 4 Lipedema: Lipo-Lymphedema",
+        "The transition from lipedema to lipo-lymphedema.",
+        "https://www.totallipedemacare.com/understanding-stage-4-lipedema-lipo-lymphedema/",
+        "Article"
+      ],
+      [
+        "Differential diagnostics of lipedema and lymphedema",
+        "Practical guideline. Basis for the differential table.",
+        "https://pubmed.ncbi.nlm.nih.gov/30280233/",
+        "PubMed"
+      ],
+      [
+        "Lipedema vs lymphedema — Northwell Health",
+        "Plain-language framing useful for patient education.",
+        "https://www.northwell.edu/news/insights/lipedema-vs-lymphedema-what-to-know",
+        "Article"
+      ]
+    ]
+  }
 }

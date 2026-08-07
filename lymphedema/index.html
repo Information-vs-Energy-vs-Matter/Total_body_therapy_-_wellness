@@ -78,6 +78,41 @@ ol.num li:before{content:counter(n);position:absolute;left:0;top:10px;width:26px
 figure{margin:18px 0 4px}
 figure img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
 figcaption{font-size:12px;color:var(--slate);margin-top:7px;font-style:italic}
+.sug{margin:16px 0 4px;padding:15px 16px;background:#F2F9FA;border-radius:11px}
+.sug .sh{font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+         color:var(--teal);margin-bottom:9px}
+.sug .fn{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--slate);
+         background:#fff;border:1px solid var(--line);border-radius:6px;padding:3px 7px;
+         display:inline-block;margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips a{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;
+         padding:8px 13px;font-size:13px;font-weight:600;color:var(--deep);text-decoration:none}
+.chips a:active{background:var(--mist)}
+.refs{list-style:none}
+.refs li{border-bottom:1px solid var(--line);padding:0}
+.refs li:last-child{border-bottom:none}
+.refs a{display:block;padding:14px 4px;text-decoration:none;color:var(--ink)}
+.refs a:active{background:var(--mist)}
+.refs .rt{font-weight:700;font-size:15.5px;color:var(--deep)}
+.refs .rd{font-size:13.5px;color:var(--slate);margin-top:3px}
+.refs .rk{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.07em;
+          text-transform:uppercase;color:var(--teal);background:var(--mist);
+          border-radius:999px;padding:3px 9px;margin-top:7px}
+.pgrp{margin-bottom:16px}
+.pgrp .lic{font-size:13px;color:var(--slate);margin:6px 0 12px}
+.src{display:block;background:var(--deep);color:#fff;text-decoration:none;font-weight:700;
+     font-size:14.5px;padding:12px 16px;border-radius:10px;margin-bottom:14px}
+.pit{display:flex;gap:12px;align-items:flex-start;padding:12px 4px;
+     border-bottom:1px solid var(--line);cursor:pointer}
+.pit:last-child{border-bottom:none}
+.pit .bx{flex:0 0 22px;height:22px;border:2px solid var(--line);border-radius:6px;margin-top:2px}
+.pit.done .bx{background:var(--sea);border-color:var(--sea)}
+.pit.done .pt{text-decoration:line-through;color:#9BB0B8}
+.pit .pt{font-size:15px;font-weight:600}
+.pit .pf{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;
+         color:var(--teal);margin-top:3px;word-break:break-all}
+.pit .pw{font-size:12.5px;color:var(--slate);margin-top:2px}
+.star{color:var(--amber);font-weight:700}
 .gal{display:grid;gap:12px;margin:18px 0 4px}
 @media(min-width:640px){.gal:has(figure+figure){grid-template-columns:1fr 1fr}}
 .gal figure{margin:0}
@@ -181,7 +216,7 @@ footer .dis{margin-top:8px;font-style:italic}
 </head><body>
 <header class="top"><div class="wrap">
 <a href="../index.html" class="brand">Total Body Therapy &amp; Wellness</a>
-<nav><a href="../index.html" class="">Home</a><a href="../lymphedema/index.html" class="on">Presentation</a><a href="../lymphedema/outline.html" class="">Outline</a><a href="../lymphedema/quiz.html" class="">Quiz</a><a href="../capabilities.html" class="">Capabilities</a></nav>
+<nav><a href="../index.html" class="">Home</a><a href="../lymphedema/index.html" class="on">Presentation</a><a href="../lymphedema/outline.html" class="">Outline</a><a href="../lymphedema/quiz.html" class="">Quiz</a><a href="../images.html" class="">Images</a><a href="../capabilities.html" class="">Capabilities</a></nav>
 </div></header>
 <div class="hero"><div class="wrap">
 <div class="kick">Total Body Therapy &amp; Wellness</div>
@@ -211,6 +246,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Trunks drain to the thoracic duct (left, and entire lower body) and right lymphatic duct</li>
 <li>Both empty at the subclavian veins — back into venous circulation</li>
 </ul>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: anat_lymphatic_system.png, anat_openstax_system.png, anat_grays_thoracic_duct.png</span><div class="chips"><a href="https://smart.servier.com/?s=lymphatic%20system" target="_blank" rel="noopener">Servier (CC BY) — “lymphatic system”</a><a href="https://openstax.org/books/anatomy-and-physiology-2e/pages/21-1-anatomy-of-the-lymphatic-and-immune-systems" target="_blank" rel="noopener">OpenStax Ch.21 (CC BY)</a><a href="https://commons.wikimedia.org/w/index.php?search=lymphatic%20system%20diagram&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymphatic system diagram”</a><a href="https://visualsonline.cancer.gov/search.cfm?criteria=lymphatic%20system" target="_blank" rel="noopener">NCI (public domain) — “lymphatic system”</a></div></div>
 <div class="note">Lymphangion contraction is the primary pump. It is stimulated by stretch, muscle contraction, arterial pulsation, and breathing — which is exactly why exercise and diaphragmatic breathing are treatment, not just adjuncts.</div>
 </section>
 <section class="card" id="load_capacity">
@@ -229,6 +265,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>That fibrosis further reduces transport capacity — a self-reinforcing loop</li>
 <li>This is why untreated lymphedema progresses, and why early intervention changes the trajectory</li>
 </ul>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: anat_lymph_capillary.png</span><div class="chips"><a href="https://smart.servier.com/?s=lymphatic%20capillary" target="_blank" rel="noopener">Servier (CC BY) — “lymphatic capillary”</a><a href="https://commons.wikimedia.org/w/index.php?search=lymph%20capillary%20interstitial%20fluid&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymph capillary interstitial fluid”</a><a href="https://openstax.org/books/anatomy-and-physiology-2e/pages/21-1-anatomy-of-the-lymphatic-and-immune-systems" target="_blank" rel="noopener">OpenStax Ch.21 (CC BY)</a></div></div>
 <div class="note">Combined insufficiency — high load AND damaged system — is common in the patients you will actually see.</div>
 </section>
 <section class="card" id="etiology">
@@ -249,6 +286,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li><strong>Recurrent infection</strong> — each episode of cellulitis causes further lymphatic damage</li>
 <li><strong>Obesity</strong> — central obesity significantly raises risk independently</li>
 </ul>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: anat_axillary_nodes.png, anat_node_regions.png</span><div class="chips"><a href="https://visualsonline.cancer.gov/search.cfm?criteria=axillary%20lymph%20node" target="_blank" rel="noopener">NCI (public domain) — “axillary lymph node”</a><a href="https://smart.servier.com/?s=lymph%20node" target="_blank" rel="noopener">Servier (CC BY) — “lymph node”</a><a href="https://commons.wikimedia.org/w/index.php?search=lymph%20node%20dissection&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymph node dissection”</a></div></div>
 <div class="note">Risk multipliers after cancer treatment: extent of node dissection, regional radiation, elevated BMI, post-op infection, wound complications, and taxane-based chemotherapy.</div>
 </section>
 <section class="card" id="symptoms">
@@ -275,6 +313,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Functional loss — grip, reach, gait, footwear, ADLs</li>
 <li>Occupational impact and cost of ongoing garments</li>
 </ul>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: stage_clinical_leg.png</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=lymphedema%20arm&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymphedema arm”</a><a href="https://commons.wikimedia.org/w/index.php?search=lymphedema%20leg&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymphedema leg”</a><a href="https://smart.servier.com/?s=edema" target="_blank" rel="noopener">Servier (CC BY) — “edema”</a></div></div>
 <div class="note">Lymphedema is typically painless early. New or significant pain suggests infection, DVT, malignancy — or lipedema, which is painful by definition.</div>
 </section>
 <section class="card" id="diagnosis">
@@ -307,6 +346,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li><strong>Duplex ultrasound</strong> — rule out DVT and venous insufficiency</li>
 <li><strong>MRI / CT</strong> — rule out malignancy or extrinsic compression</li>
 </ul>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: dx_stemmer_positive.png</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=Stemmer%20sign&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “Stemmer sign”</a><a href="https://commons.wikimedia.org/w/index.php?search=pitting%20edema&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “pitting edema”</a><a href="https://smart.servier.com/?s=lymphoscintigraphy" target="_blank" rel="noopener">Servier (CC BY) — “lymphoscintigraphy”</a><a href="https://commons.wikimedia.org/w/index.php?search=limb%20circumference%20measurement&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “limb circumference measurement”</a></div></div>
 <div class="note">Severity by volume difference vs. the contralateral limb: minimal &lt;20%, moderate 20–40%, severe &gt;40%.</div>
 </section>
 <section class="card" id="differential_general">
@@ -327,6 +367,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <tr><td>Medication-induced</td><td>Calcium channel blockers, NSAIDs, steroids, gabapentin, some diabetes drugs</td></tr>
 </tbody></table></div>
 <p class="hint">Scroll the table sideways on a phone.</p>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: any of the above</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=deep%20vein%20thrombosis%20leg&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “deep vein thrombosis leg”</a><a href="https://commons.wikimedia.org/w/index.php?search=chronic%20venous%20insufficiency&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “chronic venous insufficiency”</a><a href="https://commons.wikimedia.org/w/index.php?search=cellulitis%20leg&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “cellulitis leg”</a></div></div>
 <div class="note">Malignant lymphedema and DVT are the two that must not be missed. Both are referrals, not treatment plans.</div>
 </section>
 <section class="card" id="staging_overview">
@@ -334,6 +375,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <h2 class="sec">ISL Staging — Overview</h2>
 <p class="lead">The International Society of Lymphology defines four stages. Stage 0 is latent — the lymphatics are already impaired before anything is visible.</p>
 <figure><img src="../assets/stage_progression.png" alt="ISL Staging — Overview" loading="lazy"></figure>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: stage_clinical_leg.png</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=lymphedema%20stages&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymphedema stages”</a><a href="https://smart.servier.com/?s=lymphedema" target="_blank" rel="noopener">Servier (CC BY) — “lymphedema”</a></div></div>
 <div class="note">Staging describes tissue condition, not size. A small Stage III limb is still Stage III. Severity is graded separately by volume difference.</div>
 </section>
 <section class="card" id="stage_0">
@@ -355,6 +397,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Prophylactic PT after node dissection has been shown to reduce progression</li>
 </ul>
 <div class="slot"><b>Clinical photo</b>Stage 0 — no visible change; consider a limb-surveillance/measurement photo instead</div>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: any of the above</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=bioimpedance%20lymphedema&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “bioimpedance lymphedema”</a><a href="https://commons.wikimedia.org/w/index.php?search=limb%20measurement%20tape&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “limb measurement tape”</a></div></div>
 </section>
 <section class="card" id="stage_1">
 <div class="kick">Staging</div>
@@ -375,6 +418,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Goal: prevent the transition to fibrosis</li>
 </ul>
 <div class="slot"><b>Clinical photo</b>Stage I — soft pitting edema, dorsum of foot or hand</div>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: stage1_photo.png</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=pitting%20edema%20foot&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “pitting edema foot”</a><a href="https://commons.wikimedia.org/w/index.php?search=lymphedema%20early%20stage&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymphedema early stage”</a></div></div>
 </section>
 <section class="card" id="stage_2">
 <div class="kick">Staging</div>
@@ -396,6 +440,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Aggressive infection-prevention education</li>
 </ul>
 <div class="slot"><b>Clinical photo</b>Stage II — firm non-pitting swelling, positive Stemmer, early skin thickening</div>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: stage2_photo.png</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=lymphedema%20fibrosis&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymphedema fibrosis”</a><a href="https://commons.wikimedia.org/w/index.php?search=Stemmer%20sign%20positive&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “Stemmer sign positive”</a></div></div>
 <div class="note">The presence or absence of pitting is what separates early from late Stage II — not the size of the limb.</div>
 </section>
 <section class="card" id="stage_3">
@@ -420,6 +465,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Coordinate with physician; surgical options may be considered after conservative management</li>
 </ul>
 <div class="slot"><b>Clinical photo</b>Stage III — elephantiasis, papillomas, deep skin folds</div>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: stage3_photo.png</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=elephantiasis%20leg&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “elephantiasis leg”</a><a href="https://commons.wikimedia.org/w/index.php?search=lymphostatic%20elephantiasis&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymphostatic elephantiasis”</a><a href="https://commons.wikimedia.org/w/index.php?search=papillomatosis%20skin&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “papillomatosis skin”</a></div></div>
 <div class="note">Stage III is not a treatment failure to be managed passively. Significant reduction is well documented with sustained CDT.</div>
 </section>
 <section class="card" id="cdt_overview">
@@ -446,6 +492,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <div class="pill"><div class="n">3</div><h4>Compression Therapy</h4><p>Counter refilling, soften fibrosis, sustain the reduction achieved</p></div>
 <div class="pill"><div class="n">4</div><h4>Remedial Exercise</h4><p>Use the muscle pump under compression to drive lymph transport</p></div>
 </div>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: tx_before_after.png</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=complete%20decongestive%20therapy&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “complete decongestive therapy”</a><a href="https://commons.wikimedia.org/w/index.php?search=lymphedema%20before%20after%20treatment&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymphedema before after treatment”</a></div></div>
 <div class="note">Phase II is where outcomes are actually won or lost. Adherence, not technique, is the usual determinant of long-term result.</div>
 </section>
 <section class="card" id="skin_care">
@@ -472,6 +519,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Recurrent cellulitis may warrant prophylactic antibiotics — physician decision</li>
 </ul>
 <div class="slot"><b>Clinical photo</b>Skin care — emollient application, interdigital inspection</div>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: any of the above</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=emollient%20application%20skin&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “emollient application skin”</a><a href="https://commons.wikimedia.org/w/index.php?search=tinea%20pedis&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “tinea pedis”</a><a href="https://commons.wikimedia.org/w/index.php?search=cellulitis%20leg&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “cellulitis leg”</a></div></div>
 </section>
 <section class="card" id="mld">
 <div class="kick">Treatment · CDT 2 of 4</div>
@@ -502,6 +550,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Caution with active untreated malignancy — coordinate with oncology</li>
 <li>Caution with carotid sinus hypersensitivity for neck work</li>
 </ul>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: tx_mld_hands.png</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=manual%20lymphatic%20drainage&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “manual lymphatic drainage”</a><a href="https://smart.servier.com/?s=lymphatic%20drainage" target="_blank" rel="noopener">Servier (CC BY) — “lymphatic drainage”</a><a href="https://commons.wikimedia.org/w/index.php?search=lymphatic%20watershed&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lymphatic watershed”</a></div></div>
 <div class="note">MLD alone produces modest results. Its value is greatest when combined with compression — the evidence supports CDT as a package, not MLD in isolation.</div>
 </section>
 <section class="card" id="compression">
@@ -531,6 +580,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Recheck skin integrity at every application</li>
 </ul>
 <div class="slot"><b>Clinical photo</b>Compression — short-stretch bandaging layers and flat-knit garment</div>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: tx_bandaging.png, tx_garment_flatknit.png</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=compression%20bandage%20leg&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “compression bandage leg”</a><a href="https://commons.wikimedia.org/w/index.php?search=compression%20stocking&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “compression stocking”</a><a href="https://commons.wikimedia.org/w/index.php?search=short%20stretch%20bandage&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “short stretch bandage”</a></div></div>
 <div class="note">Intermittent pneumatic compression may be a useful adjunct but does not replace MLD or bandaging, and must not be used over an untreated proximal obstruction.</div>
 </section>
 <section class="card" id="exercise">
@@ -561,6 +611,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li><strong>Do not tell patients to avoid using the limb.</strong> That advice is outdated and causes deconditioning.</li>
 </ul>
 <div class="slot"><b>Clinical photo</b>Exercise — patient exercising in compression garment</div>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: any of the above</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=aquatic%20therapy%20pool&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “aquatic therapy pool”</a><a href="https://commons.wikimedia.org/w/index.php?search=resistance%20training%20rehabilitation&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “resistance training rehabilitation”</a><a href="https://commons.wikimedia.org/w/index.php?search=diaphragmatic%20breathing&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “diaphragmatic breathing”</a></div></div>
 <div class="note">Aquatic exercise is particularly effective — hydrostatic pressure provides uniform external compression while the patient moves.</div>
 </section>
 <section class="card" id="lipedema_intro">
@@ -590,6 +641,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Delayed diagnosis allows progression toward lymphatic involvement</li>
 <li>A correct diagnosis is itself therapeutic — it reframes the patient&#x27;s understanding</li>
 </ul>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: lip_clinical_legs.png</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=lipedema&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lipedema”</a><a href="https://commons.wikimedia.org/w/index.php?search=lipedema%20legs&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lipedema legs”</a><a href="https://smart.servier.com/?s=adipose%20tissue" target="_blank" rel="noopener">Servier (CC BY) — “adipose tissue”</a></div></div>
 <div class="note">Sarah Bramblette and patient advocacy groups have driven recent recognition, but average time to diagnosis remains measured in years.</div>
 </section>
 <section class="card" id="lipedema_staging">
@@ -631,6 +683,7 @@ footer .dis{margin-top:8px;font-style:italic}
 </ul></div>
 </div>
 <div class="slot"><b>Clinical photo</b>Lipedema stages 1–4 — four-panel comparison</div>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: lip_stage1.png, lip_stage2.png, lip_stage3.png, lip_stage4.png</span><div class="chips"><a href="https://www.lipedema.org/staging" target="_blank" rel="noopener">Lipedema Foundation — staging photos (ask permission)</a><a href="https://commons.wikimedia.org/w/index.php?search=lipedema%20stages&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lipedema stages”</a><a href="https://commons.wikimedia.org/w/index.php?search=lipedema%20legs&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lipedema legs”</a></div></div>
 <div class="note">IMPORTANT CAVEAT: The Lipedema Foundation no longer uses a &#x27;Stage 4&#x27; designation, on the grounds that the lymphatic system can be compromised at any stage — lymphatic impairment is documented in Stages 2 and 3. Present Stage 4 as lipo-lymphedema, and note the debate. This is the intellectually honest framing and it will be the question a sharp student asks.</div>
 </section>
 <section class="card" id="differential_lip">
@@ -656,6 +709,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <tr><td>Onset trigger</td><td>Puberty, pregnancy, menopause</td><td>Surgery, radiation, infection, trauma</td></tr>
 </tbody></table></div>
 <p class="hint">Scroll the table sideways on a phone.</p>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: any of the above</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=lipedema%20lymphedema%20comparison&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “lipedema lymphedema comparison”</a><a href="https://commons.wikimedia.org/w/index.php?search=Stemmer%20sign&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “Stemmer sign”</a></div></div>
 <div class="note">They co-exist. Lipedema does not itself cause lymphedema — but central obesity, which frequently accompanies it, substantially raises lymphedema risk. Treat what you find.</div>
 </section>
 <section class="card" id="lipedema_treatment">
@@ -683,6 +737,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>PT before and after liposuction improves outcomes</li>
 <li>Insurance coverage remains inconsistent — this is a real barrier</li>
 </ul>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: any of the above</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=compression%20stocking%20leg&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “compression stocking leg”</a><a href="https://commons.wikimedia.org/w/index.php?search=aquatic%20therapy&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “aquatic therapy”</a></div></div>
 <div class="note">The single most valuable thing you may do is tell the patient this is a recognized disease and not a personal failure of willpower.</div>
 </section>
 <section class="card" id="red_flags">
@@ -708,6 +763,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Active malignancy — coordinate with oncology</li>
 <li>Peripheral neuropathy and sensory testing</li>
 </ul>
+<div class="sug"><div class="sh">Suggested images for this section</div><span class="fn">save as: any of the above</span><div class="chips"><a href="https://commons.wikimedia.org/w/index.php?search=cellulitis%20leg&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “cellulitis leg”</a><a href="https://commons.wikimedia.org/w/index.php?search=deep%20vein%20thrombosis&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Wikimedia — “deep vein thrombosis”</a></div></div>
 <div class="note">MLD is contraindicated in acute infection, acute DVT, and decompensated heart failure. When in doubt, do not treat — refer.</div>
 </section>
 <section class="card" id="takeaways">
@@ -726,6 +782,7 @@ footer .dis{margin-top:8px;font-style:italic}
 <li>Patient education and Phase II adherence determine long-term outcome.</li>
 </ol>
 </section>
+<section class="card" id="reference_decks"><div class="kick">Appendix</div><h2 class="sec">Source Decks &amp; Reference Material</h2><p class="lead">The existing presentations and documents this deck was built from. Open any of them to review how others have structured the same material.</p><ul class="refs"><li><a href="https://www.isl.arizona.edu/sites/default/files/2024-11/THE-DIAGNOSIS-AND-TREATMENT-OF-PERIPHERAL-LYMPHEDEMA-2023-CONSENSUS-DOCUMENT-OF-THE-INTERNATIONAL-SOCIETY-OF-LYMPHOLOGY.pdf" target="_blank" rel="noopener"><div class="rt">ISL 2023 Consensus Document</div><div class="rd">The staging authority. Stages 0–III, diagnosis, and treatment.</div><span class="rk">PDF · primary source</span></a></li><li><a href="https://www.slideserve.com/collin/lymphedema-overview-and-treatment-considerations" target="_blank" rel="noopener"><div class="rt">Linda Koehler, PT, CLT-LANA — Univ. of Minnesota</div><div class="rd">Best PT-focused deck found. CDT components, wound care, pain management.</div><span class="rk">Slide deck</span></a></li><li><a href="https://www.slideserve.com/lilly/lymphedema" target="_blank" rel="noopener"><div class="rt">Christina Hankins, PT, CLT, CWS — Lymphedema</div><div class="rd">Good objectives and outline structure to model.</div><span class="rk">Slide deck</span></a></li><li><a href="https://www.slideserve.com/lael/lymphedema-therapy" target="_blank" rel="noopener"><div class="rt">Lymphedema Therapy (compiled decks)</div><div class="rd">Several decks on one page, incl. stage descriptions and exercise evidence.</div><span class="rk">Slide deck</span></a></li><li><a href="https://www.slideserve.com/shoshana-reynolds/lymphedema-powerpoint-ppt-presentation" target="_blank" rel="noopener"><div class="rt">Lymphedema — assorted author decks</div><div class="rd">Ernandez, Richter, Arslan, Johansson. Mixed quality; useful for framing.</div><span class="rk">Slide deck</span></a></li><li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6666846/" target="_blank" rel="noopener"><div class="rt">Clinical Outcomes After PT for Secondary Lymphedema</div><div class="rd">Zuther &amp; Norton staging language in plain English.</div><span class="rk">Case report</span></a></li><li><a href="https://www.lipedema.org/staging" target="_blank" rel="noopener"><div class="rt">Lipedema Foundation — Staging</div><div class="rd">Best lipedema staging photos. Note: they no longer use “Stage 4”.</div><span class="rk">Reference + photos</span></a></li><li><a href="https://www.totallipedemacare.com/understanding-stage-4-lipedema-lipo-lymphedema/" target="_blank" rel="noopener"><div class="rt">Understanding Stage 4 Lipedema: Lipo-Lymphedema</div><div class="rd">The transition from lipedema to lipo-lymphedema.</div><span class="rk">Article</span></a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/30280233/" target="_blank" rel="noopener"><div class="rt">Differential diagnostics of lipedema and lymphedema</div><div class="rd">Practical guideline. Basis for the differential table.</div><span class="rk">PubMed</span></a></li><li><a href="https://www.northwell.edu/news/insights/lipedema-vs-lymphedema-what-to-know" target="_blank" rel="noopener"><div class="rt">Lipedema vs lymphedema — Northwell Health</div><div class="rd">Plain-language framing useful for patient education.</div><span class="rk">Article</span></a></li></ul><div class="note">Reviewing these is fine. Reusing their figures in a published deck is not — most contain third-party images the authors did not clear for redistribution. Use the per-slide image links instead; those are openly licensed. Structure, sequencing, and teaching approach are free to borrow from anyone.</div></section>
 <section class="card"><div class="kick">References</div><h2 class="sec">Sources</h2><ul class="pts"><li><strong>International Society of Lymphology</strong> — The Diagnosis and Treatment of Peripheral Lymphedema: 2023 Consensus Document <em>Lymphology 56 (2023) 133–151</em></li><li><strong>Zuther, J. &amp; Norton, S.</strong> — Lymphedema Management: The Comprehensive Guide for Practitioners <em>Thieme</em></li><li><strong>Lipedema Foundation</strong> — Staging of Lipedema <em>lipedema.org/staging</em></li><li><strong>Schmitz, K. et al.</strong> — Physical Activity and Lymphedema (PAL) Trial <em>NEJM / JAMA</em></li><li><strong>Koehler, L.</strong> — Lymphedema: Overview and Treatment Considerations <em>University of Minnesota</em></li><li><strong>Reich-Schupke, S. et al.</strong> — Differential diagnostics of lipedema and lymphedema: A practical guideline <em>PubMed 30280233</em></li></ul></section>
 </main>
 <footer><div class="wrap">

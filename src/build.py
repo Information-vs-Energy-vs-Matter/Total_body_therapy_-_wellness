@@ -97,6 +97,41 @@ ol.num li:before{content:counter(n);position:absolute;left:0;top:10px;width:26px
 figure{margin:18px 0 4px}
 figure img{width:100%%;height:auto;border-radius:10px;border:1px solid var(--line)}
 figcaption{font-size:12px;color:var(--slate);margin-top:7px;font-style:italic}
+.sug{margin:16px 0 4px;padding:15px 16px;background:#F2F9FA;border-radius:11px}
+.sug .sh{font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+         color:var(--teal);margin-bottom:9px}
+.sug .fn{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--slate);
+         background:#fff;border:1px solid var(--line);border-radius:6px;padding:3px 7px;
+         display:inline-block;margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips a{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;
+         padding:8px 13px;font-size:13px;font-weight:600;color:var(--deep);text-decoration:none}
+.chips a:active{background:var(--mist)}
+.refs{list-style:none}
+.refs li{border-bottom:1px solid var(--line);padding:0}
+.refs li:last-child{border-bottom:none}
+.refs a{display:block;padding:14px 4px;text-decoration:none;color:var(--ink)}
+.refs a:active{background:var(--mist)}
+.refs .rt{font-weight:700;font-size:15.5px;color:var(--deep)}
+.refs .rd{font-size:13.5px;color:var(--slate);margin-top:3px}
+.refs .rk{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.07em;
+          text-transform:uppercase;color:var(--teal);background:var(--mist);
+          border-radius:999px;padding:3px 9px;margin-top:7px}
+.pgrp{margin-bottom:16px}
+.pgrp .lic{font-size:13px;color:var(--slate);margin:6px 0 12px}
+.src{display:block;background:var(--deep);color:#fff;text-decoration:none;font-weight:700;
+     font-size:14.5px;padding:12px 16px;border-radius:10px;margin-bottom:14px}
+.pit{display:flex;gap:12px;align-items:flex-start;padding:12px 4px;
+     border-bottom:1px solid var(--line);cursor:pointer}
+.pit:last-child{border-bottom:none}
+.pit .bx{flex:0 0 22px;height:22px;border:2px solid var(--line);border-radius:6px;margin-top:2px}
+.pit.done .bx{background:var(--sea);border-color:var(--sea)}
+.pit.done .pt{text-decoration:line-through;color:#9BB0B8}
+.pit .pt{font-size:15px;font-weight:600}
+.pit .pf{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;
+         color:var(--teal);margin-top:3px;word-break:break-all}
+.pit .pw{font-size:12.5px;color:var(--slate);margin-top:2px}
+.star{color:var(--amber);font-weight:700}
 .gal{display:grid;gap:12px;margin:18px 0 4px}
 @media(min-width:640px){.gal:has(figure+figure){grid-template-columns:1fr 1fr}}
 .gal figure{margin:0}
@@ -205,6 +240,7 @@ def page(title, body, active, depth=0):
            ("Presentation", up + PRES + "/index.html", "pres"),
            ("Outline", up + PRES + "/outline.html", "outline"),
            ("Quiz", up + PRES + "/quiz.html", "quiz"),
+           ("Images", up + "images.html", "images"),
            ("Capabilities", up + "capabilities.html", "cap")]
     links = "".join(
         f'<a href="{h}" class="{"on" if k == active else ""}">{n}</a>' for n, h, k in nav)
@@ -301,6 +337,14 @@ def render_section(s, depth=1):
     elif s.get("photo_slot"):
         o.append('<div class="slot"><b>Clinical photo</b>%s</div>' % md(s["photo_slot"]))
 
+    if s.get("photo_links") and not found:
+        names = ", ".join(n + ".png" for n in s.get("photos", [])) or "any of the above"
+        chips = "".join('<a href="%s" target="_blank" rel="noopener">%s</a>'
+                        % (html.escape(u), md(t)) for t, u in s["photo_links"])
+        o.append('<div class="sug"><div class="sh">Suggested images for this section</div>'
+                 '<span class="fn">save as: %s</span>'
+                 '<div class="chips">%s</div></div>' % (md(names), chips))
+
     if s.get("note"):
         o.append('<div class="note">%s</div>' % md(s["note"]))
     o.append("</section>")
@@ -345,6 +389,20 @@ def build_presentation():
 
     for s in C["sections"]:
         body.append(render_section(s, depth=1))
+
+    rd = C.get("reference_decks")
+    if rd:
+        items = "".join(
+            '<li><a href="%s" target="_blank" rel="noopener">'
+            '<div class="rt">%s</div><div class="rd">%s</div>'
+            '<span class="rk">%s</span></a></li>'
+            % (html.escape(u), md(t), md(dsc), md(k)) for t, dsc, u, k in rd["items"])
+        body.append('<section class="card" id="reference_decks">'
+                    '<div class="kick">%s</div><h2 class="sec">%s</h2>'
+                    '<p class="lead">%s</p><ul class="refs">%s</ul>'
+                    '<div class="note">%s</div></section>'
+                    % (md(rd["kicker"]), md(rd["title"]), md(rd["lead"]),
+                       items, md(rd["note"])))
 
     body.append('<section class="card"><div class="kick">References</div>'
                 '<h2 class="sec">Sources</h2><ul class="pts">%s</ul></section>'
@@ -470,6 +528,79 @@ def build_capabilities():
     return page("Capabilities — " + M["org"], body, "cap", depth=0)
 
 
+def build_images():
+    IL = C["image_list"]
+    tier = {"free": ("b-live", "Free \u00b7 no permission needed"),
+            "check": ("b-ready", "Check each license"),
+            "ask": ("b-service", "Email and ask first"),
+            "own": ("b-live", "Sara owns these")}
+    pri = set(IL["priority"])
+    out = []
+
+    steps = "".join("<li>%s</li>" % md(x) for x in IL["howto"])
+    out.append('<section class="card"><div class="kick">How this works</div>'
+               '<h2 class="sec">Four steps</h2><ol class="num">%s</ol>'
+               '<div class="note">%s</div></section>' % (steps, md(IL["format_note"])))
+
+    for g in IL["groups"]:
+        cls, lbl = tier[g["tier"]]
+        src = ('<a class="src" href="%s" target="_blank" rel="noopener">%s &rarr;</a>'
+               % (html.escape(g["url"]), md(g["url_label"]))) if g.get("url") else ""
+        rows = []
+        for what, fn, where in g["items"]:
+            star = '<span class="star">\u2605 </span>' if fn.rsplit(".", 1)[0] in pri else ""
+            wh = '<div class="pw">%s</div>' % md(where) if where else ""
+            rows.append('<div class="pit" data-k="%s"><div class="bx"></div><div>'
+                        '<div class="pt">%s%s</div><div class="pf">%s</div>%s</div></div>'
+                        % (html.escape(fn), star, md(what), md(fn), wh))
+        note = '<div class="note">%s</div>' % md(g["note"]) if g.get("note") else ""
+        out.append('<section class="card pgrp"><span class="badge %s">%s</span>'
+                   '<h2 class="sec">%s</h2><p class="lic">%s</p>%s%s%s</section>'
+                   % (cls, lbl, md(g["h"]), md(g["lic"]), src, "".join(rows), note))
+
+    out.append('<section class="card"><span class="badge b-avoid">Not recommended</span>'
+               '<h2 class="sec">%s</h2><p class="lead">%s</p></section>'
+               % (md(IL["avoid"]["h"]), md(IL["avoid"]["body"])))
+
+    js = """
+<script>
+var K='tbtw_img_v1';
+function load(){try{return JSON.parse(localStorage.getItem(K))||{}}catch(e){return {}}}
+function save(o){try{localStorage.setItem(K,JSON.stringify(o))}catch(e){}}
+function count(){
+  var d=load(),n=document.querySelectorAll('.pit').length,c=0;
+  document.querySelectorAll('.pit').forEach(function(p){if(d[p.dataset.k])c++;});
+  document.getElementById('cnt').textContent=c+' of '+n+' collected';
+}
+var st=load();
+document.querySelectorAll('.pit').forEach(function(p){
+  if(st[p.dataset.k])p.classList.add('done');
+  p.addEventListener('click',function(){
+    var d=load();
+    if(d[p.dataset.k]){delete d[p.dataset.k];p.classList.remove('done');}
+    else{d[p.dataset.k]=1;p.classList.add('done');}
+    save(d);count();
+  });
+});
+document.getElementById('reset').addEventListener('click',function(){
+  save({});document.querySelectorAll('.pit').forEach(function(p){p.classList.remove('done')});count();
+});
+count();
+</script>"""
+
+    body = ('<div class="hero"><div class="wrap"><div class="kick">%s</div>'
+            '<h1>Pick the images</h1><p class="sub">%s</p>'
+            '<div class="who"><b id="cnt">0 collected</b> &nbsp;&middot;&nbsp; '
+            '<span class="cred">\u2605 = highest priority</span></div>'
+            '</div></div><main class="wrap">%s'
+            '<section class="card"><button type="button" id="reset" '
+            'style="width:100%%;border:1px solid var(--line);background:#fff;color:var(--slate);'
+            'font-weight:700;font-size:14px;padding:12px;border-radius:9px;cursor:pointer;'
+            'font-family:inherit">Reset all checkmarks</button></section>'
+            '</main>%s' % (md(M["org"]), md(IL["lead"]), "".join(out), js))
+    return page("Pick the images \u2014 " + M["title"], body, "images", depth=0)
+
+
 def build_hub():
     n = len(C["sections"])
     body = f"""<div class="hero"><div class="wrap">
@@ -513,6 +644,7 @@ def main():
     files = {
         "index.html": build_hub(),
         "capabilities.html": build_capabilities(),
+        "images.html": build_images(),
         PRES + "/index.html": build_presentation(),
         PRES + "/outline.html": build_outline(),
         PRES + "/quiz.html": build_quiz(),

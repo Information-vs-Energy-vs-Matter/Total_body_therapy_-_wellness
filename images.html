@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pick the images — Lymphedema &amp; Lipedema</title>
+<meta name="description" content="Lymphedema &amp; Lipedema — Total Body Therapy &amp; Wellness">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --deep:#025462; --teal:#028090; --mid:#1C7293; --sea:#00A896;
+  --slate:#36454F; --mist:#F4F8F9; --line:#DCE6E8; --ink:#1B2A30;
+  --amber:#B8730A; --rose:#9E3A5A;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+     color:var(--ink);background:var(--mist);line-height:1.65;font-size:16px}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+a{color:var(--teal)}
+
+/* ---- header ---- */
+.top{background:var(--deep);color:#fff;padding:16px 0;position:sticky;top:0;z-index:50;
+     box-shadow:0 1px 8px rgba(0,0,0,.16)}
+.top .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.top .brand{font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+            font-weight:700;color:#8FD3DE;text-decoration:none}
+.top nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.top nav a{color:#DCEEF2;text-decoration:none;font-size:13px;font-weight:600;
+           padding:7px 12px;border-radius:8px;background:rgba(255,255,255,.09)}
+.top nav a.on{background:#fff;color:var(--deep)}
+
+/* ---- hero ---- */
+.hero{background:var(--deep);color:#fff;padding:46px 0 52px}
+.hero .kick{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+            color:#8FD3DE;font-weight:700;margin-bottom:14px}
+.hero h1{font-size:30px;line-height:1.24;font-weight:700;letter-spacing:-.015em}
+.hero .sub{margin-top:14px;color:#CBE6EB;font-size:17px}
+.hero .who{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);
+           font-size:15px;color:#E4F2F5}
+.hero .who b{color:#fff}
+.hero .who .cred{font-size:13px;color:#A8CFD8}
+
+/* ---- QR ---- */
+.qr{background:#fff;border-radius:18px;padding:26px 20px 22px;text-align:center;
+    margin:0 auto;max-width:520px;box-shadow:0 6px 26px rgba(0,0,0,.13)}
+.qr h2{font-size:15px;color:var(--deep);letter-spacing:.1em;text-transform:uppercase;
+       margin-bottom:6px}
+.qr p{font-size:13px;color:var(--slate);margin-bottom:16px}
+.qr img{width:100%;max-width:400px;height:auto;display:block;margin:0 auto}
+.qr .url{margin-top:14px;font-size:12px;color:var(--slate);word-break:break-all;
+         font-family:ui-monospace,Menlo,Consolas,monospace}
+@media print{.qr img{max-width:300px}}
+
+/* ---- content ---- */
+main{padding:34px 0 70px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;
+      padding:24px;margin-bottom:16px}
+.kick{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--teal);font-weight:700;margin-bottom:8px}
+h2.sec{font-size:23px;color:var(--deep);font-weight:700;line-height:1.25;
+       letter-spacing:-.01em;margin-bottom:12px}
+.lead{font-size:16px;color:var(--slate);margin-bottom:18px}
+h3.blk{font-size:15px;color:var(--deep);font-weight:700;margin:20px 0 9px}
+ul.pts{list-style:none}
+ul.pts li{position:relative;padding:6px 0 6px 20px;font-size:15px;
+          border-bottom:1px solid var(--line)}
+ul.pts li:last-child{border-bottom:none}
+ul.pts li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;
+                 border-radius:50%;background:var(--sea)}
+ol.num{list-style:none;counter-reset:n}
+ol.num li{counter-increment:n;position:relative;padding:10px 0 10px 40px;font-size:15px;
+          border-bottom:1px solid var(--line)}
+ol.num li:last-child{border-bottom:none}
+ol.num li:before{content:counter(n);position:absolute;left:0;top:10px;width:26px;height:26px;
+                 border-radius:50%;background:var(--deep);color:#fff;font-size:13px;
+                 font-weight:700;display:flex;align-items:center;justify-content:center}
+.note{margin-top:18px;padding:14px 16px;background:var(--mist);
+      border-radius:10px;font-size:14px;color:var(--slate)}
+.note b{color:var(--deep)}
+figure{margin:18px 0 4px}
+figure img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+figcaption{font-size:12px;color:var(--slate);margin-top:7px;font-style:italic}
+.sug{margin:16px 0 4px;padding:15px 16px;background:#F2F9FA;border-radius:11px}
+.sug .sh{font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+         color:var(--teal);margin-bottom:9px}
+.sug .fn{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--slate);
+         background:#fff;border:1px solid var(--line);border-radius:6px;padding:3px 7px;
+         display:inline-block;margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips a{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;
+         padding:8px 13px;font-size:13px;font-weight:600;color:var(--deep);text-decoration:none}
+.chips a:active{background:var(--mist)}
+.refs{list-style:none}
+.refs li{border-bottom:1px solid var(--line);padding:0}
+.refs li:last-child{border-bottom:none}
+.refs a{display:block;padding:14px 4px;text-decoration:none;color:var(--ink)}
+.refs a:active{background:var(--mist)}
+.refs .rt{font-weight:700;font-size:15.5px;color:var(--deep)}
+.refs .rd{font-size:13.5px;color:var(--slate);margin-top:3px}
+.refs .rk{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.07em;
+          text-transform:uppercase;color:var(--teal);background:var(--mist);
+          border-radius:999px;padding:3px 9px;margin-top:7px}
+.pgrp{margin-bottom:16px}
+.pgrp .lic{font-size:13px;color:var(--slate);margin:6px 0 12px}
+.src{display:block;background:var(--deep);color:#fff;text-decoration:none;font-weight:700;
+     font-size:14.5px;padding:12px 16px;border-radius:10px;margin-bottom:14px}
+.pit{display:flex;gap:12px;align-items:flex-start;padding:12px 4px;
+     border-bottom:1px solid var(--line);cursor:pointer}
+.pit:last-child{border-bottom:none}
+.pit .bx{flex:0 0 22px;height:22px;border:2px solid var(--line);border-radius:6px;margin-top:2px}
+.pit.done .bx{background:var(--sea);border-color:var(--sea)}
+.pit.done .pt{text-decoration:line-through;color:#9BB0B8}
+.pit .pt{font-size:15px;font-weight:600}
+.pit .pf{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;
+         color:var(--teal);margin-top:3px;word-break:break-all}
+.pit .pw{font-size:12.5px;color:var(--slate);margin-top:2px}
+.star{color:var(--amber);font-weight:700}
+.gal{display:grid;gap:12px;margin:18px 0 4px}
+@media(min-width:640px){.gal:has(figure+figure){grid-template-columns:1fr 1fr}}
+.gal figure{margin:0}
+.slot{margin:16px 0 4px;padding:16px;border:2px dashed var(--line);border-radius:10px;
+      font-size:13px;color:var(--slate);text-align:center}
+.slot b{display:block;color:var(--deep);font-size:12px;letter-spacing:.1em;
+        text-transform:uppercase;margin-bottom:4px}
+.stagetag{display:inline-block;background:var(--deep);color:#fff;font-size:12px;
+          font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+          padding:5px 12px;border-radius:999px;margin-bottom:10px}
+
+/* ---- tables ---- */
+.tw{overflow-x:auto;margin:16px 0 4px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+th{background:var(--deep);color:#fff;text-align:left;padding:11px 12px;
+   font-size:13px;font-weight:700}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:var(--mist)}
+td:first-child{font-weight:700;color:var(--deep)}
+.hint{font-size:12px;color:var(--slate);margin-top:6px;font-style:italic}
+
+/* ---- stage cards ---- */
+.stages{display:grid;gap:14px;margin-top:16px}
+.stage{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fff}
+.stage .n{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+          color:#fff;background:var(--teal);display:inline-block;padding:4px 11px;
+          border-radius:999px;margin-bottom:8px}
+.stage h4{font-size:17px;color:var(--deep);margin-bottom:10px}
+
+/* ---- pillars ---- */
+.pillars{display:grid;gap:12px;margin-top:16px}
+@media(min-width:640px){.pillars{grid-template-columns:1fr 1fr}}
+.pill{background:var(--deep);color:#fff;border-radius:12px;padding:18px}
+.pill .n{width:30px;height:30px;border-radius:50%;background:#fff;color:var(--deep);
+         font-weight:700;display:flex;align-items:center;justify-content:center;
+         margin-bottom:10px;font-size:15px}
+.pill h4{font-size:16px;margin-bottom:6px}
+.pill p{font-size:13.5px;color:#CBE6EB}
+
+/* ---- quiz ---- */
+.q{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;
+   overflow:hidden}
+.q .qq{padding:18px;font-size:15.5px;font-weight:600;color:var(--ink)}
+.q .qn{display:inline-block;background:var(--teal);color:#fff;font-size:12px;
+       font-weight:700;width:24px;height:24px;border-radius:50%;text-align:center;
+       line-height:24px;margin-right:9px}
+.q button{width:100%;border:none;background:var(--mist);color:var(--deep);
+          font-size:14px;font-weight:700;padding:13px;cursor:pointer;
+          border-top:1px solid var(--line);font-family:inherit;text-align:center}
+.q button:hover{background:#E6F1F3}
+.q .qa{display:none;padding:18px;background:#F2F9FA;font-size:15px;color:var(--slate);
+       border-top:1px solid var(--line)}
+.q.open .qa{display:block}
+.q.open button{background:var(--deep);color:#fff}
+.qbar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.qbar button{flex:1;min-width:130px;border:1px solid var(--line);background:#fff;
+             color:var(--deep);font-weight:700;font-size:13.5px;padding:11px;
+             border-radius:9px;cursor:pointer;font-family:inherit}
+.qbar button:hover{background:var(--mist)}
+
+/* ---- outline / hub ---- */
+.olist{list-style:none;counter-reset:o}
+.olist li{counter-increment:o;border-bottom:1px solid var(--line)}
+.olist li:last-child{border-bottom:none}
+.olist a{display:flex;gap:14px;align-items:baseline;padding:13px 4px;
+         text-decoration:none;color:var(--ink)}
+.olist a:hover{background:var(--mist)}
+.olist .on{color:var(--teal);font-weight:700;font-size:13px;min-width:26px}
+.olist .ot{font-weight:600;font-size:15.5px}
+.olist .od{font-size:13px;color:var(--slate);margin-top:2px}
+.olist .cut{font-size:11px;color:var(--amber);font-weight:700;letter-spacing:.06em;
+            text-transform:uppercase;margin-left:6px}
+.pcard{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;
+       padding:22px;text-decoration:none;color:var(--ink);margin-bottom:14px}
+.pcard:hover{border-color:var(--teal)}
+.pcard h3{font-size:19px;color:var(--deep);margin-bottom:6px}
+.pcard p{font-size:14px;color:var(--slate)}
+.pcard .go{margin-top:12px;font-size:13px;font-weight:700;color:var(--teal)}
+
+/* ---- capabilities ---- */
+.cap{margin-bottom:16px}
+.cap .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;
+            text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.b-live{background:#E1F5EF;color:#046B5D}
+.b-ready{background:#E3EEF6;color:#1C5A85}
+.b-service{background:#FBEEDA;color:#8A5606}
+.b-avoid{background:#FAE7EC;color:#8C2F4C}
+.cap dl{margin-top:4px}
+.cap dt{font-weight:700;font-size:14.5px;color:var(--deep);margin-top:13px}
+.cap dd{font-size:14px;color:var(--slate);margin-top:2px}
+
+.dl{display:inline-block;background:var(--deep);color:#fff;text-decoration:none;
+    font-weight:700;font-size:15px;padding:13px 22px;border-radius:10px}
+.dl:hover{background:var(--teal)}
+footer{border-top:1px solid var(--line);padding:26px 0 50px;font-size:13px;color:#6B7C84}
+footer b{color:var(--slate)}
+footer .dis{margin-top:8px;font-style:italic}
+@media(min-width:700px){.hero h1{font-size:38px}h2.sec{font-size:26px}}
+@media print{.top,.qbar{display:none}.q .qa{display:block}.card{break-inside:avoid}}
+</style>
+</head><body>
+<header class="top"><div class="wrap">
+<a href="index.html" class="brand">Total Body Therapy &amp; Wellness</a>
+<nav><a href="index.html" class="">Home</a><a href="lymphedema/index.html" class="">Presentation</a><a href="lymphedema/outline.html" class="">Outline</a><a href="lymphedema/quiz.html" class="">Quiz</a><a href="images.html" class="on">Images</a><a href="capabilities.html" class="">Capabilities</a></nav>
+</div></header>
+<div class="hero"><div class="wrap"><div class="kick">Total Body Therapy &amp; Wellness</div><h1>Pick the images</h1><p class="sub">Tap a source to open it. Tap a row to mark it done — your progress is saved on this device.</p><div class="who"><b id="cnt">0 collected</b> &nbsp;&middot;&nbsp; <span class="cred">★ = highest priority</span></div></div></div><main class="wrap"><section class="card"><div class="kick">How this works</div><h2 class="sec">Four steps</h2><ol class="num"><li>Pick the images you want from the sources below</li><li>Save each one using the exact filename shown</li><li>Send them back to be added to the deck and this site</li><li>Skipped items just stay as they are — nothing breaks</li></ol><div class="note">PNG or JPG, 1200px wide or larger. Bigger is fine.</div></section><section class="card pgrp"><span class="badge b-live">Free · no permission needed</span><h2 class="sec">Servier Medical Art</h2><p class="lic">CC BY 4.0 — free to use, adapt, and use commercially. Credit is added automatically.</p><a class="src" href="https://smart.servier.com/category/medical-specialties/cardiology-phlebology/" target="_blank" rel="noopener">Open Servier → Cardiology &amp; Phlebology &rarr;</a><div class="pit" data-k="anat_lymphatic_system.png"><div class="bx"></div><div><div class="pt"><span class="star">★ </span>Full lymphatic system, whole body</div><div class="pf">anat_lymphatic_system.png</div><div class="pw">Anatomy → Lymphatic system</div></div></div><div class="pit" data-k="anat_lymph_node.png"><div class="bx"></div><div><div class="pt"><span class="star">★ </span>Lymph node structure, cutaway</div><div class="pf">anat_lymph_node.png</div><div class="pw">Cardiology → Lymph node</div></div></div><div class="pit" data-k="anat_lymph_circulation.png"><div class="bx"></div><div><div class="pt">Lymphatic circulation / vessel</div><div class="pf">anat_lymph_circulation.png</div><div class="pw">Cardiology → Lymphatic circulation</div></div></div><div class="pit" data-k="anat_lymph_capillary.png"><div class="bx"></div><div><div class="pt">Lymphatic capillary + interstitium</div><div class="pf">anat_lymph_capillary.png</div><div class="pw">Search “lymphatic vessel”</div></div></div><div class="pit" data-k="anat_thoracic_duct.png"><div class="bx"></div><div><div class="pt">Thoracic duct / subclavian junction</div><div class="pf">anat_thoracic_duct.png</div><div class="pw">Search “thoracic duct”</div></div></div><div class="note">Best single source. Some images download as editable PowerPoint files.</div></section><section class="card pgrp"><span class="badge b-live">Free · no permission needed</span><h2 class="sec">OpenStax Anatomy &amp; Physiology</h2><p class="lic">CC BY — free to use. Textbook quality, projects well.</p><a class="src" href="https://openstax.org/details/books/anatomy-and-physiology-2e" target="_blank" rel="noopener">Open OpenStax → Ch. 21 Lymphatic System &rarr;</a><div class="pit" data-k="anat_openstax_system.png"><div class="bx"></div><div><div class="pt">Whole-body lymphatic system figure</div><div class="pf">anat_openstax_system.png</div><div class="pw">Chapter 21</div></div></div><div class="pit" data-k="anat_openstax_capillary.png"><div class="bx"></div><div><div class="pt">Lymphatic capillaries / fluid movement</div><div class="pf">anat_openstax_capillary.png</div><div class="pw">Chapter 21</div></div></div></section><section class="card pgrp"><span class="badge b-live">Free · no permission needed</span><h2 class="sec">NCI Visuals Online / SEER</h2><p class="lic">US government — public domain. No attribution needed.</p><a class="src" href="https://visualsonline.cancer.gov/" target="_blank" rel="noopener">Open NCI Visuals Online &rarr;</a><div class="pit" data-k="anat_node_regions.png"><div class="bx"></div><div><div class="pt">Lymph node regions / drainage map</div><div class="pf">anat_node_regions.png</div><div class="pw">Search “lymphatic system”</div></div></div><div class="pit" data-k="anat_axillary_nodes.png"><div class="bx"></div><div><div class="pt">Axillary node levels</div><div class="pf">anat_axillary_nodes.png</div><div class="pw">Search “axillary lymph node”</div></div></div></section><section class="card pgrp"><span class="badge b-ready">Check each license</span><h2 class="sec">Wikimedia Commons</h2><p class="lic">Mixed. Use only images marked CC BY, CC BY-SA, or Public domain. Skip “all rights reserved.”</p><a class="src" href="https://commons.wikimedia.org/w/index.php?search=lymphedema&amp;title=Special:MediaSearch&amp;type=image" target="_blank" rel="noopener">Search Commons for “lymphedema” &rarr;</a><div class="pit" data-k="dx_stemmer_positive.png"><div class="bx"></div><div><div class="pt"><span class="star">★ </span>Stemmer’s sign, positive</div><div class="pf">dx_stemmer_positive.png</div><div class="pw">Search “Stemmer sign”</div></div></div><div class="pit" data-k="stage_clinical_leg.png"><div class="bx"></div><div><div class="pt"><span class="star">★ </span>Lymphedema of the leg, clinical</div><div class="pf">stage_clinical_leg.png</div><div class="pw">Search “lymphedema”</div></div></div><div class="pit" data-k="lip_clinical_legs.png"><div class="bx"></div><div><div class="pt"><span class="star">★ </span>Lipedema legs, clinical</div><div class="pf">lip_clinical_legs.png</div><div class="pw">Search “lipedema”</div></div></div><div class="pit" data-k="anat_grays_thoracic_duct.png"><div class="bx"></div><div><div class="pt">Thoracic duct, Gray’s 1918 plate</div><div class="pf">anat_grays_thoracic_duct.png</div><div class="pw">Public domain, zero restrictions</div></div></div></section><section class="card pgrp"><span class="badge b-service">Email and ask first</span><h2 class="sec">Lipedema Foundation</h2><p class="lic">Not open-licensed — email and ask. They are a patient-advocacy nonprofit and routinely grant permission for clinician education.</p><a class="src" href="https://www.lipedema.org/staging" target="_blank" rel="noopener">Open Lipedema Foundation staging page &rarr;</a><div class="pit" data-k="lip_stage1.png"><div class="bx"></div><div><div class="pt">Lipedema Stage 1</div><div class="pf">lip_stage1.png</div></div></div><div class="pit" data-k="lip_stage2.png"><div class="bx"></div><div><div class="pt">Lipedema Stage 2</div><div class="pf">lip_stage2.png</div></div></div><div class="pit" data-k="lip_stage3.png"><div class="bx"></div><div><div class="pt">Lipedema Stage 3</div><div class="pf">lip_stage3.png</div></div></div><div class="pit" data-k="lip_stage4.png"><div class="bx"></div><div><div class="pt">Lipo-lymphedema (Stage 4)</div><div class="pf">lip_stage4.png</div></div></div><div class="note">The best lipedema staging photos anywhere. Worth the email — nothing else compares.</div></section><section class="card pgrp"><span class="badge b-service">Email and ask first</span><h2 class="sec">Garment &amp; bandage manufacturers</h2><p class="lic">Juzo, Medi, Sigvaris, Lohmann &amp; Rauscher, Jobst all have education image libraries and usually say yes to a clinician for teaching use.</p><a class="src" href="https://www.juzousa.com/" target="_blank" rel="noopener">Open Juzo &rarr;</a><div class="pit" data-k="tx_bandaging.png"><div class="bx"></div><div><div class="pt"><span class="star">★ </span>Short-stretch bandaging, layered on a leg</div><div class="pf">tx_bandaging.png</div></div></div><div class="pit" data-k="tx_garment_flatknit.png"><div class="bx"></div><div><div class="pt">Flat-knit compression garment</div><div class="pf">tx_garment_flatknit.png</div></div></div><div class="pit" data-k="tx_mld_hands.png"><div class="bx"></div><div><div class="pt">MLD hand technique</div><div class="pf">tx_mld_hands.png</div></div></div></section><section class="card pgrp"><span class="badge b-live">Sara owns these</span><h2 class="sec">TBTW’s own photos</h2><p class="lic">Sara owns these outright. No licensing question — and they beat stock every time.</p><a class="src" href="https://www.instagram.com/tbtwnc/" target="_blank" rel="noopener">Open Instagram @tbtwnc (1,077 posts) &rarr;</a><div class="pit" data-k="tbtw_clinic_exterior.jpg"><div class="bx"></div><div><div class="pt"><span class="star">★ </span>NEW CLINIC — 260 Pine State St, exterior</div><div class="pf">tbtw_clinic_exterior.jpg</div></div></div><div class="pit" data-k="tbtw_clinic_interior.jpg"><div class="bx"></div><div><div class="pt">New clinic — interior / reception</div><div class="pf">tbtw_clinic_interior.jpg</div></div></div><div class="pit" data-k="tbtw_treatment_room.jpg"><div class="bx"></div><div><div class="pt">Treatment room</div><div class="pf">tbtw_treatment_room.jpg</div></div></div><div class="pit" data-k="tbtw_sara.jpg"><div class="bx"></div><div><div class="pt"><span class="star">★ </span>Dr. Sara Morrison headshot</div><div class="pf">tbtw_sara.jpg</div></div></div><div class="pit" data-k="tbtw_andie.jpg"><div class="bx"></div><div><div class="pt">Dr. Andie Cahoon headshot</div><div class="pf">tbtw_andie.jpg</div></div></div><div class="pit" data-k="tbtw_logo.png"><div class="bx"></div><div><div class="pt">TBTW logo, high resolution</div><div class="pf">tbtw_logo.png</div></div></div><div class="pit" data-k="tbtw_lymph_treatment.jpg"><div class="bx"></div><div><div class="pt">Lymphedema treatment in progress</div><div class="pf">tbtw_lymph_treatment.jpg</div></div></div><div class="pit" data-k="tbtw_gym.jpg"><div class="bx"></div><div><div class="pt">Gym floor / equipment</div><div class="pf">tbtw_gym.jpg</div></div></div><div class="note">The new clinic photos are almost certainly already on the Instagram.</div></section><section class="card pgrp"><span class="badge b-live">Sara owns these</span><h2 class="sec">Sara’s own patient photos</h2><p class="lic">Requires WRITTEN CONSENT. Crop or mask anything identifying. For an in-service to her own staff these are the most persuasive images available.</p><div class="pit" data-k="stage1_photo.jpg"><div class="bx"></div><div><div class="pt">Stage I — soft pitting edema</div><div class="pf">stage1_photo.jpg</div></div></div><div class="pit" data-k="stage2_photo.jpg"><div class="bx"></div><div><div class="pt">Stage II — firm, positive Stemmer</div><div class="pf">stage2_photo.jpg</div></div></div><div class="pit" data-k="stage3_photo.jpg"><div class="bx"></div><div><div class="pt">Stage III — skin changes</div><div class="pf">stage3_photo.jpg</div></div></div><div class="pit" data-k="tx_before_after.jpg"><div class="bx"></div><div><div class="pt">Before / after CDT</div><div class="pf">tx_before_after.jpg</div></div></div></section><section class="card"><span class="badge b-avoid">Not recommended</span><h2 class="sec">Please don’t use</h2><p class="lead">Figures pulled from other people’s slide decks, textbooks, or journal articles without permission. This site is public and carries the practice name — the exposure would be Sara’s. Everything listed above is either openly licensed, public domain, hers, or a permission request worth making.</p></section><section class="card"><button type="button" id="reset" style="width:100%;border:1px solid var(--line);background:#fff;color:var(--slate);font-weight:700;font-size:14px;padding:12px;border-radius:9px;cursor:pointer;font-family:inherit">Reset all checkmarks</button></section></main>
+<script>
+var K='tbtw_img_v1';
+function load(){try{return JSON.parse(localStorage.getItem(K))||{}}catch(e){return {}}}
+function save(o){try{localStorage.setItem(K,JSON.stringify(o))}catch(e){}}
+function count(){
+  var d=load(),n=document.querySelectorAll('.pit').length,c=0;
+  document.querySelectorAll('.pit').forEach(function(p){if(d[p.dataset.k])c++;});
+  document.getElementById('cnt').textContent=c+' of '+n+' collected';
+}
+var st=load();
+document.querySelectorAll('.pit').forEach(function(p){
+  if(st[p.dataset.k])p.classList.add('done');
+  p.addEventListener('click',function(){
+    var d=load();
+    if(d[p.dataset.k]){delete d[p.dataset.k];p.classList.remove('done');}
+    else{d[p.dataset.k]=1;p.classList.add('done');}
+    save(d);count();
+  });
+});
+document.getElementById('reset').addEventListener('click',function(){
+  save({});document.querySelectorAll('.pit').forEach(function(p){p.classList.remove('done')});count();
+});
+count();
+</script>
+<footer><div class="wrap">
+<b>Total Body Therapy &amp; Wellness</b> &middot; 260 Pine State Street, Lillington, NC 27546 &middot; (910) 893-2850
+<div class="dis">Educational use only. Not a substitute for individualized medical evaluation or care.</div>
+</div></footer>
+</body></html>

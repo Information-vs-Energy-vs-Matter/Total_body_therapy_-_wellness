@@ -13,7 +13,8 @@
     "audience": "PT students & staff in-service",
     "base_url": "https://information-vs-energy-vs-matter.github.io/Total_body_therapy_-_wellness",
     "pres_path": "/lymphedema/",
-    "disclaimer": "Educational use only. Not a substitute for individualized medical evaluation or care."
+    "disclaimer": "Educational use only. Not a substitute for individualized medical evaluation or care.",
+    "deck_file": "Lymphedema_Lipedema_TBTW.pptx"
   },
 
   "palette": {

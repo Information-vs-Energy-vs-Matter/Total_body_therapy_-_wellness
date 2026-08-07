@@ -185,6 +185,9 @@ td:first-child{font-weight:700;color:var(--deep)}
 .cap dt{font-weight:700;font-size:14.5px;color:var(--deep);margin-top:13px}
 .cap dd{font-size:14px;color:var(--slate);margin-top:2px}
 
+.dl{display:inline-block;background:var(--deep);color:#fff;text-decoration:none;
+    font-weight:700;font-size:15px;padding:13px 22px;border-radius:10px}
+.dl:hover{background:var(--teal)}
 footer{border-top:1px solid var(--line);padding:26px 0 50px;font-size:13px;color:#6B7C84}
 footer b{color:var(--slate)}
 footer .dis{margin-top:8px;font-style:italic}
@@ -296,6 +299,15 @@ def build_presentation():
             "<p>Scan to open this presentation on your own device</p>"
             '<img src="../assets/qr.svg" alt="QR code linking to this presentation">'
             '<div class="url">%s</div></div>' % html.escape(url)]
+
+    if M.get("deck_file"):
+        body.append(
+            '<section class="card"><div class="kick">Download</div>'
+            '<h2 class="sec">PowerPoint deck</h2>'
+            '<p class="lead">The same material as an editable 32-slide presentation, '
+            'with speaker notes. Optional slides are flagged in the notes.</p>'
+            '<p><a class="dl" href="../%s">Download the .pptx</a></p></section>'
+            % html.escape(M["deck_file"]))
 
     ab = C["about_org"]
     body.append('<section class="card" id="about"><div class="kick">About</div>'

@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """Generate QR code + all vector diagrams. Reads content.json; hardcodes nothing."""
-import json, os
+import json, os, textwrap
+
+
+def wrap(s, n):
+    return "\n".join(textwrap.wrap(s, n)) if s else s
+
 import qrcode
 import qrcode.image.svg
 import matplotlib
@@ -253,22 +258,22 @@ def d_stage_progression():
 
 # ------------------------------------------------------- 5. CDT pillars
 def d_cdt_pillars():
-    f, ax = fig(10, 4.8)
+    f, ax = fig(10, 4.4)
     pillars = C["sections"]
     pil = next(s for s in pillars if s["id"] == "cdt_overview")["pillars"]
     cols = [P["seafoam"], P["teal"], P["mid"], P["deep"]]
     pw = 22.0
     for i, p in enumerate(pil):
         x = 2.0 + i * (pw + 2.0)
-        box(ax, x, 8, pw, 30, cols[i], r=1.8)
-        ax.add_patch(Circle((x + pw / 2, 32), 4.0, fc="white", zorder=4))
-        txt(ax, x + pw / 2, 32, p["n"], size=15, c=cols[i], w="bold", z=5)
-        txt(ax, x + pw / 2, 24.5, p["h"], size=10.5, c="white", w="bold")
-        txt(ax, x + pw / 2, 15, p["d"], size=8.2, c="white")
+        box(ax, x, 6, pw, 32, cols[i], r=1.8)
+        ax.add_patch(Circle((x + pw / 2, 34.4), 2.9, fc="white", zorder=4))
+        txt(ax, x + pw / 2, 34.4, p["n"], size=13, c=cols[i], w="bold", z=5)
+        txt(ax, x + pw / 2, 26.2, wrap(p["h"], 15), size=10.5, c="white", w="bold")
+        txt(ax, x + pw / 2, 15.0, wrap(p["d"], 24), size=8.0, c="white")
 
-    txt(ax, 50, 44, "Complete Decongestive Therapy \u2014 four components",
+    txt(ax, 50, 40.5, "Complete Decongestive Therapy \u2014 four components",
         size=12.5, c=P["deep"], w="bold")
-    txt(ax, 50, 3.5,
+    txt(ax, 50, 2.8,
         "Phase I intensive (3\u20136 weeks, 4\u20135\u00d7/week)  \u2192  Phase II maintenance (lifelong self-management)",
         size=9, c=P["slate"], style="italic")
     save(f, "cdt_pillars")

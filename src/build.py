@@ -97,6 +97,9 @@ ol.num li:before{content:counter(n);position:absolute;left:0;top:10px;width:26px
 figure{margin:18px 0 4px}
 figure img{width:100%%;height:auto;border-radius:10px;border:1px solid var(--line)}
 figcaption{font-size:12px;color:var(--slate);margin-top:7px;font-style:italic}
+.gal{display:grid;gap:12px;margin:18px 0 4px}
+@media(min-width:640px){.gal:has(figure+figure){grid-template-columns:1fr 1fr}}
+.gal figure{margin:0}
 .slot{margin:16px 0 4px;padding:16px;border:2px dashed var(--line);border-radius:10px;
       font-size:13px;color:var(--slate);text-align:center}
 .slot b{display:block;color:var(--deep);font-size:12px;letter-spacing:.1em;
@@ -225,7 +228,20 @@ def page(title, body, active, depth=0):
 
 
 # ------------------------------------------------------------ section render
+PHOTO_DIR = os.path.join(HERE, M.get("photo_dir", "assets/photos"))
+PHOTO_EXT = (".png", ".jpg", ".jpeg", ".webp")
+
+
+def photo_path(name):
+    """Return the site-relative path for a captured photo, or None if absent."""
+    for ext in PHOTO_EXT:
+        if os.path.exists(os.path.join(PHOTO_DIR, name + ext)):
+            return M.get("photo_dir", "assets/photos") + "/" + name + ext
+    return None
+
+
 def render_section(s, depth=1):
+    up = "../" * depth
     o = ['<section class="card" id="%s">' % s["id"]]
     if s.get("kicker"):
         o.append('<div class="kick">%s</div>' % md(s["kicker"]))
@@ -275,7 +291,14 @@ def render_section(s, depth=1):
         o += ["<li>%s</li>" % md(i) for i in s["numbered"]]
         o.append("</ol>")
 
-    if s.get("photo_slot"):
+    found = [p for p in (photo_path(nm) for nm in s.get("photos", [])) if p]
+    if found:
+        o.append('<div class="gal">')
+        for p in found:
+            o.append('<figure><img src="%s%s" alt="%s" loading="lazy"></figure>'
+                     % (up, p, md(s["title"])))
+        o.append("</div>")
+    elif s.get("photo_slot"):
         o.append('<div class="slot"><b>Clinical photo</b>%s</div>' % md(s["photo_slot"]))
 
     if s.get("note"):
@@ -482,6 +505,9 @@ def main():
         shutil.rmtree(OUT)
     os.makedirs(os.path.join(OUT, PRES), exist_ok=True)
     shutil.copytree(os.path.join(HERE, "assets"), os.path.join(OUT, "assets"))
+    npics = len([f for f in os.listdir(PHOTO_DIR)
+                 if f.lower().endswith(PHOTO_EXT)]) if os.path.isdir(PHOTO_DIR) else 0
+    print("  captured photos found: %d" % npics)
     open(os.path.join(OUT, ".nojekyll"), "w").close()
 
     files = {

@@ -7,6 +7,23 @@ const HERE = __dirname;
 const C = JSON.parse(fs.readFileSync(path.join(HERE, "content.json"), "utf8"));
 const M = C.meta, P = C.palette;
 const A = (n) => path.join(HERE, "assets", n + ".png");
+
+// captured photos land in assets/photos/ — use them when present
+const PHOTO_DIR = path.join(HERE, "assets", "photos");
+const PHOTO_EXT = [".png", ".jpg", ".jpeg", ".webp"];
+function photo(name) {
+  for (const e of PHOTO_EXT) {
+    const f = path.join(PHOTO_DIR, name + e);
+    if (fs.existsSync(f)) return f;
+  }
+  return null;
+}
+/** first available captured photo for a section, else null */
+function secPhoto(sec) {
+  for (const nm of (sec.photos || [])) { const f = photo(nm); if (f) return f; }
+  return null;
+}
+let PHOTOS_USED = 0;
 const S = (id) => C.sections.find((s) => s.id === id);
 
 const W = 13.333, H = 7.5;
@@ -237,13 +254,16 @@ function contentSlide(id, opt) {
   const blocks = opt.blocks
     ? opt.blocks.map((i) => sec.blocks[i])
     : (sec.blocks || []);
-  const img = opt.image !== undefined ? opt.image : sec.diagram;
+  let img = opt.image !== undefined ? opt.image : sec.diagram;
+  let imgPath = img ? A(img) : null;
+  const cap = opt.image === undefined ? secPhoto(sec) : null;
+  if (cap) { imgPath = cap; img = true; PHOTOS_USED += 1; }
   const BOT = 0.62;                       // bottom margin
   const avail = H - y - BOT;
 
   if (img && !blocks.length) {
     s.addImage({
-      path: A(img), x: MX, y: y, w: CW, h: avail,
+      path: imgPath, x: MX, y: y, w: CW, h: avail,
       sizing: { type: "contain", w: CW, h: avail },
     });
   } else if (img) {
@@ -253,7 +273,7 @@ function contentSlide(id, opt) {
     const gap = 0.18;
     const size = fitStack(blocks, bw - 0.56, avail, gap);
     s.addImage({
-      path: A(img), x: W - MX - iw, y: y + 0.1, w: iw, h: Math.min(3.6, avail - 0.2),
+      path: imgPath, x: W - MX - iw, y: y + 0.1, w: iw, h: Math.min(3.6, avail - 0.2),
       sizing: { type: "contain", w: iw, h: Math.min(3.6, avail - 0.2) },
     });
     let by = y;
@@ -392,6 +412,12 @@ function stageSlide(id) {
       x: MX, y: y + ch + 0.14, w: CW, h: 0.5, fontSize: 11, italic: true,
       color: P.slate, fontFace: "Calibri", margin: 0, valign: "top",
     });
+  }
+  const sp = secPhoto(sec);
+  if (sp) {
+    PHOTOS_USED += 1;
+    s.addImage({ path: sp, x: W - MX - 3.2, y: 0.95, w: 3.2, h: 2.4,
+                 sizing: { type: "contain", w: 3.2, h: 2.4 } });
   }
   notes(s, sec, "Photo slot: " + (sec.photo_slot || "n/a"));
   return s;
@@ -550,6 +576,7 @@ contentSlide("red_flags");
 const out = path.join(HERE, "Lymphedema_Lipedema_TBTW.pptx");
 pres.writeFile({ fileName: out }).then(() => {
   console.log("slides: " + n);
+  console.log("captured photos used: " + PHOTOS_USED);
   console.log("optional/cuttable: " + (CUT.length ? "\n  " + CUT.join("\n  ") : "none"));
   console.log("wrote " + out);
 });

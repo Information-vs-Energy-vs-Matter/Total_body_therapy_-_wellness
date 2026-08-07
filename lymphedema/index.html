@@ -78,6 +78,9 @@ ol.num li:before{content:counter(n);position:absolute;left:0;top:10px;width:26px
 figure{margin:18px 0 4px}
 figure img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
 figcaption{font-size:12px;color:var(--slate);margin-top:7px;font-style:italic}
+.gal{display:grid;gap:12px;margin:18px 0 4px}
+@media(min-width:640px){.gal:has(figure+figure){grid-template-columns:1fr 1fr}}
+.gal figure{margin:0}
 .slot{margin:16px 0 4px;padding:16px;border:2px dashed var(--line);border-radius:10px;
       font-size:13px;color:var(--slate);text-align:center}
 .slot b{display:block;color:var(--deep);font-size:12px;letter-spacing:.1em;

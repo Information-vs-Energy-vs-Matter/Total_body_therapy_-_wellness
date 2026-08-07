@@ -14,23 +14,30 @@
     "base_url": "https://information-vs-energy-vs-matter.github.io/Total_body_therapy_-_wellness",
     "pres_path": "/lymphedema/",
     "disclaimer": "Educational use only. Not a substitute for individualized medical evaluation or care.",
-    "deck_file": "Lymphedema_Lipedema_TBTW.pptx"
+    "deck_file": "Lymphedema_Lipedema_TBTW.pptx",
+    "photo_dir": "assets/photos",
+    "org_photos": [
+      "tbtw_clinic_exterior",
+      "tbtw_clinic_interior",
+      "tbtw_treatment_room",
+      "tbtw_sara",
+      "tbtw_andie",
+      "tbtw_logo"
+    ]
   },
-
   "palette": {
-    "deep":   "025462",
-    "teal":   "028090",
-    "mid":    "1C7293",
-    "seafoam":"00A896",
-    "slate":  "36454F",
-    "mist":   "F4F8F9",
-    "line":   "DCE6E8",
-    "ink":    "1B2A30",
-    "white":  "FFFFFF",
-    "amber":  "B8730A",
-    "rose":   "9E3A5A"
+    "deep": "025462",
+    "teal": "028090",
+    "mid": "1C7293",
+    "seafoam": "00A896",
+    "slate": "36454F",
+    "mist": "F4F8F9",
+    "line": "DCE6E8",
+    "ink": "1B2A30",
+    "white": "FFFFFF",
+    "amber": "B8730A",
+    "rose": "9E3A5A"
   },
-
   "about_org": {
     "heading": "About Total Body Therapy & Wellness",
     "body": "Founded in Lillington, NC in 2008 with the goal of bringing exceptional \"Big City Care\" to a small-town community. Physical therapy in Harnett County since 2002.",
@@ -41,7 +48,6 @@
       "Patient education as a core part of the plan of care"
     ]
   },
-
   "objectives": [
     "Describe the structure and function of the lymphatic system",
     "Differentiate primary from secondary lymphedema and identify risk factors",
@@ -52,7 +58,6 @@
     "Distinguish lipedema from lymphedema and stage lipedema appropriately",
     "Identify red flags requiring physician referral"
   ],
-
   "sections": [
     {
       "id": "anatomy",
@@ -81,7 +86,12 @@
         }
       ],
       "note": "Lymphangion contraction is the primary pump. It is stimulated by stretch, muscle contraction, arterial pulsation, and breathing — which is exactly why exercise and diaphragmatic breathing are treatment, not just adjuncts.",
-      "diagram": "lymph_pathway"
+      "diagram": "lymph_pathway",
+      "photos": [
+        "anat_lymphatic_system",
+        "anat_openstax_system",
+        "anat_grays_thoracic_duct"
+      ]
     },
     {
       "id": "load_capacity",
@@ -109,7 +119,10 @@
         }
       ],
       "note": "Combined insufficiency — high load AND damaged system — is common in the patients you will actually see.",
-      "diagram": "load_capacity"
+      "diagram": "load_capacity",
+      "photos": [
+        "anat_lymph_capillary"
+      ]
     },
     {
       "id": "etiology",
@@ -140,7 +153,11 @@
         }
       ],
       "note": "Risk multipliers after cancer treatment: extent of node dissection, regional radiation, elevated BMI, post-op infection, wound complications, and taxane-based chemotherapy.",
-      "diagram": null
+      "diagram": null,
+      "photos": [
+        "anat_axillary_nodes",
+        "anat_node_regions"
+      ]
     },
     {
       "id": "symptoms",
@@ -180,7 +197,10 @@
         }
       ],
       "note": "Lymphedema is typically painless early. New or significant pain suggests infection, DVT, malignancy — or lipedema, which is painful by definition.",
-      "diagram": null
+      "diagram": null,
+      "photos": [
+        "stage_clinical_leg"
+      ]
     },
     {
       "id": "diagnosis",
@@ -228,7 +248,10 @@
         }
       ],
       "note": "Severity by volume difference vs. the contralateral limb: minimal <20%, moderate 20–40%, severe >40%.",
-      "diagram": "stemmer"
+      "diagram": "stemmer",
+      "photos": [
+        "dx_stemmer_positive"
+      ]
     },
     {
       "id": "differential_general",
@@ -237,16 +260,43 @@
       "cuttable": true,
       "lead": "Before you treat it as lymphedema, rule these out.",
       "table": {
-        "cols": ["Condition", "Distinguishing features"],
+        "cols": [
+          "Condition",
+          "Distinguishing features"
+        ],
         "rows": [
-          ["Deep vein thrombosis", "Acute unilateral onset, pain, warmth, erythema. URGENT — do not perform MLD."],
-          ["Chronic venous insufficiency", "Hemosiderin staining, varicosities, medial malleolar ulceration, improves with elevation"],
-          ["Congestive heart failure", "Bilateral, dependent, pitting, dyspnea, JVD, orthopnea"],
-          ["Hypoproteinemia", "Bilateral, generalized, may include ascites/periorbital edema"],
-          ["Lipedema", "Bilateral, symmetrical, painful, bruises easily, SPARES THE FEET, negative Stemmer"],
-          ["Malignant lymphedema", "Rapid onset, pain, proximal-first, neurologic signs. Requires imaging."],
-          ["Cellulitis", "Fever, spreading erythema, heat, pain. Antibiotics first — MLD contraindicated."],
-          ["Medication-induced", "Calcium channel blockers, NSAIDs, steroids, gabapentin, some diabetes drugs"]
+          [
+            "Deep vein thrombosis",
+            "Acute unilateral onset, pain, warmth, erythema. URGENT — do not perform MLD."
+          ],
+          [
+            "Chronic venous insufficiency",
+            "Hemosiderin staining, varicosities, medial malleolar ulceration, improves with elevation"
+          ],
+          [
+            "Congestive heart failure",
+            "Bilateral, dependent, pitting, dyspnea, JVD, orthopnea"
+          ],
+          [
+            "Hypoproteinemia",
+            "Bilateral, generalized, may include ascites/periorbital edema"
+          ],
+          [
+            "Lipedema",
+            "Bilateral, symmetrical, painful, bruises easily, SPARES THE FEET, negative Stemmer"
+          ],
+          [
+            "Malignant lymphedema",
+            "Rapid onset, pain, proximal-first, neurologic signs. Requires imaging."
+          ],
+          [
+            "Cellulitis",
+            "Fever, spreading erythema, heat, pain. Antibiotics first — MLD contraindicated."
+          ],
+          [
+            "Medication-induced",
+            "Calcium channel blockers, NSAIDs, steroids, gabapentin, some diabetes drugs"
+          ]
         ]
       },
       "note": "Malignant lymphedema and DVT are the two that must not be missed. Both are referrals, not treatment plans.",
@@ -259,7 +309,10 @@
       "cuttable": false,
       "lead": "The International Society of Lymphology defines four stages. Stage 0 is latent — the lymphatics are already impaired before anything is visible.",
       "note": "Staging describes tissue condition, not size. A small Stage III limb is still Stage III. Severity is graded separately by volume difference.",
-      "diagram": "stage_progression"
+      "diagram": "stage_progression",
+      "photos": [
+        "stage_clinical_leg"
+      ]
     },
     {
       "id": "stage_0",
@@ -289,7 +342,8 @@
           ]
         }
       ],
-      "photo_slot": "Stage 0 — no visible change; consider a limb-surveillance/measurement photo instead"
+      "photo_slot": "Stage 0 — no visible change; consider a limb-surveillance/measurement photo instead",
+      "photos": []
     },
     {
       "id": "stage_1",
@@ -319,7 +373,10 @@
           ]
         }
       ],
-      "photo_slot": "Stage I — soft pitting edema, dorsum of foot or hand"
+      "photo_slot": "Stage I — soft pitting edema, dorsum of foot or hand",
+      "photos": [
+        "stage1_photo"
+      ]
     },
     {
       "id": "stage_2",
@@ -351,7 +408,10 @@
         }
       ],
       "note": "The presence or absence of pitting is what separates early from late Stage II — not the size of the limb.",
-      "photo_slot": "Stage II — firm non-pitting swelling, positive Stemmer, early skin thickening"
+      "photo_slot": "Stage II — firm non-pitting swelling, positive Stemmer, early skin thickening",
+      "photos": [
+        "stage2_photo"
+      ]
     },
     {
       "id": "stage_3",
@@ -385,7 +445,10 @@
         }
       ],
       "note": "Stage III is not a treatment failure to be managed passively. Significant reduction is well documented with sustained CDT.",
-      "photo_slot": "Stage III — elephantiasis, papillomas, deep skin folds"
+      "photo_slot": "Stage III — elephantiasis, papillomas, deep skin folds",
+      "photos": [
+        "stage3_photo"
+      ]
     },
     {
       "id": "cdt_overview",
@@ -394,10 +457,26 @@
       "cuttable": false,
       "lead": "CDT is the internationally accepted standard of care. It has four components, delivered in two phases.",
       "pillars": [
-        { "n": "1", "h": "Skin & Nail Care", "d": "Reduce bacterial and fungal load; protect the primary infection barrier" },
-        { "n": "2", "h": "Manual Lymphatic Drainage", "d": "Redirect lymph to functioning territories via light, specific manual technique" },
-        { "n": "3", "h": "Compression Therapy", "d": "Counter refilling, soften fibrosis, sustain the reduction achieved" },
-        { "n": "4", "h": "Remedial Exercise", "d": "Use the muscle pump under compression to drive lymph transport" }
+        {
+          "n": "1",
+          "h": "Skin & Nail Care",
+          "d": "Reduce bacterial and fungal load; protect the primary infection barrier"
+        },
+        {
+          "n": "2",
+          "h": "Manual Lymphatic Drainage",
+          "d": "Redirect lymph to functioning territories via light, specific manual technique"
+        },
+        {
+          "n": "3",
+          "h": "Compression Therapy",
+          "d": "Counter refilling, soften fibrosis, sustain the reduction achieved"
+        },
+        {
+          "n": "4",
+          "h": "Remedial Exercise",
+          "d": "Use the muscle pump under compression to drive lymph transport"
+        }
       ],
       "blocks": [
         {
@@ -421,7 +500,10 @@
         }
       ],
       "note": "Phase II is where outcomes are actually won or lost. Adherence, not technique, is the usual determinant of long-term result.",
-      "diagram": "cdt_pillars"
+      "diagram": "cdt_pillars",
+      "photos": [
+        "tx_before_after"
+      ]
     },
     {
       "id": "skin_care",
@@ -459,7 +541,8 @@
           ]
         }
       ],
-      "photo_slot": "Skin care — emollient application, interdigital inspection"
+      "photo_slot": "Skin care — emollient application, interdigital inspection",
+      "photos": []
     },
     {
       "id": "mld",
@@ -503,7 +586,10 @@
         }
       ],
       "note": "MLD alone produces modest results. Its value is greatest when combined with compression — the evidence supports CDT as a package, not MLD in isolation.",
-      "diagram": "mld_flow"
+      "diagram": "mld_flow",
+      "photos": [
+        "tx_mld_hands"
+      ]
     },
     {
       "id": "compression",
@@ -545,7 +631,11 @@
         }
       ],
       "note": "Intermittent pneumatic compression may be a useful adjunct but does not replace MLD or bandaging, and must not be used over an untreated proximal obstruction.",
-      "photo_slot": "Compression — short-stretch bandaging layers and flat-knit garment"
+      "photo_slot": "Compression — short-stretch bandaging layers and flat-knit garment",
+      "photos": [
+        "tx_bandaging",
+        "tx_garment_flatknit"
+      ]
     },
     {
       "id": "exercise",
@@ -588,7 +678,8 @@
         }
       ],
       "note": "Aquatic exercise is particularly effective — hydrostatic pressure provides uniform external compression while the patient moves.",
-      "photo_slot": "Exercise — patient exercising in compression garment"
+      "photo_slot": "Exercise — patient exercising in compression garment",
+      "photos": []
     },
     {
       "id": "lipedema_intro",
@@ -630,7 +721,10 @@
         }
       ],
       "note": "Sarah Bramblette and patient advocacy groups have driven recent recognition, but average time to diagnosis remains measured in years.",
-      "diagram": "lipedema_cuff"
+      "diagram": "lipedema_cuff",
+      "photos": [
+        "lip_clinical_legs"
+      ]
     },
     {
       "id": "lipedema_staging",
@@ -689,7 +783,13 @@
         }
       ],
       "note": "IMPORTANT CAVEAT: The Lipedema Foundation no longer uses a 'Stage 4' designation, on the grounds that the lymphatic system can be compromised at any stage — lymphatic impairment is documented in Stages 2 and 3. Present Stage 4 as lipo-lymphedema, and note the debate. This is the intellectually honest framing and it will be the question a sharp student asks.",
-      "photo_slot": "Lipedema stages 1–4 — four-panel comparison"
+      "photo_slot": "Lipedema stages 1–4 — four-panel comparison",
+      "photos": [
+        "lip_stage1",
+        "lip_stage2",
+        "lip_stage3",
+        "lip_stage4"
+      ]
     },
     {
       "id": "differential_lip",
@@ -698,23 +798,72 @@
       "cuttable": false,
       "lead": "The differential that matters most in practice — and the one most often gotten wrong.",
       "table": {
-        "cols": ["Feature", "Lipedema", "Lymphedema"],
+        "cols": [
+          "Feature",
+          "Lipedema",
+          "Lymphedema"
+        ],
         "rows": [
-          ["Sex", "Almost exclusively women", "Either sex"],
-          ["Symmetry", "Bilateral, symmetrical", "Often unilateral; symmetry not required"],
-          ["Feet", "SPARED — sharp ankle cuff", "INVOLVED — swelling includes feet/toes"],
-          ["Stemmer's sign", "Negative", "Positive"],
-          ["Pain", "Painful, tender to pressure", "Painless early; tension pain when advanced"],
-          ["Bruising", "Bruises easily", "Not characteristic"],
-          ["Pitting", "Typically non-pitting", "Pitting early; non-pitting when fibrotic"],
-          ["Distribution", "Proximal-dominant, disproportionate", "Distal parts always more affected"],
-          ["Family history", "Commonly positive", "Positive only in primary lymphedema"],
-          ["Response to diet", "Affected fat is diet-resistant", "Not primarily fat; weight loss reduces risk"],
-          ["Onset trigger", "Puberty, pregnancy, menopause", "Surgery, radiation, infection, trauma"]
+          [
+            "Sex",
+            "Almost exclusively women",
+            "Either sex"
+          ],
+          [
+            "Symmetry",
+            "Bilateral, symmetrical",
+            "Often unilateral; symmetry not required"
+          ],
+          [
+            "Feet",
+            "SPARED — sharp ankle cuff",
+            "INVOLVED — swelling includes feet/toes"
+          ],
+          [
+            "Stemmer's sign",
+            "Negative",
+            "Positive"
+          ],
+          [
+            "Pain",
+            "Painful, tender to pressure",
+            "Painless early; tension pain when advanced"
+          ],
+          [
+            "Bruising",
+            "Bruises easily",
+            "Not characteristic"
+          ],
+          [
+            "Pitting",
+            "Typically non-pitting",
+            "Pitting early; non-pitting when fibrotic"
+          ],
+          [
+            "Distribution",
+            "Proximal-dominant, disproportionate",
+            "Distal parts always more affected"
+          ],
+          [
+            "Family history",
+            "Commonly positive",
+            "Positive only in primary lymphedema"
+          ],
+          [
+            "Response to diet",
+            "Affected fat is diet-resistant",
+            "Not primarily fat; weight loss reduces risk"
+          ],
+          [
+            "Onset trigger",
+            "Puberty, pregnancy, menopause",
+            "Surgery, radiation, infection, trauma"
+          ]
         ]
       },
       "note": "They co-exist. Lipedema does not itself cause lymphedema — but central obesity, which frequently accompanies it, substantially raises lymphedema risk. Treat what you find.",
-      "diagram": "lip_vs_lymph"
+      "diagram": "lip_vs_lymph",
+      "photos": []
     },
     {
       "id": "lipedema_treatment",
@@ -754,7 +903,8 @@
           ]
         }
       ],
-      "note": "The single most valuable thing you may do is tell the patient this is a recognized disease and not a personal failure of willpower."
+      "note": "The single most valuable thing you may do is tell the patient this is a recognized disease and not a personal failure of willpower.",
+      "photos": []
     },
     {
       "id": "red_flags",
@@ -814,7 +964,6 @@
       ]
     }
   ],
-
   "quiz": [
     {
       "q": "A patient reports her arm feels heavy and her rings are tight, but you can see no swelling and measurements match the other side. What ISL stage is this, and does it need treatment?",
@@ -865,7 +1014,6 @@
       "a": "Seek medical care the same day — this is likely cellulitis. Stop MLD and compression until it is treated. Every episode causes further lymphatic damage, so recurrent cellulitis may warrant prophylactic antibiotics, which is a physician decision."
     }
   ],
-
   "capabilities": {
     "lead": "This site is a static presentation platform. Here is what it can do now, what can be added, and what the trade-offs are.",
     "groups": [
@@ -873,38 +1021,98 @@
         "h": "Working today — no backend required",
         "state": "live",
         "items": [
-          ["Scrolling presentation pages", "Present live from a phone, tablet, or laptop; audience follows along on their own device."],
-          ["Click-to-reveal quiz", "Self-check questions that stay hidden until tapped. Runs entirely in the visitor's browser."],
-          ["Large QR code", "Scannable from the back of a room. Points audience straight to the presentation."],
-          ["Outline page", "Separate scannable agenda so viewers can jump to a section."],
-          ["Multiple presentations", "Each lives in its own subdirectory. The homepage lists them automatically."],
-          ["Mobile-first layout", "Built and tested at phone width first."],
-          ["Print / save to PDF", "Any page prints cleanly from the browser."],
-          ["Instant updates", "Edit content, rebuild, push — live in under a minute."]
+          [
+            "Scrolling presentation pages",
+            "Present live from a phone, tablet, or laptop; audience follows along on their own device."
+          ],
+          [
+            "Click-to-reveal quiz",
+            "Self-check questions that stay hidden until tapped. Runs entirely in the visitor's browser."
+          ],
+          [
+            "Large QR code",
+            "Scannable from the back of a room. Points audience straight to the presentation."
+          ],
+          [
+            "Outline page",
+            "Separate scannable agenda so viewers can jump to a section."
+          ],
+          [
+            "Multiple presentations",
+            "Each lives in its own subdirectory. The homepage lists them automatically."
+          ],
+          [
+            "Mobile-first layout",
+            "Built and tested at phone width first."
+          ],
+          [
+            "Print / save to PDF",
+            "Any page prints cleanly from the browser."
+          ],
+          [
+            "Instant updates",
+            "Edit content, rebuild, push — live in under a minute."
+          ]
         ]
       },
       {
         "h": "Can be added — no backend, no cost",
         "state": "ready",
         "items": [
-          ["Stage comparison slider", "Drag between two stages to see the progression."],
-          ["Searchable glossary", "Type a term, get the definition."],
-          ["Progress tracking", "Remembers which sections a visitor has read, on their device only."],
-          ["Scored quiz mode", "Timed or scored version with a results summary."],
-          ["Downloadable handouts", "PDF patient-education sheets linked from any section."],
-          ["Embedded video", "Technique demonstrations hosted on YouTube or Vimeo."],
-          ["Speaker notes view", "A presenter-only page with prompts, hidden from the public URL."],
-          ["Language toggle", "Spanish version of patient-facing content."]
+          [
+            "Stage comparison slider",
+            "Drag between two stages to see the progression."
+          ],
+          [
+            "Searchable glossary",
+            "Type a term, get the definition."
+          ],
+          [
+            "Progress tracking",
+            "Remembers which sections a visitor has read, on their device only."
+          ],
+          [
+            "Scored quiz mode",
+            "Timed or scored version with a results summary."
+          ],
+          [
+            "Downloadable handouts",
+            "PDF patient-education sheets linked from any section."
+          ],
+          [
+            "Embedded video",
+            "Technique demonstrations hosted on YouTube or Vimeo."
+          ],
+          [
+            "Speaker notes view",
+            "A presenter-only page with prompts, hidden from the public URL."
+          ],
+          [
+            "Language toggle",
+            "Spanish version of patient-facing content."
+          ]
         ]
       },
       {
         "h": "Needs a form service — free tiers available",
         "state": "service",
         "items": [
-          ["Anonymous question box", "Audience types a question during the talk; it goes privately to the presenter's inbox. Nothing displays publicly."],
-          ["Post-presentation feedback", "Short survey; responses collected privately."],
-          ["Contact / appointment request", "Routes to the clinic inbox."],
-          ["CE attendance sign-in", "Collects attendee name and email for records."]
+          [
+            "Anonymous question box",
+            "Audience types a question during the talk; it goes privately to the presenter's inbox. Nothing displays publicly."
+          ],
+          [
+            "Post-presentation feedback",
+            "Short survey; responses collected privately."
+          ],
+          [
+            "Contact / appointment request",
+            "Routes to the clinic inbox."
+          ],
+          [
+            "CE attendance sign-in",
+            "Collects attendee name and email for records."
+          ]
         ],
         "note": "Options: Web3Forms (up to 250 submissions/month free, no account needed), Basin (100/month free), or an embedded Google Form. All are host-independent and keep working if the site moves."
       },
@@ -912,30 +1120,77 @@
         "h": "Deliberately not recommended",
         "state": "avoid",
         "items": [
-          ["Public comment thread", "Visitors would post personal health details — their surgeries, their limbs — publicly under the practice name, with no moderation queue and no way to retract. Use the private question box instead."],
-          ["Live chat / advice widget", "Creates an expectation of clinical advice outside a documented patient relationship."],
-          ["Patient photo uploads", "Identifiable health information on a public static host. Not appropriate without a HIPAA-compliant system."],
-          ["Storing any patient data on this site", "A static site has no secure storage. Anything genuinely confidential belongs in the clinic's EMR."]
+          [
+            "Public comment thread",
+            "Visitors would post personal health details — their surgeries, their limbs — publicly under the practice name, with no moderation queue and no way to retract. Use the private question box instead."
+          ],
+          [
+            "Live chat / advice widget",
+            "Creates an expectation of clinical advice outside a documented patient relationship."
+          ],
+          [
+            "Patient photo uploads",
+            "Identifiable health information on a public static host. Not appropriate without a HIPAA-compliant system."
+          ],
+          [
+            "Storing any patient data on this site",
+            "A static site has no secure storage. Anything genuinely confidential belongs in the clinic's EMR."
+          ]
         ]
       }
     ],
     "hosting": {
       "h": "Hosting notes",
       "items": [
-        ["Current host", "GitHub Pages — free, unlimited bandwidth for this scale, requires the repository to be public."],
-        ["Static only", "GitHub Pages serves files. It cannot run server code, so anything storing data needs an outside service."],
-        ["Netlify alternative", "Netlify's free plan is 300 credits/month with production deploys at 15 credits each — roughly 20 deploys before the cap. Form submissions are now free and unlimited on credit plans. Free accounts cannot auto-recharge, so the cap is hard."],
-        ["Recommendation", "Stay on GitHub Pages for hosting. Add a third-party form endpoint if interactive input is wanted. This avoids the deploy-credit ceiling entirely."]
+        [
+          "Current host",
+          "GitHub Pages — free, unlimited bandwidth for this scale, requires the repository to be public."
+        ],
+        [
+          "Static only",
+          "GitHub Pages serves files. It cannot run server code, so anything storing data needs an outside service."
+        ],
+        [
+          "Netlify alternative",
+          "Netlify's free plan is 300 credits/month with production deploys at 15 credits each — roughly 20 deploys before the cap. Form submissions are now free and unlimited on credit plans. Free accounts cannot auto-recharge, so the cap is hard."
+        ],
+        [
+          "Recommendation",
+          "Stay on GitHub Pages for hosting. Add a third-party form endpoint if interactive input is wanted. This avoids the deploy-credit ceiling entirely."
+        ]
       ]
     }
   },
-
   "sources": [
-    ["International Society of Lymphology", "The Diagnosis and Treatment of Peripheral Lymphedema: 2023 Consensus Document", "Lymphology 56 (2023) 133–151"],
-    ["Zuther, J. & Norton, S.", "Lymphedema Management: The Comprehensive Guide for Practitioners", "Thieme"],
-    ["Lipedema Foundation", "Staging of Lipedema", "lipedema.org/staging"],
-    ["Schmitz, K. et al.", "Physical Activity and Lymphedema (PAL) Trial", "NEJM / JAMA"],
-    ["Koehler, L.", "Lymphedema: Overview and Treatment Considerations", "University of Minnesota"],
-    ["Reich-Schupke, S. et al.", "Differential diagnostics of lipedema and lymphedema: A practical guideline", "PubMed 30280233"]
+    [
+      "International Society of Lymphology",
+      "The Diagnosis and Treatment of Peripheral Lymphedema: 2023 Consensus Document",
+      "Lymphology 56 (2023) 133–151"
+    ],
+    [
+      "Zuther, J. & Norton, S.",
+      "Lymphedema Management: The Comprehensive Guide for Practitioners",
+      "Thieme"
+    ],
+    [
+      "Lipedema Foundation",
+      "Staging of Lipedema",
+      "lipedema.org/staging"
+    ],
+    [
+      "Schmitz, K. et al.",
+      "Physical Activity and Lymphedema (PAL) Trial",
+      "NEJM / JAMA"
+    ],
+    [
+      "Koehler, L.",
+      "Lymphedema: Overview and Treatment Considerations",
+      "University of Minnesota"
+    ],
+    [
+      "Reich-Schupke, S. et al.",
+      "Differential diagnostics of lipedema and lymphedema: A practical guideline",
+      "PubMed 30280233"
+    ]
   ]
 }

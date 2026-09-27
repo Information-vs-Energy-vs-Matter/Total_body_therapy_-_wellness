@@ -23,6 +23,31 @@ function secPhoto(sec) {
   for (const nm of (sec.photos || [])) { const f = photo(nm); if (f) return f; }
   return null;
 }
+/** every available captured photo for a section, as [name, path] */
+function secPhotos(sec) {
+  const out = [];
+  for (const nm of (sec.photos || [])) { const f = photo(nm); if (f) out.push([nm, f]); }
+  return out;
+}
+const CAPS = C.photo_captions || {};
+
+/** lay N photos in a row with captions, inside the given box */
+function photoRow(s, list, x, y, w, h) {
+  const gap = 0.18;
+  const cw = (w - gap * (list.length - 1)) / list.length;
+  list.forEach((pr, i) => {
+    const px = x + i * (cw + gap);
+    const cap = CAPS[pr[0]] || "";
+    const ih = cap ? h - 0.42 : h;
+    s.addImage({ path: pr[1], x: px, y: y, w: cw, h: ih,
+                 sizing: { type: "contain", w: cw, h: ih } });
+    if (cap) {
+      s.addText(cap, { x: px, y: y + ih + 0.04, w: cw, h: 0.36, fontSize: 9,
+        italic: true, color: P.slate, align: "center", fontFace: "Calibri",
+        margin: 0, valign: "top" });
+    }
+  });
+}
 let PHOTOS_USED = 0;
 const S = (id) => C.sections.find((s) => s.id === id);
 
@@ -318,6 +343,19 @@ function contentSlide(id, opt) {
   return s;
 }
 
+/** dedicated photo slide for sections with several images */
+function photoSlide(id, title) {
+  const sec = S(id);
+  const list = secPhotos(sec);
+  if (list.length < 2) return null;
+  const s = newSlide();
+  head(s, sec.kicker, title || (sec.title + " \u2014 Clinical Appearance"));
+  const y = 1.75;
+  photoRow(s, list.slice(0, 3), MX, y, CW, H - y - 0.7);
+  s.addNotes(clean(sec.note || "") + "\n\nImages supplied by the practice / open sources.");
+  return s;
+}
+
 // ==================================================== full-bleed diagram
 function diagramSlide(id, opt) {
   opt = opt || {};
@@ -398,11 +436,29 @@ function stageSlide(id) {
   });
   let y = lead(s, sec.lead, 1.0);
 
+  const pics = secPhotos(sec).slice(0, 2);
+  const picW = pics.length ? 3.35 : 0;          // reserved right column
+  const bandW = CW - (picW ? picW + 0.3 : 0);
   const cols = sec.blocks.length;
   const gap = 0.25;
-  const cw = (CW - gap * (cols - 1)) / cols;
+  const cw = (bandW - gap * (cols - 1)) / cols;
   const noteH = sec.note ? 0.62 : 0;
   const ch = H - y - 0.62 - noteH;
+  if (pics.length) {
+    const ph = (ch - 0.14 * (pics.length - 1)) / pics.length;
+    pics.forEach((pr, i) => {
+      const py = y + i * (ph + 0.14);
+      const cap = CAPS[pr[0]] || "";
+      const ih = cap ? ph - 0.34 : ph;
+      s.addImage({ path: pr[1], x: W - MX - picW, y: py, w: picW, h: ih,
+                   sizing: { type: "contain", w: picW, h: ih } });
+      if (cap) {
+        s.addText(cap, { x: W - MX - picW, y: py + ih + 0.02, w: picW, h: 0.3,
+          fontSize: 8.5, italic: true, color: P.slate, align: "center",
+          fontFace: "Calibri", margin: 0, valign: "top" });
+      }
+    });
+  }
   const size = fitSize(sec.blocks, cw - 0.52, ch, [13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5]);
   sec.blocks.forEach((b, i) => {
     const x = MX + i * (cw + gap);
@@ -420,12 +476,6 @@ function stageSlide(id) {
       color: P.slate, fontFace: "Calibri", margin: 0, valign: "top",
     });
   }
-  const sp = secPhoto(sec);
-  if (sp) {
-    PHOTOS_USED += 1;
-    s.addImage({ path: sp, x: W - MX - 3.2, y: 0.95, w: 3.2, h: 2.4,
-                 sizing: { type: "contain", w: 3.2, h: 2.4 } });
-  }
   notes(s, sec, "Photo slot: " + (sec.photo_slot || "n/a"));
   return s;
 }
@@ -440,10 +490,12 @@ contentSlide("diagnosis", { blocks: [0, 1], image: "stemmer", title: "Diagnosis 
 contentSlide("diagnosis", { blocks: [2, 3], image: null, noLead: true, title: "Diagnosis — Measurement & Imaging" });
 tableSlide("differential_general", { colW: [3.0, 9.11], size: 11, rowH: 0.42 });
 diagramSlide("staging_overview");
+photoSlide("staging_overview", "Staging \u2014 Clinical Appearance");
 stageSlide("stage_0");
 stageSlide("stage_1");
 stageSlide("stage_2");
 stageSlide("stage_3");
+photoSlide("stage_3", "Stage III \u2014 Clinical Appearance");
 diagramSlide("cdt_overview", { title: "Complete Decongestive Therapy" });
 
 // CDT phases (blocks only)
@@ -470,11 +522,49 @@ diagramSlide("cdt_overview", { title: "Complete Decongestive Therapy" });
 })();
 
 contentSlide("skin_care");
+photoSlide("skin_care", "Skin Breakdown \u2014 What to Watch For");
 contentSlide("mld", { blocks: [0, 1], image: null, title: "Manual Lymphatic Drainage — Technique" });
 diagramSlide("mld", { title: "MLD — Sequence & Contraindications", image: "mld_flow" });
 contentSlide("compression");
 contentSlide("exercise");
+
+// ---- long-term compression garments (Sara's request) ----
+(function () {
+  const sec = S("garments");
+  const s1 = newSlide();
+  head(s1, sec.kicker, sec.title);
+  let y = lead(s1, sec.lead, 1.72);
+  const b = sec.blocks.slice(0, 3);
+  const gap = 0.22, cw = (CW - gap * 2) / 3, ch = H - y - 0.72;
+  const size = fitSize(b, cw - 0.48, ch, [12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9]);
+  b.forEach((blk, i) => {
+    const x = MX + i * (cw + gap);
+    card(s1, x, y, cw, ch);
+    s1.addText(blk.h, { x: x + 0.24, y: y + 0.14, w: cw - 0.48, h: 0.34,
+      fontSize: size + 1.5, bold: true, color: P.deep, fontFace: "Calibri", margin: 0 });
+    bullets(s1, blk.items, x + 0.24, y + 0.56, cw - 0.48, ch - 0.74, size);
+  });
+  s1.addNotes(clean(sec.note));
+
+  const s2 = newSlide();
+  head(s2, sec.kicker, "Custom Garments & Prescribing");
+  let y2 = 1.78;
+  const b2 = sec.blocks.slice(3);
+  const cw2 = (CW - 0.28) / 2, ch2 = H - y2 - 1.15;
+  const size2 = fitSize(b2, cw2 - 0.52, ch2, [13, 12.5, 12, 11.5, 11, 10.5, 10]);
+  b2.forEach((blk, i) => {
+    const x = MX + i * (cw2 + 0.28);
+    card(s2, x, y2, cw2, ch2);
+    s2.addText(blk.h, { x: x + 0.26, y: y2 + 0.16, w: cw2 - 0.52, h: 0.34,
+      fontSize: size2 + 1.5, bold: true, color: P.deep, fontFace: "Calibri", margin: 0 });
+    bullets(s2, blk.items, x + 0.26, y2 + 0.6, cw2 - 0.52, ch2 - 0.78, size2);
+  });
+  s2.addText(clean(sec.note), { x: MX, y: y2 + ch2 + 0.14, w: CW, h: 0.62,
+    fontSize: 11, italic: true, color: P.slate, fontFace: "Calibri", margin: 0, valign: "top" });
+  notes(s2, sec);
+})();
 contentSlide("lipedema_intro", { image: "lipedema_cuff", blocks: [0] });
+photoSlide("lipedema_intro", "Lipedema \u2014 Clinical Appearance");
 contentSlide("lipedema_intro", { title: "Lipedema — Etiology & Misdiagnosis", blocks: [1, 2], image: null, noLead: true });
 
 // lipedema stages, split 2 + 2
@@ -515,6 +605,37 @@ contentSlide("lipedema_intro", { title: "Lipedema — Etiology & Misdiagnosis", 
 
 tableSlide("differential_lip", { colW: [2.6, 4.75, 4.76], size: 11, rowH: 0.33 });
 contentSlide("lipedema_treatment");
+photoSlide("lipedema_treatment", "Lipedema \u2014 Surgical Outcomes");
+// ---- beyond CDT: gait, balance, orthopedic (Sara's request) ----
+(function () {
+  const sec = S("after_pt");
+  const s1 = newSlide();
+  head(s1, sec.kicker, sec.title);
+  let y = lead(s1, sec.lead, 1.72);
+  const b = sec.blocks.slice(0, 3);
+  const gap = 0.22, cw = (CW - gap * 2) / 3, ch = H - y - 0.72;
+  const size = fitSize(b, cw - 0.48, ch, [12.5, 12, 11.5, 11, 10.5, 10, 9.5]);
+  b.forEach((blk, i) => {
+    const x = MX + i * (cw + gap);
+    card(s1, x, y, cw, ch);
+    s1.addText(blk.h, { x: x + 0.24, y: y + 0.14, w: cw - 0.48, h: 0.34,
+      fontSize: size + 1.5, bold: true, color: P.deep, fontFace: "Calibri", margin: 0 });
+    bullets(s1, blk.items, x + 0.24, y + 0.56, cw - 0.48, ch - 0.74, size);
+  });
+  s1.addNotes(clean(sec.note));
+
+  const s2 = newSlide();
+  head(s2, sec.kicker, "Ongoing Surveillance");
+  const blk = sec.blocks[3];
+  card(s2, MX, 1.85, CW, 2.7);
+  s2.addText(blk.h, { x: MX + 0.32, y: 2.0, w: CW - 0.64, h: 0.36, fontSize: 15,
+    bold: true, color: P.deep, fontFace: "Calibri", margin: 0 });
+  bullets(s2, blk.items, MX + 0.32, 2.48, CW - 0.64, 2.0, 13);
+  s2.addText(clean(sec.note), { x: MX, y: 4.8, w: CW, h: 0.8, fontSize: 12.5,
+    italic: true, color: P.slate, fontFace: "Calibri", margin: 0, valign: "top" });
+  notes(s2, sec);
+})();
+
 contentSlide("red_flags");
 
 

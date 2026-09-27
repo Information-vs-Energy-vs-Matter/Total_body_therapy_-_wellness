@@ -327,12 +327,16 @@ def render_section(s, depth=1):
         o += ["<li>%s</li>" % md(i) for i in s["numbered"]]
         o.append("</ol>")
 
-    found = [p for p in (photo_path(nm) for nm in s.get("photos", [])) if p]
+    found = [(nm, photo_path(nm)) for nm in s.get("photos", [])]
+    found = [(nm, pth) for nm, pth in found if pth]
     if found:
         o.append('<div class="gal">')
-        for p in found:
-            o.append('<figure><img src="%s%s" alt="%s" loading="lazy"></figure>'
-                     % (up, p, md(s["title"])))
+        CAP = C.get("photo_captions", {})
+        for nm, pth in found:
+            cap = CAP.get(nm, "")
+            o.append('<figure><img src="%s%s" alt="%s" loading="lazy">%s</figure>'
+                     % (up, pth, md(cap or s["title"]),
+                        ('<figcaption>%s</figcaption>' % md(cap)) if cap else ""))
         o.append("</div>")
     elif s.get("photo_slot"):
         o.append('<div class="slot"><b>Clinical photo</b>%s</div>' % md(s["photo_slot"]))

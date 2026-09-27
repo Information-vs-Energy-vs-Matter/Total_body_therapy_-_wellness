@@ -55,8 +55,10 @@
     "Perform and interpret key diagnostic tests, including Stemmer's sign",
     "Stage lymphedema using ISL criteria, Stage 0 through Stage III",
     "Apply the four components of Complete Decongestive Therapy",
+    "Select an appropriate long-term compression garment, including adjustable wrap and custom options",
     "Distinguish lipedema from lymphedema and stage lipedema appropriately",
-    "Identify red flags requiring physician referral"
+    "Identify red flags requiring physician referral",
+    "Identify gait, balance, and orthopedic needs that persist after decongestion"
   ],
   "sections": [
     {
@@ -89,8 +91,7 @@
       "diagram": "lymph_pathway",
       "photos": [
         "anat_lymphatic_system",
-        "anat_openstax_system",
-        "anat_grays_thoracic_duct"
+        "anat_lymph_capillary"
       ],
       "photo_links": [
         [
@@ -245,7 +246,8 @@
       "note": "Lymphedema is typically painless early. New or significant pain suggests infection, DVT, malignancy — or lipedema, which is painful by definition.",
       "diagram": null,
       "photos": [
-        "stage_clinical_leg"
+        "tbtw_arm_trunk",
+        "stage_upper_limb"
       ],
       "photo_links": [
         [
@@ -310,7 +312,7 @@
       "note": "Severity by volume difference vs. the contralateral limb: minimal <20%, moderate 20–40%, severe >40%.",
       "diagram": "stemmer",
       "photos": [
-        "dx_stemmer_positive"
+        "dx_imaging"
       ],
       "photo_links": [
         [
@@ -403,7 +405,8 @@
       "note": "Staging describes tissue condition, not size. A small Stage III limb is still Stage III. Severity is graded separately by volume difference.",
       "diagram": "stage_progression",
       "photos": [
-        "stage_clinical_leg"
+        "stage_progression_photo",
+        "stage_upper_limb"
       ],
       "photo_links": [
         [
@@ -487,7 +490,8 @@
       ],
       "photo_slot": "Stage I — soft pitting edema, dorsum of foot or hand",
       "photos": [
-        "stage1_photo"
+        "stage1_photo",
+        "stage_clinical_leg"
       ],
       "photo_links": [
         [
@@ -532,7 +536,8 @@
       "note": "The presence or absence of pitting is what separates early from late Stage II — not the size of the limb.",
       "photo_slot": "Stage II — firm non-pitting swelling, positive Stemmer, early skin thickening",
       "photos": [
-        "stage2_photo"
+        "tbtw_arm_extended",
+        "tbtw_arm_raised"
       ],
       "photo_links": [
         [
@@ -579,7 +584,9 @@
       "note": "Stage III is not a treatment failure to be managed passively. Significant reduction is well documented with sustained CDT.",
       "photo_slot": "Stage III — elephantiasis, papillomas, deep skin folds",
       "photos": [
-        "stage3_photo"
+        "stage3_photo",
+        "stage3_skin",
+        "tbtw_severe_foot"
       ],
       "photo_links": [
         [
@@ -648,7 +655,7 @@
       "note": "Phase II is where outcomes are actually won or lost. Adherence, not technique, is the usual determinant of long-term result.",
       "diagram": "cdt_pillars",
       "photos": [
-        "tx_before_after"
+        "tbtw_bandaged_leg"
       ],
       "photo_links": [
         [
@@ -698,7 +705,10 @@
         }
       ],
       "photo_slot": "Skin care — emollient application, interdigital inspection",
-      "photos": [],
+      "photos": [
+        "tbtw_skin_changes",
+        "tbtw_lymphorrhea"
+      ],
       "photo_links": [
         [
           "Wikimedia — “emollient application skin”",
@@ -757,9 +767,7 @@
       ],
       "note": "MLD alone produces modest results. Its value is greatest when combined with compression — the evidence supports CDT as a package, not MLD in isolation.",
       "diagram": "mld_flow",
-      "photos": [
-        "tx_mld_hands"
-      ],
+      "photos": [],
       "photo_links": [
         [
           "Wikimedia — “manual lymphatic drainage”",
@@ -817,8 +825,7 @@
       "note": "Intermittent pneumatic compression may be a useful adjunct but does not replace MLD or bandaging, and must not be used over an untreated proximal obstruction.",
       "photo_slot": "Compression — short-stretch bandaging layers and flat-knit garment",
       "photos": [
-        "tx_bandaging",
-        "tx_garment_flatknit"
+        "tbtw_bandaged_leg"
       ],
       "photo_links": [
         [
@@ -894,6 +901,97 @@
       ]
     },
     {
+      "id": "garments",
+      "kicker": "Treatment · Long-term",
+      "cuttable": false,
+      "title": "Long-Term Compression Garments",
+      "lead": "Phase II is where the result is held. The garment has to fit the limb, the diagnosis, and the patient's hands — a garment that cannot be donned will not be worn.",
+      "blocks": [
+        {
+          "h": "Lower limb options",
+          "items": [
+            "**Knee-high stockings** — most common for calf/ankle-predominant edema. Easiest to don, best adherence.",
+            "**Thigh-high stockings** — when swelling extends above the knee. Needs silicone band or waist attachment to stop roll-down.",
+            "**Pantyhose / waist-high** — bilateral disease, or genital and lower-trunk involvement.",
+            "**Capri / knee-length** — thigh and knee involvement with a spared calf, common in lipedema."
+          ]
+        },
+        {
+          "h": "Velcro adjustable wraps",
+          "items": [
+            "Inelastic wrap systems with overlapping Velcro straps",
+            "**Patient-adjustable** — re-tension as the limb changes through the day",
+            "Far easier to apply with arthritis, weak grip, obesity, or limited reach",
+            "Excellent bridge between Phase I bandaging and a fitted garment",
+            "Useful at night and for patients who cannot tolerate donning a stocking",
+            "Juzo Compression Wrap, Jobst FarrowWrap, Circaid"
+          ]
+        },
+        {
+          "h": "Flat-knit vs. circular-knit",
+          "items": [
+            "**Flat-knit** — seamed, made to measure, stiffer. Preferred for lymphedema: it contains irregular limb shape and does not cut in at folds.",
+            "**Circular-knit** — seamless, thinner, more cosmetic, but tends to tourniquet at skin folds and is better suited to venous disease.",
+            "For any limb with distortion, fibrosis, or deep folds, choose flat-knit."
+          ]
+        },
+        {
+          "h": "Custom garments — when off-the-shelf will not do",
+          "items": [
+            "Limb measurements falling outside standard sizing charts",
+            "Marked shape distortion, deep folds, or lobules",
+            "Toe caps, gauntlets, gloves, and upper-limb sleeves with shoulder attachment",
+            "Genital, breast, head and neck, or trunk garments",
+            "Measured by a certified fitter; expect 2–3 weeks for fabrication",
+            "Jobst and Juzo both produce made-to-measure flat-knit lines"
+          ]
+        },
+        {
+          "h": "Practical prescribing",
+          "items": [
+            "**Class 1 (20–30 mmHg)** — upper limb, mild disease, prophylaxis",
+            "**Class 2 (30–40 mmHg)** — most lower limb lymphedema",
+            "**Class 3 (40–50 mmHg)** — severe lower limb",
+            "Prescribe **two** garments so one is always clean",
+            "Replace every 4–6 months — elastic fatigues before it looks worn",
+            "Check arterial status first; ABI < 0.8 requires caution",
+            "Donning aids: rubber gloves, stocking donner, silk slip-sock"
+          ]
+        }
+      ],
+      "note": "The most common cause of Phase II failure is not the wrong pressure class — it is a garment the patient cannot physically get on. Assess grip, reach, and vision before prescribing, and reach for an adjustable wrap when donning is the limiting factor.",
+      "photo_slot": "Garment types — knee-high, thigh-high, pantyhose, Velcro wrap, custom flat-knit",
+      "photos": [
+        "garment_knee_high",
+        "garment_thigh_high",
+        "garment_pantyhose",
+        "garment_velcro_wrap",
+        "garment_custom"
+      ],
+      "photo_links": [
+        [
+          "Juzo — product images (ask for education use)",
+          "https://www.juzousa.com/products"
+        ],
+        [
+          "Jobst — product images (ask for education use)",
+          "https://www.jobst-usa.com/products"
+        ],
+        [
+          "Jobst FarrowWrap — Velcro wrap systems",
+          "https://www.jobst-usa.com/farrowwrap"
+        ],
+        [
+          "Wikimedia — “compression stocking”",
+          "https://commons.wikimedia.org/w/index.php?search=compression%20stocking&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “compression bandage leg”",
+          "https://commons.wikimedia.org/w/index.php?search=compression%20bandage%20leg&title=Special:MediaSearch&type=image"
+        ]
+      ]
+    },
+    {
       "id": "lipedema_intro",
       "kicker": "Lipedema",
       "title": "Lipedema — A Different Disease",
@@ -935,7 +1033,9 @@
       "note": "Sarah Bramblette and patient advocacy groups have driven recent recognition, but average time to diagnosis remains measured in years.",
       "diagram": "lipedema_cuff",
       "photos": [
-        "lip_clinical_legs"
+        "lip_clinical_legs",
+        "lip_body_2",
+        "lip_before_front"
       ],
       "photo_links": [
         [
@@ -1011,10 +1111,8 @@
       "note": "IMPORTANT CAVEAT: The Lipedema Foundation no longer uses a 'Stage 4' designation, on the grounds that the lymphatic system can be compromised at any stage — lymphatic impairment is documented in Stages 2 and 3. Present Stage 4 as lipo-lymphedema, and note the debate. This is the intellectually honest framing and it will be the question a sharp student asks.",
       "photo_slot": "Lipedema stages 1–4 — four-panel comparison",
       "photos": [
-        "lip_stage1",
-        "lip_stage2",
         "lip_stage3",
-        "lip_stage4"
+        "lip_before_side"
       ],
       "photo_links": [
         [
@@ -1103,7 +1201,9 @@
       },
       "note": "They co-exist. Lipedema does not itself cause lymphedema — but central obesity, which frequently accompanies it, substantially raises lymphedema risk. Treat what you find.",
       "diagram": "lip_vs_lymph",
-      "photos": [],
+      "photos": [
+        "lip_foot_sparing"
+      ],
       "photo_links": [
         [
           "Wikimedia — “lipedema lymphedema comparison”",
@@ -1154,7 +1254,11 @@
         }
       ],
       "note": "The single most valuable thing you may do is tell the patient this is a recognized disease and not a personal failure of willpower.",
-      "photos": [],
+      "photos": [
+        "lip_comparison_2",
+        "lip_comparison_3",
+        "lip_surgical_markup"
+      ],
       "photo_links": [
         [
           "Wikimedia — “compression stocking leg”",
@@ -1163,6 +1267,74 @@
         [
           "Wikimedia — “aquatic therapy”",
           "https://commons.wikimedia.org/w/index.php?search=aquatic%20therapy&title=Special:MediaSearch&type=image"
+        ]
+      ]
+    },
+    {
+      "id": "after_pt",
+      "kicker": "Beyond CDT",
+      "cuttable": false,
+      "title": "Other Considerations After Lymphatic PT",
+      "lead": "Decongestion is not the end of the episode of care. Once volume is controlled, what remains is often what limits the patient most.",
+      "blocks": [
+        {
+          "h": "Gait training",
+          "items": [
+            "Limb volume changes the mechanics — gait adapted around a heavy limb persists after decongestion",
+            "Reassess step length, cadence, stance time, and base of support once volume is stable",
+            "Address the compensations: circumduction, hip hiking, reduced push-off",
+            "Footwear reassessment — shoe size often changes substantially after Phase I",
+            "Calf muscle pump function is both a gait goal and a lymphatic goal",
+            "Assistive device review — what was needed at intake may not fit now"
+          ]
+        },
+        {
+          "h": "Balance therapy",
+          "items": [
+            "Altered limb mass and distal sensation both degrade postural control",
+            "Formal falls-risk screening — these patients are frequently at risk and rarely screened",
+            "Static then dynamic progression; add head turns and dual-task once safe",
+            "Proprioceptive retraining at ankle and hip",
+            "Remember the compounding factors: chemotherapy-induced peripheral neuropathy, deconditioning, visual change",
+            "A fall producing a skin break in a lymphedematous limb is a cellulitis risk, not just an injury"
+          ]
+        },
+        {
+          "h": "Orthopedic pain not relieved by CDT",
+          "items": [
+            "If pain persists once volume is controlled, it is a separate problem — treat it as one",
+            "Knee and hip OA, unmasked or aggravated by years of altered loading",
+            "Low back pain from chronic gait asymmetry",
+            "Shoulder dysfunction after axillary dissection — capsular restriction, scar, AXD cording",
+            "Plantar fasciitis and foot pain from changed weight-bearing",
+            "Consider lipedema if pain is disproportionate, bilateral, and tender to light pressure",
+            "Standard orthopedic PT applies — manual therapy, loading progression, strengthening"
+          ]
+        },
+        {
+          "h": "Ongoing surveillance",
+          "items": [
+            "Re-measure at regular intervals; catch regression early",
+            "Garment replacement every 4–6 months",
+            "Short repeat intensive phase if the limb regresses — this is expected, not failure",
+            "Annual skin and nail review",
+            "Re-screen falls risk and function, not just limb volume"
+          ]
+        }
+      ],
+      "note": "Patients are frequently discharged the moment limb volume plateaus. The gait, balance, and orthopedic findings underneath are what determine whether they actually return to their life — and they are squarely within PT scope.",
+      "photo_links": [
+        [
+          "Wikimedia — “gait training physical therapy”",
+          "https://commons.wikimedia.org/w/index.php?search=gait%20training%20physical%20therapy&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “balance training rehabilitation”",
+          "https://commons.wikimedia.org/w/index.php?search=balance%20training%20rehabilitation&title=Special:MediaSearch&type=image"
+        ],
+        [
+          "Wikimedia — “physical therapy knee”",
+          "https://commons.wikimedia.org/w/index.php?search=physical%20therapy%20knee&title=Special:MediaSearch&type=image"
         ]
       ]
     },
@@ -1212,6 +1384,9 @@
           "Wikimedia — “deep vein thrombosis”",
           "https://commons.wikimedia.org/w/index.php?search=deep%20vein%20thrombosis&title=Special:MediaSearch&type=image"
         ]
+      ],
+      "photos": [
+        "tbtw_cellulitis"
       ]
     },
     {
@@ -1227,10 +1402,12 @@
         "Four ISL stages: 0 latent, I reversible, II irreversible/fibrotic, III elephantiasis.",
         "CDT has four components. Compression is the one that holds the result.",
         "Exercise under compression is treatment. Resistance training is safe.",
+        "Garment choice is decided as much by whether the patient can don it as by pressure class.",
         "Lipedema is painful, symmetrical, spares the feet, and has a negative Stemmer.",
         "Lipedema is staged 1–3, with lipo-lymphedema as a contested Stage 4.",
         "Every episode of cellulitis makes the underlying disease worse.",
-        "Patient education and Phase II adherence determine long-term outcome."
+        "Patient education and Phase II adherence determine long-term outcome.",
+        "Decongestion is not discharge — reassess gait, balance, and orthopedic pain afterwards."
       ]
     }
   ],
@@ -1791,5 +1968,39 @@
         "Article"
       ]
     ]
+  },
+  "photo_captions": {
+    "anat_lymphatic_system": "Lymphatic system — whole body",
+    "anat_lymph_capillary": "Initial lymphatic capillary taking up interstitial fluid",
+    "anat_node_regions": "Pelvic and inguinal node basins",
+    "anat_axillary_nodes": "Axillary node basin — the field disrupted by breast cancer surgery",
+    "stage_progression_photo": "Lower limb, Stages I–IV left to right",
+    "stage_upper_limb": "Upper limb, Stages I–IV left to right",
+    "stage_clinical_leg": "Unilateral lower limb lymphedema",
+    "stage1_photo": "Early unilateral involvement",
+    "stage3_photo": "Stage III — lymphostatic elephantiasis",
+    "stage3_skin": "Stage III skin changes with lymphorrhea",
+    "dx_imaging": "Clinical appearance alongside lymphoscintigraphy",
+    "tbtw_skin_changes": "Crusting and weeping at the ankle",
+    "tbtw_bandaged_leg": "Bilateral involvement, one limb bandaged",
+    "tbtw_lymphorrhea": "Lymphorrhea and crusting, lower leg",
+    "tbtw_arm_trunk": "Upper limb and trunk involvement",
+    "tbtw_arm_posterior": "Posterior trunk involvement",
+    "tbtw_arm_extended": "Upper limb, extended",
+    "tbtw_arm_raised": "Upper limb, elevated",
+    "tbtw_severe_foot": "Severe foot and ankle involvement",
+    "tbtw_cellulitis": "Bilateral erythema — assess for cellulitis",
+    "lip_clinical_legs": "Lipedema — note the ankle cuff and spared feet",
+    "lip_stage3": "Advanced lipedema with mottling",
+    "lip_foot_sparing": "Foot involvement (left) versus foot sparing (right)",
+    "lip_body_1": "Disproportionate lower-body distribution",
+    "lip_body_2": "Disproportionate lower-body distribution",
+    "lip_body_3": "Disproportionate lower-body distribution",
+    "lip_before_front": "Before diagnosis — anterior",
+    "lip_before_side": "Before diagnosis — lateral",
+    "lip_surgical_markup": "Pre-operative markings",
+    "lip_comparison_1": "Before and after",
+    "lip_comparison_2": "Before and after — anterior",
+    "lip_comparison_3": "Before and after — posterior"
   }
 }

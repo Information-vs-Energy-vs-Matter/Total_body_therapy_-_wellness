@@ -90,7 +90,7 @@ function estLines(t, size, wIn) {
 }
 
 function blockH(b, size, wIn) {
-  const lh = (size * 1.34) / 72;              // inches per rendered line
+  const lh = (size * 1.36) / 72;              // inches per rendered line
   let h = 0.30 + 0.16;                        // header height + gap below it
   b.items.forEach((it) => {
     h += estLines(clean(it), size, wIn - 0.30) * lh + 0.06;
@@ -99,21 +99,27 @@ function blockH(b, size, wIn) {
 }
 
 /** largest size in `sizes` where every block fits its allotted height */
+const SIZES = [20, 19, 18, 17, 16, 15, 14, 13.5, 13, 12.5, 12, 11.5];
+const PICKED = [];
+const FLOOR = 11.5;
+const TIGHT = [];
 function fitSize(blocks, wIn, hAvail, sizes) {
-  for (const s of (sizes || [13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5])) {
-    if (blocks.every((b) => blockH(b, s, wIn) <= hAvail)) return s;
+  for (const s of (sizes || SIZES)) {
+    if (blocks.every((b) => blockH(b, s, wIn) <= hAvail)) { PICKED.push([n, s]); return s; }
   }
-  return 8;
+  TIGHT.push("slide " + n + " (grid) hit the " + FLOOR + "pt floor");
+  return FLOOR;
 }
 
 /** largest size where the SUM of stacked block heights fits */
 function fitStack(blocks, wIn, hTotal, gap, sizes) {
-  for (const s of (sizes || [13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5])) {
+  for (const s of (sizes || SIZES)) {
     const tot = blocks.reduce((a, b) => a + blockH(b, s, wIn), 0)
       + gap * (blocks.length - 1);
-    if (tot <= hTotal) return s;
+    if (tot <= hTotal) { PICKED.push([n, s]); return s; }
   }
-  return 8;
+  TIGHT.push("slide " + n + " (stack) hit the " + FLOOR + "pt floor");
+  return FLOOR;
 }
 
 function notes(slide, s, extra) {
@@ -149,7 +155,7 @@ function head(slide, kicker, title, dark) {
 function lead(slide, text, y) {
   if (!text) return y;
   slide.addText(clean(text), {
-    x: MX, y: y, w: CW, h: 0.62, fontSize: 15, color: P.slate,
+    x: MX, y: y, w: CW, h: 0.62, fontSize: 16.5, color: P.slate,
     fontFace: "Calibri", margin: 0, valign: "top",
   });
   return y + 0.72;
@@ -292,6 +298,8 @@ function contentSlide(id, opt) {
   const BOT = 0.62;                       // bottom margin
   const avail = H - y - BOT;
 
+  if (img && blocks.length > 2) { img = null; imgPath = null; }   // readability wins
+
   if (img && !blocks.length) {
     s.addImage({
       path: imgPath, x: MX, y: y, w: CW, h: avail,
@@ -324,13 +332,21 @@ function contentSlide(id, opt) {
     const gap = 0.22;
     const cw = (CW - gap * (cols - 1)) / cols;
     const rh = (avail - gap * (rows - 1)) / rows;
-    const size = fitSize(blocks, cw - 0.48, rh, [13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9]);
+    const size = fitSize(blocks, cw - 0.48, rh, SIZES);
+    // per-row height = tallest card in that row, so cards hug their content
+    const rowHs = [];
+    for (let r = 0; r < rows; r++) {
+      const inRow = blocks.slice(r * cols, (r + 1) * cols);
+      rowHs.push(Math.min(rh, Math.max(1.15,
+        Math.max(...inRow.map((b) => blockH(b, size, cw - 0.48))))));
+    }
+    const usedH = rowHs.reduce((a, b) => a + b, 0) + gap * (rows - 1);
+    const yStart = y + Math.min(0.35, Math.max(0, (avail - usedH) / 2));
     blocks.forEach((b, i) => {
+      const r = Math.floor(i / cols);
       const x = MX + (i % cols) * (cw + gap);
-      const cy = y + Math.floor(i / cols) * (rh + gap);
-      // uniform row height: fitSize already guarantees every block fits rh,
-      // so a full-height card can never be overflowed by its own text
-      const h = rh;
+      const cy = yStart + rowHs.slice(0, r).reduce((a, v) => a + v + gap, 0);
+      const h = rowHs[r];
       card(s, x, cy, cw, h);
       s.addText(b.h, {
         x: x + 0.24, y: cy + 0.14, w: cw - 0.48, h: 0.32, fontSize: size + 1.5,
@@ -459,16 +475,19 @@ function stageSlide(id) {
       }
     });
   }
-  const size = fitSize(sec.blocks, cw - 0.52, ch, [13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5]);
+  const size = fitSize(sec.blocks, cw - 0.52, ch, SIZES);
+  const stageH = Math.min(ch, Math.max(1.2,
+    Math.max(...sec.blocks.map((b) => blockH(b, size, cw - 0.52)))));
+  const yS = y + Math.min(0.3, Math.max(0, (ch - stageH) / 2));
   sec.blocks.forEach((b, i) => {
     const x = MX + i * (cw + gap);
-    const h = ch;
-    card(s, x, y, cw, h);
+    const h = stageH;
+    card(s, x, yS, cw, h);
     s.addText(b.h, {
-      x: x + 0.26, y: y + 0.16, w: cw - 0.52, h: 0.32, fontSize: size + 1.5, bold: true,
+      x: x + 0.26, y: yS + 0.16, w: cw - 0.52, h: 0.32, fontSize: size + 1.5, bold: true,
       color: P.deep, fontFace: "Calibri", margin: 0,
     });
-    bullets(s, b.items, x + 0.26, y + 0.58, cw - 0.52, h - 0.76, size);
+    bullets(s, b.items, x + 0.26, yS + 0.58, cw - 0.52, h - 0.76, size);
   });
   if (sec.note) {
     s.addText(clean(sec.note), {
@@ -481,8 +500,7 @@ function stageSlide(id) {
 }
 
 // ======================================================== BUILD ORDER
-diagramSlide("anatomy");
-contentSlide("anatomy", { title: "Lymphatic System — Pathway & Function", image: null, kicker: "Foundations" });
+contentSlide("anatomy", { image: "lymph_pathway" });
 diagramSlide("load_capacity");
 contentSlide("etiology");
 contentSlide("symptoms");
@@ -502,20 +520,20 @@ diagramSlide("cdt_overview", { title: "Complete Decongestive Therapy" });
 (function () {
   const sec = S("cdt_overview");
   const s = newSlide();
-  head(s, "Treatment", "CDT — Two Phases");
-  let y = 1.72;
+  head(s, "Treatment", "CDT \u2014 Two Phases");
+  let y = 1.8;
   const cw = (CW - 0.3) / 2;
   sec.blocks.forEach((b, i) => {
     const x = MX + i * (cw + 0.3);
-    card(s, x, y, cw, 3.6);
+    card(s, x, y, cw, H - y - 0.95);
     s.addText(b.h, {
       x: x + 0.3, y: y + 0.22, w: cw - 0.6, h: 0.4, fontSize: 16, bold: true,
       color: P.deep, fontFace: "Calibri", margin: 0,
     });
-    bullets(s, b.items, x + 0.3, y + 0.75, cw - 0.6, 2.7, 13);
+    bullets(s, b.items, x + 0.3, y + 0.75, cw - 0.6, H - y - 1.8, 13);
   });
   s.addText(clean(sec.note), {
-    x: MX, y: y + 3.8, w: CW, h: 0.5, fontSize: 12, italic: true,
+    x: MX, y: H - 0.85, w: CW, h: 0.5, fontSize: 12, italic: true,
     color: P.slate, fontFace: "Calibri", margin: 0, valign: "top",
   });
   s.addNotes(clean(sec.note));
@@ -523,8 +541,7 @@ diagramSlide("cdt_overview", { title: "Complete Decongestive Therapy" });
 
 contentSlide("skin_care");
 photoSlide("skin_care", "Skin Breakdown \u2014 What to Watch For");
-contentSlide("mld", { blocks: [0, 1], image: null, title: "Manual Lymphatic Drainage — Technique" });
-diagramSlide("mld", { title: "MLD — Sequence & Contraindications", image: "mld_flow" });
+contentSlide("mld", { blocks: [0, 2], image: "mld_flow" });
 contentSlide("compression");
 contentSlide("exercise");
 
@@ -536,7 +553,7 @@ contentSlide("exercise");
   let y = lead(s1, sec.lead, 1.72);
   const b = sec.blocks.slice(0, 3);
   const gap = 0.22, cw = (CW - gap * 2) / 3, ch = H - y - 0.72;
-  const size = fitSize(b, cw - 0.48, ch, [12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9]);
+  const size = fitSize(b, cw - 0.48, ch, SIZES);
   b.forEach((blk, i) => {
     const x = MX + i * (cw + gap);
     card(s1, x, y, cw, ch);
@@ -551,7 +568,7 @@ contentSlide("exercise");
   let y2 = 1.78;
   const b2 = sec.blocks.slice(3);
   const cw2 = (CW - 0.28) / 2, ch2 = H - y2 - 1.15;
-  const size2 = fitSize(b2, cw2 - 0.52, ch2, [13, 12.5, 12, 11.5, 11, 10.5, 10]);
+  const size2 = fitSize(b2, cw2 - 0.52, ch2, SIZES);
   b2.forEach((blk, i) => {
     const x = MX + i * (cw2 + 0.28);
     card(s2, x, y2, cw2, ch2);
@@ -614,7 +631,7 @@ photoSlide("lipedema_treatment", "Lipedema \u2014 Surgical Outcomes");
   let y = lead(s1, sec.lead, 1.72);
   const b = sec.blocks.slice(0, 3);
   const gap = 0.22, cw = (CW - gap * 2) / 3, ch = H - y - 0.72;
-  const size = fitSize(b, cw - 0.48, ch, [12.5, 12, 11.5, 11, 10.5, 10, 9.5]);
+  const size = fitSize(b, cw - 0.48, ch, SIZES);
   b.forEach((blk, i) => {
     const x = MX + i * (cw + gap);
     card(s1, x, y, cw, ch);
@@ -624,16 +641,8 @@ photoSlide("lipedema_treatment", "Lipedema \u2014 Surgical Outcomes");
   });
   s1.addNotes(clean(sec.note));
 
-  const s2 = newSlide();
-  head(s2, sec.kicker, "Ongoing Surveillance");
-  const blk = sec.blocks[3];
-  card(s2, MX, 1.85, CW, 2.7);
-  s2.addText(blk.h, { x: MX + 0.32, y: 2.0, w: CW - 0.64, h: 0.36, fontSize: 15,
-    bold: true, color: P.deep, fontFace: "Calibri", margin: 0 });
-  bullets(s2, blk.items, MX + 0.32, 2.48, CW - 0.64, 2.0, 13);
-  s2.addText(clean(sec.note), { x: MX, y: 4.8, w: CW, h: 0.8, fontSize: 12.5,
-    italic: true, color: P.slate, fontFace: "Calibri", margin: 0, valign: "top" });
-  notes(s2, sec);
+  s1.addNotes(clean(sec.note) + "\n\nONGOING SURVEILLANCE\n"
+    + sec.blocks[3].items.map((x) => "· " + clean(x)).join("\n"));
 })();
 
 contentSlide("red_flags");
@@ -643,33 +652,33 @@ contentSlide("red_flags");
 (function () {
   const rd = C.reference_decks;
   if (!rd) return;
-  const per = 5;
+  const per = 7;
   for (let g = 0; g < rd.items.length; g += per) {
     const grp = rd.items.slice(g, g + per);
     const s = newSlide();
     head(s, rd.kicker, rd.title + (rd.items.length > per
       ? "  (" + (Math.floor(g / per) + 1) + " of " + Math.ceil(rd.items.length / per) + ")" : ""));
     let y = g === 0 ? lead(s, rd.lead, 1.72) : 1.85;
-    const rowH = 0.86;
+    const rowH = 0.70;
     grp.forEach((it, i) => {
       const [t, dsc, u, k] = it;
       const cy = y + i * (rowH + 0.12);
       card(s, MX, cy, CW, rowH);
       s.addText(t, {
-        x: MX + 0.26, y: cy + 0.1, w: CW - 2.6, h: 0.28, fontSize: 13, bold: true,
+        x: MX + 0.26, y: cy + 0.06, w: CW - 2.6, h: 0.26, fontSize: 12, bold: true,
         color: P.deep, fontFace: "Calibri", margin: 0, valign: "middle",
       });
       s.addText(k, {
-        x: W - MX - 2.3, y: cy + 0.1, w: 2.0, h: 0.28, fontSize: 9.5, bold: true,
+        x: W - MX - 2.3, y: cy + 0.06, w: 2.0, h: 0.26, fontSize: 9, bold: true,
         color: P.teal, align: "right", fontFace: "Calibri", margin: 0, valign: "middle",
       });
       s.addText(dsc, {
-        x: MX + 0.26, y: cy + 0.36, w: CW - 0.52, h: 0.22, fontSize: 10.5,
+        x: MX + 0.26, y: cy + 0.30, w: CW - 0.52, h: 0.2, fontSize: 9.5,
         color: P.slate, fontFace: "Calibri", margin: 0, valign: "middle",
       });
-      s.addText([{ text: u, options: { hyperlink: { url: u }, fontSize: 8.5,
+      s.addText([{ text: u, options: { hyperlink: { url: u }, fontSize: 8,
                    color: "1C7293", underline: true } }], {
-        x: MX + 0.26, y: cy + 0.58, w: CW - 0.52, h: 0.22,
+        x: MX + 0.26, y: cy + 0.49, w: CW - 0.52, h: 0.2,
         fontFace: "Calibri", margin: 0, valign: "middle",
       });
     });
@@ -744,6 +753,11 @@ const out = path.join(HERE, "Lymphedema_Lipedema_TBTW.pptx");
 pres.writeFile({ fileName: out }).then(() => {
   console.log("slides: " + n);
   console.log("captured photos used: " + PHOTOS_USED);
+  const hist = {};
+  PICKED.forEach(([sl, sz]) => { hist[sz] = (hist[sz] || 0) + 1; });
+  console.log("body font sizes: " + JSON.stringify(hist));
+  console.log(TIGHT.length ? "AT FONT FLOOR:\n  " + TIGHT.join("\n  ")
+                           : "no slide hit the font floor");
   console.log("optional/cuttable: " + (CUT.length ? "\n  " + CUT.join("\n  ") : "none"));
   console.log("wrote " + out);
 });

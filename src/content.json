@@ -14,7 +14,7 @@
     "base_url": "https://information-vs-energy-vs-matter.github.io/Total_body_therapy_-_wellness",
     "pres_path": "/lymphedema/",
     "disclaimer": "Educational use only. Not a substitute for individualized medical evaluation or care.",
-    "deck_file": "Lymphedema_Lipedema_TBTW.pptx",
+    "deck_file": "Lymphedema_Lipedema_TBTW_v2.pptx",
     "photo_dir": "assets/photos",
     "org_photos": [
       "tbtw_clinic_exterior",
@@ -23,7 +23,8 @@
       "tbtw_sara",
       "tbtw_andie",
       "tbtw_logo"
-    ]
+    ],
+    "deck_file_prev": "Lymphedema_Lipedema_TBTW_v1.pptx"
   },
   "palette": {
     "deep": "025462",
@@ -71,20 +72,20 @@
         {
           "h": "Three jobs",
           "items": [
-            "**Fluid balance** — returns roughly 2–4 L of interstitial fluid to the bloodstream daily",
-            "**Protein transport** — the only route by which large interstitial proteins return to circulation",
-            "**Immune surveillance** — lymph nodes filter pathogens and host lymphocytes"
+            "**Fluid balance** — returns 2–4 L/day to circulation",
+            "**Protein transport** — the only route back for large proteins",
+            "**Immune surveillance** — nodes filter, host lymphocytes"
           ]
         },
         {
           "h": "The pathway",
           "items": [
-            "Initial lymphatics (blind-ended capillaries) collect interstitial fluid",
-            "Precollectors and collectors move lymph via lymphangions — segments that contract 6–10x/min",
-            "Regional lymph nodes filter the load",
-            "Trunks drain to the thoracic duct (left, and entire lower body) and right lymphatic duct",
-            "Both empty at the subclavian veins — back into venous circulation"
-          ]
+            "Initial lymphatics collect interstitial fluid",
+            "Collectors move lymph via lymphangions",
+            "Regional nodes filter the load",
+            "Thoracic duct → subclavian veins"
+          ],
+          "detail": "Lymphangions are segments that contract 6–10x/min. The left side and the entire lower body drain via the thoracic duct; the right upper quadrant via the right lymphatic duct."
         }
       ],
       "note": "Lymphangion contraction is the primary pump. It is stimulated by stretch, muscle contraction, arterial pulsation, and breathing — which is exactly why exercise and diaphragmatic breathing are treatment, not just adjuncts.",
@@ -122,19 +123,19 @@
         {
           "h": "The three states",
           "items": [
-            "**Normal** — transport capacity comfortably exceeds lymph load. Large functional reserve.",
-            "**Dynamic insufficiency** — normal lymphatics, but load exceeds capacity. This is ordinary edema (CHF, venous insufficiency, hypoproteinemia). Low protein.",
-            "**Mechanical insufficiency** — capacity drops below even a normal load. This is lymphedema. High protein."
+            "**Normal** — capacity exceeds load, large reserve",
+            "**Dynamic insufficiency** — normal vessels, excess load. Ordinary edema.",
+            "**Mechanical insufficiency** — damaged vessels. This is lymphedema."
           ]
         },
         {
           "h": "Why the protein matters",
           "items": [
-            "Retained interstitial protein is osmotically active — it pulls in more water",
-            "It triggers chronic inflammation and fibroblast activity",
-            "That fibrosis further reduces transport capacity — a self-reinforcing loop",
-            "This is why untreated lymphedema progresses, and why early intervention changes the trajectory"
-          ]
+            "Retained protein is osmotically active — pulls in water",
+            "Drives inflammation and fibrosis",
+            "Fibrosis further cuts capacity — a self-reinforcing loop"
+          ],
+          "detail": "This is why untreated lymphedema progresses, and why early intervention changes the trajectory."
         }
       ],
       "note": "Combined insufficiency — high load AND damaged system — is common in the patients you will actually see.",
@@ -167,22 +168,22 @@
         {
           "h": "Primary — developmental",
           "items": [
-            "**Congenital** — present at birth or within the first 2 years. Includes Milroy disease.",
-            "**Praecox** — onset at puberty through age 35. The most common primary form.",
-            "**Tarda** — onset after age 35",
-            "Mechanisms: aplasia, hypoplasia, hyperplasia, or valvular incompetence of lymphatics"
-          ]
+            "**Congenital** — birth to age 2, incl. Milroy disease",
+            "**Praecox** — puberty to 35. Most common primary form.",
+            "**Tarda** — after 35"
+          ],
+          "detail": "Mechanisms: aplasia, hypoplasia, hyperplasia, or valvular incompetence."
         },
         {
           "h": "Secondary — acquired",
           "items": [
-            "**Cancer treatment** — lymph node dissection and/or radiation. The leading cause in developed countries.",
-            "**Filariasis** — *Wuchereria bancrofti*. The leading cause worldwide.",
-            "**Trauma or surgery** — burns, vein harvest, orthopedic procedures",
-            "**Chronic venous insufficiency** — progresses to phlebolymphedema",
-            "**Recurrent infection** — each episode of cellulitis causes further lymphatic damage",
-            "**Obesity** — central obesity significantly raises risk independently"
-          ]
+            "**Cancer treatment** — node dissection and/or radiation. Leading cause here.",
+            "**Filariasis** — leading cause worldwide",
+            "**Trauma, surgery, burns**",
+            "**Chronic venous insufficiency** → phlebolymphedema",
+            "**Recurrent infection** and **obesity**"
+          ],
+          "detail": "Risk multipliers after cancer treatment: extent of node dissection, regional radiation, elevated BMI, post-op infection, wound complications, taxane-based chemo."
         }
       ],
       "note": "Risk multipliers after cancer treatment: extent of node dissection, regional radiation, elevated BMI, post-op infection, wound complications, and taxane-based chemotherapy.",
@@ -216,30 +217,28 @@
         {
           "h": "Early — often reported before anything is visible",
           "items": [
-            "Heaviness, fullness, or tightness in the limb",
-            "Clothing, sleeves, rings, or shoes fitting differently",
-            "Aching or discomfort without a clear mechanical cause",
-            "Reduced flexibility at the wrist, hand, or ankle",
-            "Transient swelling that resolves overnight"
+            "Heaviness, fullness, tightness",
+            "Clothing, rings or shoes fitting differently",
+            "Aching without a mechanical cause",
+            "Swelling that resolves overnight"
           ]
         },
         {
           "h": "Established",
           "items": [
-            "Persistent swelling, initially distal, that no longer resolves with elevation",
-            "Pitting edema — later becoming non-pitting as fibrosis develops",
-            "Skin feels thickened, firm, or leathery",
+            "Persistent swelling, no longer resolving with elevation",
+            "Pitting → non-pitting as fibrosis develops",
+            "Skin thickened and firm",
             "Positive Stemmer's sign",
-            "Deepened natural skin folds",
             "Recurrent cellulitis"
           ]
         },
         {
           "h": "Do not overlook",
           "items": [
-            "Psychosocial burden — body image, clothing, social withdrawal, anxiety",
-            "Functional loss — grip, reach, gait, footwear, ADLs",
-            "Occupational impact and cost of ongoing garments"
+            "Psychosocial burden — body image, social withdrawal",
+            "Functional loss — grip, reach, gait, footwear",
+            "Occupational impact and garment cost"
           ]
         }
       ],
@@ -274,38 +273,38 @@
         {
           "h": "History",
           "items": [
-            "Onset, duration, progression, and whether it resolves overnight",
-            "Surgical and oncologic history — nodes removed, radiation fields",
-            "Infection history — every episode of cellulitis",
-            "Family history (suggests primary lymphedema or lipedema)",
-            "Travel history (filariasis), cardiac, renal, and hepatic history"
+            "Onset, duration, whether it resolves overnight",
+            "Surgical and oncologic history — nodes, radiation fields",
+            "Every episode of cellulitis",
+            "Family history; travel history"
           ]
         },
         {
           "h": "Physical examination",
           "items": [
-            "**Stemmer's sign** — attempt to pinch and lift the skin fold at the base of the 2nd toe or finger. Cannot lift = **positive** = lymphedema. Positive is diagnostic; negative does not rule it out.",
-            "**Pitting assessment** — depth and rebound time, graded 1+ to 4+",
-            "**Skin inspection** — texture, temperature, color, papillomas, fissures, wounds, fungal infection between digits",
-            "**Bilateral comparison** — symmetry, foot involvement, where the swelling stops"
-          ]
+            "**Stemmer's sign** — cannot lift the skin fold = positive = lymphedema",
+            "**Pitting** — depth and rebound, graded 1+ to 4+",
+            "**Skin** — texture, papillomas, fissures, fungal infection",
+            "**Compare sides** — symmetry, foot involvement"
+          ],
+          "detail": "Stemmer's is diagnostic when positive; a negative does NOT rule lymphedema out. Check between the toes for tinea — a common cellulitis entry point."
         },
         {
           "h": "Objective measurement",
           "items": [
-            "**Circumferential tape** — at fixed 4 cm intervals from a bony landmark. Low cost, good reliability if landmarks are consistent.",
-            "**Volumetry** — water displacement. Historically the gold standard; impractical with open wounds.",
-            "**Perometry** — infrared optical scanning. Fast and reproducible.",
-            "**Bioimpedance spectroscopy (L-Dex)** — detects extracellular fluid change; can identify subclinical Stage 0."
+            "**Circumferential tape** at 4 cm intervals — cheap, reliable",
+            "**Volumetry** — water displacement",
+            "**Perometry** — infrared, fast and reproducible",
+            "**Bioimpedance (L-Dex)** — can detect Stage 0"
           ]
         },
         {
           "h": "Imaging — when the picture is unclear",
           "items": [
-            "**Lymphoscintigraphy** — the imaging standard for confirming lymphatic dysfunction",
-            "**ICG lymphography** — maps superficial lymphatics; guides MLD and surgical planning",
-            "**Duplex ultrasound** — rule out DVT and venous insufficiency",
-            "**MRI / CT** — rule out malignancy or extrinsic compression"
+            "**Lymphoscintigraphy** — the imaging standard",
+            "**ICG lymphography** — maps superficial vessels",
+            "**Duplex US** — rule out DVT",
+            "**MRI / CT** — rule out malignancy"
           ]
         }
       ],
@@ -489,10 +488,7 @@
         }
       ],
       "photo_slot": "Stage I — soft pitting edema, dorsum of foot or hand",
-      "photos": [
-        "stage1_photo",
-        "stage_clinical_leg"
-      ],
+      "photos": [],
       "photo_links": [
         [
           "Wikimedia — “pitting edema foot”",
@@ -536,8 +532,8 @@
       "note": "The presence or absence of pitting is what separates early from late Stage II — not the size of the limb.",
       "photo_slot": "Stage II — firm non-pitting swelling, positive Stemmer, early skin thickening",
       "photos": [
-        "tbtw_arm_extended",
-        "tbtw_arm_raised"
+        "stage1_photo",
+        "stage_clinical_leg"
       ],
       "photo_links": [
         [
@@ -734,35 +730,31 @@
         {
           "h": "Technique principles",
           "items": [
-            "**Very light pressure** — stretches skin only. Heavy pressure collapses initial lymphatics and is counterproductive.",
-            "Slow, rhythmic — roughly one stroke per second, matching lymphangion contraction rate",
-            "**Clear proximal before distal.** Empty the receiving area first or there is nowhere for fluid to go.",
-            "Begin with the neck/terminus, then trunk quadrants, then the affected limb",
-            "Work root-to-tip to clear, then tip-to-root to drain",
-            "Skin must move with the hand — no gliding, no lubricant"
-          ]
+            "**Very light pressure** — skin stretch only",
+            "**~1 stroke/second** — matches lymphangion rate",
+            "**Clear proximal before distal**",
+            "Skin moves with the hand — no lubricant, no gliding"
+          ],
+          "detail": "Heavy pressure collapses initial lymphatics and is counterproductive. Order: neck/terminus, then trunk quadrants, then the limb. Work root-to-tip to clear, then tip-to-root to drain."
         },
         {
           "h": "Sequence for an affected limb",
           "items": [
-            "Diaphragmatic breathing — drives thoracic duct flow",
-            "Terminus (supraclavicular) clearing",
-            "Contralateral, then ipsilateral trunk quadrants",
-            "Anastomoses — axillo-axillary, axillo-inguinal, inguino-inguinal",
-            "Proximal limb, then progressively distal",
-            "Finish with a distal-to-proximal drainage sequence"
+            "Diaphragmatic breathing",
+            "Terminus, then trunk quadrants",
+            "Anastomoses",
+            "Proximal limb, then distal"
           ]
         },
         {
           "h": "Contraindications",
           "items": [
-            "**Acute cellulitis or active infection**",
+            "**Acute cellulitis or infection**",
             "**Acute DVT**",
-            "**Decompensated congestive heart failure**",
-            "Acute renal failure",
-            "Caution with active untreated malignancy — coordinate with oncology",
-            "Caution with carotid sinus hypersensitivity for neck work"
-          ]
+            "**Decompensated heart failure**",
+            "Caution: active malignancy — coordinate with oncology"
+          ],
+          "detail": "Acute renal failure is also a contraindication. Carotid sinus hypersensitivity is a caution for neck work."
         }
       ],
       "note": "MLD alone produces modest results. Its value is greatest when combined with compression — the evidence supports CDT as a package, not MLD in isolation.",
@@ -793,33 +785,31 @@
         {
           "h": "Phase I — short-stretch bandaging",
           "items": [
-            "**Short-stretch** bandages: low resting pressure, high working pressure",
-            "Never use long-stretch/ACE — high resting pressure risks a tourniquet effect",
-            "Layered: stockinette, digit wrap, padding, then short-stretch",
-            "Foam or chip padding over fibrotic areas to soften tissue",
-            "Gradient must be higher distally than proximally",
-            "Worn 23 hours/day, reapplied at each visit"
+            "**Short-stretch** — low resting, high working pressure",
+            "**Never long-stretch/ACE** — tourniquet risk",
+            "Layered: stockinette, digits, padding, bandage",
+            "Foam over fibrosis; gradient higher distally",
+            "Worn 23 hrs/day"
           ]
         },
         {
           "h": "Phase II — garments",
           "items": [
-            "**Class 1: 20–30 mmHg** — mild/early, upper limb, prophylaxis",
-            "**Class 2: 30–40 mmHg** — most lower limb lymphedema",
-            "**Class 3: 40–50 mmHg** — severe lower limb",
-            "Flat-knit generally preferred over circular-knit for lymphedema — better containment, no tourniquet at folds",
-            "Custom fit for irregular limb shape",
-            "Replace every 4–6 months; two garments so one is always clean"
+            "**Class 1 (20–30)** — upper limb, mild, prophylaxis",
+            "**Class 2 (30–40)** — most lower limb",
+            "**Class 3 (40–50)** — severe lower limb",
+            "Flat-knit preferred; custom for irregular shape",
+            "Replace every 4–6 months"
           ]
         },
         {
           "h": "Precautions",
           "items": [
-            "**Check arterial status.** ABI < 0.8 requires caution; < 0.5 is a contraindication to standard compression.",
-            "Decompensated heart failure — sudden fluid return can precipitate overload",
-            "Acute DVT, acute infection, severe peripheral neuropathy",
-            "Recheck skin integrity at every application"
-          ]
+            "**Check ABI.** < 0.8 caution, < 0.5 contraindicated",
+            "Decompensated heart failure",
+            "Acute DVT, acute infection, severe neuropathy"
+          ],
+          "detail": "Intermittent pneumatic compression is an adjunct only. Never use it over an untreated proximal obstruction."
         }
       ],
       "note": "Intermittent pneumatic compression may be a useful adjunct but does not replace MLD or bandaging, and must not be used over an untreated proximal obstruction.",
@@ -852,34 +842,32 @@
         {
           "h": "Principles",
           "items": [
-            "**Always perform with compression in place** — bandages or garment",
-            "Begin with diaphragmatic breathing to open the thoracic duct",
-            "**Proximal to distal** — clear the trunk and proximal limb first",
-            "Slow, rhythmic, controlled; no breath-holding or Valsalva",
-            "Low resistance, higher repetition",
-            "End with elevation and further breathing"
+            "**Always with compression in place**",
+            "Start with diaphragmatic breathing",
+            "**Proximal to distal**",
+            "Slow and rhythmic; no Valsalva",
+            "Low resistance, higher repetition"
           ]
         },
         {
           "h": "Programme components",
           "items": [
-            "Diaphragmatic breathing — 5–10 repetitions to start and finish",
-            "Cervical and shoulder girdle mobility (upper limb cases)",
+            "Diaphragmatic breathing to start and finish",
+            "Cervical and shoulder girdle mobility",
             "Trunk and core activation",
-            "Active ROM progressing proximal to distal through the limb",
-            "Ankle pumps and calf work for lower limb cases",
-            "Aerobic conditioning — walking, cycling, aquatic therapy"
+            "Active ROM, proximal → distal",
+            "Aerobic — walking, cycling, aquatic"
           ]
         },
         {
           "h": "The resistance training question — settled",
           "items": [
-            "Slowly progressive resistance training does **not** cause or worsen lymphedema",
-            "The PAL trial demonstrated safety in breast cancer survivors",
-            "It may reduce flare incidence and improve limb symptoms",
-            "Progress gradually, wear compression, monitor and stop for symptom change",
-            "**Do not tell patients to avoid using the limb.** That advice is outdated and causes deconditioning."
-          ]
+            "Progressive resistance training does **not** cause or worsen lymphedema",
+            "The PAL trial demonstrated safety",
+            "May reduce flare incidence",
+            "**Do not tell patients to avoid using the limb**"
+          ],
+          "detail": "Progress gradually, wear compression, monitor and stop for symptom change. Advising disuse is outdated and causes deconditioning. Aquatic exercise is especially effective — hydrostatic pressure provides uniform compression while the patient moves."
         }
       ],
       "note": "Aquatic exercise is particularly effective — hydrostatic pressure provides uniform external compression while the patient moves.",
@@ -910,52 +898,48 @@
         {
           "h": "Lower limb options",
           "items": [
-            "**Knee-high stockings** — most common for calf/ankle-predominant edema. Easiest to don, best adherence.",
-            "**Thigh-high stockings** — when swelling extends above the knee. Needs silicone band or waist attachment to stop roll-down.",
-            "**Pantyhose / waist-high** — bilateral disease, or genital and lower-trunk involvement.",
-            "**Capri / knee-length** — thigh and knee involvement with a spared calf, common in lipedema."
+            "**Knee-high** — most common; easiest to don, best adherence",
+            "**Thigh-high** — swelling above the knee; needs a silicone band",
+            "**Pantyhose / waist-high** — bilateral or genital involvement",
+            "**Capri** — thigh and knee, spared calf. Common in lipedema."
           ]
         },
         {
           "h": "Velcro adjustable wraps",
           "items": [
-            "Inelastic wrap systems with overlapping Velcro straps",
-            "**Patient-adjustable** — re-tension as the limb changes through the day",
-            "Far easier to apply with arthritis, weak grip, obesity, or limited reach",
-            "Excellent bridge between Phase I bandaging and a fitted garment",
-            "Useful at night and for patients who cannot tolerate donning a stocking",
-            "Juzo Compression Wrap, Jobst FarrowWrap, Circaid"
+            "Inelastic, overlapping Velcro straps",
+            "**Patient-adjustable** through the day",
+            "Far easier with arthritis, weak grip, or limited reach",
+            "Bridges Phase I bandaging to a fitted garment",
+            "Juzo Wrap, Jobst FarrowWrap, Circaid"
           ]
         },
         {
           "h": "Flat-knit vs. circular-knit",
           "items": [
-            "**Flat-knit** — seamed, made to measure, stiffer. Preferred for lymphedema: it contains irregular limb shape and does not cut in at folds.",
-            "**Circular-knit** — seamless, thinner, more cosmetic, but tends to tourniquet at skin folds and is better suited to venous disease.",
-            "For any limb with distortion, fibrosis, or deep folds, choose flat-knit."
+            "**Flat-knit** — seamed, made to measure, stiffer. Preferred for lymphedema.",
+            "**Circular-knit** — thinner, more cosmetic, tourniquets at folds",
+            "Any distortion, fibrosis, or deep folds → flat-knit"
           ]
         },
         {
           "h": "Custom garments — when off-the-shelf will not do",
           "items": [
-            "Limb measurements falling outside standard sizing charts",
-            "Marked shape distortion, deep folds, or lobules",
-            "Toe caps, gauntlets, gloves, and upper-limb sleeves with shoulder attachment",
-            "Genital, breast, head and neck, or trunk garments",
-            "Measured by a certified fitter; expect 2–3 weeks for fabrication",
-            "Jobst and Juzo both produce made-to-measure flat-knit lines"
-          ]
+            "Measurements outside standard sizing",
+            "Marked distortion, deep folds, lobules",
+            "Toe caps, gauntlets, gloves, sleeves",
+            "Genital, breast, head and neck, trunk",
+            "2–3 weeks to fabricate"
+          ],
+          "detail": "Measured by a certified fitter. Jobst and Juzo both produce made-to-measure flat-knit lines."
         },
         {
           "h": "Practical prescribing",
           "items": [
-            "**Class 1 (20–30 mmHg)** — upper limb, mild disease, prophylaxis",
-            "**Class 2 (30–40 mmHg)** — most lower limb lymphedema",
-            "**Class 3 (40–50 mmHg)** — severe lower limb",
-            "Prescribe **two** garments so one is always clean",
+            "**Two garments** so one is always clean",
             "Replace every 4–6 months — elastic fatigues before it looks worn",
-            "Check arterial status first; ABI < 0.8 requires caution",
-            "Donning aids: rubber gloves, stocking donner, silk slip-sock"
+            "Check arterial status first; ABI < 0.8 caution",
+            "Donning aids: rubber gloves, donner, slip-sock"
           ]
         }
       ],
@@ -1001,32 +985,30 @@
         {
           "h": "Defining features",
           "items": [
-            "**Bilateral and symmetrical** fat deposition — legs, hips, buttocks, sometimes arms",
-            "**Painful** — tenderness, aching, pressure sensitivity. This is diagnostic, not incidental.",
-            "**Bruises easily** — capillary fragility",
-            "**Spares the feet** — a sharp cuff or 'bracelet' at the ankle",
-            "**Disproportionate** — lower body markedly larger than trunk",
-            "**Diet-resistant** — the affected fat does not respond to caloric restriction or exercise",
-            "**Negative Stemmer's sign** (until lymphatic involvement develops)"
-          ]
+            "**Bilateral and symmetrical**",
+            "**Painful** — tender to pressure. Diagnostic, not incidental.",
+            "**Bruises easily**",
+            "**Spares the feet** — sharp ankle cuff",
+            "**Diet-resistant**; **negative Stemmer's**"
+          ],
+          "detail": "Also: disproportionate — lower body markedly larger than trunk. The affected fat does not respond to caloric restriction or exercise."
         },
         {
           "h": "Etiology",
           "items": [
-            "Cause is unknown; strong familial pattern suggests genetic contribution",
-            "**Hormonally triggered** — onset and acceleration cluster at puberty, pregnancy, and menopause",
-            "Evidence points toward a connective tissue disorder component",
-            "Reported in up to ~11% of women",
-            "Men are affected rarely, usually with hormonal alteration"
+            "Cause unknown; strong familial pattern",
+            "**Hormonally triggered** — puberty, pregnancy, menopause",
+            "Evidence points to a connective tissue component",
+            "Reported in up to ~11% of women"
           ]
         },
         {
           "h": "Why the misdiagnosis matters",
           "items": [
-            "Patients are frequently told to lose weight — which does not resolve the affected fat",
-            "Years of unnecessary shame and ineffective treatment",
-            "Delayed diagnosis allows progression toward lymphatic involvement",
-            "A correct diagnosis is itself therapeutic — it reframes the patient's understanding"
+            "Patients are told to lose weight — it does not work",
+            "Years of shame and ineffective treatment",
+            "Delay allows progression to lymphatic involvement",
+            "**A correct diagnosis is itself therapeutic**"
           ]
         }
       ],
@@ -1225,31 +1207,29 @@
         {
           "h": "What PT can achieve",
           "items": [
-            "Pain reduction — often the patient's highest priority",
-            "Control of any fluid component through MLD and compression",
-            "Preservation of joint mechanics and gait",
-            "Prevention of progression to lipo-lymphedema",
-            "Weight-bearing tolerance and conditioning"
+            "Pain reduction — often the patient's priority",
+            "Control of the fluid component",
+            "Preserve joint mechanics and gait",
+            "Prevent progression to lipo-lymphedema"
           ]
         },
         {
           "h": "Interventions",
           "items": [
-            "Compression — flat-knit garments, generally better tolerated than in lymphedema",
-            "MLD for the fluid component and for pain relief",
-            "Aquatic exercise — highly effective; buoyancy plus hydrostatic compression",
-            "Low-impact aerobic and resistance conditioning",
-            "Manual therapy for associated joint dysfunction",
-            "Nutritional referral — anti-inflammatory patterns, not caloric restriction alone"
+            "Flat-knit compression",
+            "MLD for fluid and for pain",
+            "**Aquatic exercise** — buoyancy plus hydrostatic compression",
+            "Low-impact aerobic and resistance work",
+            "Nutritional referral"
           ]
         },
         {
           "h": "Set expectations honestly",
           "items": [
-            "Conservative care does not eliminate the fat",
-            "Liposuction (tumescent/water-assisted) is the only intervention that removes it",
-            "PT before and after liposuction improves outcomes",
-            "Insurance coverage remains inconsistent — this is a real barrier"
+            "Conservative care does not remove the fat",
+            "Liposuction is the only intervention that does",
+            "PT before and after surgery improves outcomes",
+            "Insurance coverage remains inconsistent"
           ]
         }
       ],
@@ -1280,35 +1260,33 @@
         {
           "h": "Gait training",
           "items": [
-            "Limb volume changes the mechanics — gait adapted around a heavy limb persists after decongestion",
-            "Reassess step length, cadence, stance time, and base of support once volume is stable",
-            "Address the compensations: circumduction, hip hiking, reduced push-off",
-            "Footwear reassessment — shoe size often changes substantially after Phase I",
-            "Calf muscle pump function is both a gait goal and a lymphatic goal",
-            "Assistive device review — what was needed at intake may not fit now"
-          ]
+            "Gait adapted around a heavy limb persists after decongestion",
+            "Reassess step length, cadence, base of support",
+            "**Shoe size often changes after Phase I**",
+            "Calf pump is both a gait and a lymphatic goal",
+            "Review the assistive device"
+          ],
+          "detail": "Address compensations: circumduction, hip hiking, reduced push-off."
         },
         {
           "h": "Balance therapy",
           "items": [
-            "Altered limb mass and distal sensation both degrade postural control",
-            "Formal falls-risk screening — these patients are frequently at risk and rarely screened",
-            "Static then dynamic progression; add head turns and dual-task once safe",
+            "Altered limb mass and distal sensation degrade postural control",
+            "**Screen falls risk** — rarely done in this population",
+            "Static → dynamic, then dual-task",
             "Proprioceptive retraining at ankle and hip",
-            "Remember the compounding factors: chemotherapy-induced peripheral neuropathy, deconditioning, visual change",
-            "A fall producing a skin break in a lymphedematous limb is a cellulitis risk, not just an injury"
-          ]
+            "A fall breaking skin is a cellulitis risk"
+          ],
+          "detail": "Compounding factors: chemotherapy-induced peripheral neuropathy, deconditioning, visual change."
         },
         {
           "h": "Orthopedic pain not relieved by CDT",
           "items": [
-            "If pain persists once volume is controlled, it is a separate problem — treat it as one",
-            "Knee and hip OA, unmasked or aggravated by years of altered loading",
-            "Low back pain from chronic gait asymmetry",
-            "Shoulder dysfunction after axillary dissection — capsular restriction, scar, AXD cording",
-            "Plantar fasciitis and foot pain from changed weight-bearing",
-            "Consider lipedema if pain is disproportionate, bilateral, and tender to light pressure",
-            "Standard orthopedic PT applies — manual therapy, loading progression, strengthening"
+            "If pain persists once volume is controlled, treat it as a separate problem",
+            "Knee and hip OA; low back pain from gait asymmetry",
+            "Post-axillary-dissection shoulder — capsule, scar, cording",
+            "Plantar fasciitis from changed weight-bearing",
+            "**Disproportionate bilateral tenderness → consider lipedema**"
           ]
         },
         {
@@ -1348,26 +1326,25 @@
         {
           "h": "Urgent — same day",
           "items": [
-            "**Cellulitis** — spreading erythema, heat, fever, sudden limb enlargement",
-            "**Suspected DVT** — acute unilateral swelling, calf pain, warmth",
-            "**Decompensated heart failure** — dyspnea, orthopnea, rapid bilateral swelling",
-            "Systemic illness — fever, rigors, malaise, hypotension"
+            "**Cellulitis** — spreading erythema, heat, fever",
+            "**Suspected DVT** — acute unilateral swelling, calf pain",
+            "**Decompensated heart failure** — dyspnea, orthopnea",
+            "Systemic illness — fever, rigors, hypotension"
           ]
         },
         {
           "h": "Refer for workup",
           "items": [
-            "Rapid-onset or proximal-first swelling — possible malignant lymphedema",
-            "Any new neurological deficit in the limb",
+            "Rapid-onset or proximal-first swelling — possible malignancy",
+            "New neurological deficit",
             "Non-healing wound or ulceration",
-            "Unexplained weight loss, night sweats, palpable mass",
-            "Failure to respond to appropriately delivered CDT"
+            "Failure to respond to well-delivered CDT"
           ]
         },
         {
           "h": "Screen before starting",
           "items": [
-            "Arterial status — ABI before lower limb compression",
+            "**ABI before lower limb compression**",
             "Cardiac and renal status",
             "Active malignancy — coordinate with oncology",
             "Peripheral neuropathy and sensory testing"

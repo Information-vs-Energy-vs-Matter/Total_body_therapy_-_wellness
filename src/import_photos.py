@@ -53,6 +53,13 @@ MAP = [
     ("lip_comparison_1",    "comparison.jpeg",  None, "before / after"),
     ("lip_comparison_2",    "comparison2.jpeg", None, "before / after, anterior"),
     ("lip_comparison_3",    "comparison3.jpeg", None, "before / after, posterior"),
+# ---------- compression garments (manufacturer product images) ----------
+    ("garment_thigh_high",  "IMG_7281.jpg", (.03, .02, .03, .02), "thigh-high, silicone band"),
+    ("garment_pantyhose",   "IMG_7282.jpg", (.05, .06, .05, .03), "pantyhose / waist-high"),
+    ("garment_wrap_arm",    "IMG_7283.jpg", (.02, .03, .02, .02), "Velcro wrap, upper limb"),
+    ("garment_wrap_calf",   "IMG_7284.jpg", (.04, .04, .04, .04), "Velcro wrap, calf"),
+    ("garment_wrap_foot",   "IMG_7285.jpg", (.03, .03, .03, .03), "Velcro wrap, foot / ankle"),
+    ("garment_bra",         "IMG_7286.jpg", (.13, .03, .13, .03), "compression bra / trunk garment"),
 ]
 
 # excluded on purpose

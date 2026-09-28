@@ -379,7 +379,16 @@ function photoSlide(id, title) {
   const s = newSlide();
   head(s, sec.kicker, title || (sec.title + " \u2014 Clinical Appearance"));
   const y = 1.75;
-  photoRow(s, list.slice(0, 3), MX, y, CW, H - y - 0.7);
+  const avail = H - y - 0.7;
+  if (list.length <= 3) {
+    photoRow(s, list.slice(0, 3), MX, y, CW, avail);
+  } else {
+    // two rows of three
+    const half = Math.ceil(list.length / 2);
+    const rh = (avail - 0.22) / 2;
+    photoRow(s, list.slice(0, half), MX, y, CW, rh);
+    photoRow(s, list.slice(half), MX, y + rh + 0.22, CW, rh);
+  }
   s.addNotes(clean(sec.note || "") + "\n\nImages supplied by the practice / open sources.");
   return s;
 }
@@ -588,6 +597,7 @@ contentSlide("exercise");
     fontSize: 11, italic: true, color: P.slate, fontFace: "Calibri", margin: 0, valign: "top" });
   notes(s2, sec);
 })();
+photoSlide("garments", "Garment Types");
 contentSlide("lipedema_intro", { image: "lipedema_cuff", blocks: [0] });
 photoSlide("lipedema_intro", "Lipedema \u2014 Clinical Appearance");
 contentSlide("lipedema_intro", { title: "Lipedema — Etiology & Misdiagnosis", blocks: [1, 2], image: null, noLead: true });

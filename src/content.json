@@ -910,7 +910,7 @@
             "Inelastic, overlapping Velcro straps",
             "**Patient-adjustable** through the day",
             "Far easier with arthritis, weak grip, or limited reach",
-            "Bridges Phase I bandaging to a fitted garment",
+            "Available for calf, foot/ankle, and upper limb",
             "Juzo Wrap, Jobst FarrowWrap, Circaid"
           ]
         },
@@ -928,8 +928,8 @@
             "Measurements outside standard sizing",
             "Marked distortion, deep folds, lobules",
             "Toe caps, gauntlets, gloves, sleeves",
-            "Genital, breast, head and neck, trunk",
-            "2–3 weeks to fabricate"
+            "**Compression bras** for trunk and chest wall",
+            "Genital, head and neck; 2–3 weeks to fabricate"
           ],
           "detail": "Measured by a certified fitter. Jobst and Juzo both produce made-to-measure flat-knit lines."
         },
@@ -944,13 +944,13 @@
         }
       ],
       "note": "The most common cause of Phase II failure is not the wrong pressure class — it is a garment the patient cannot physically get on. Assess grip, reach, and vision before prescribing, and reach for an adjustable wrap when donning is the limiting factor.",
-      "photo_slot": "Garment types — knee-high, thigh-high, pantyhose, Velcro wrap, custom flat-knit",
       "photos": [
-        "garment_knee_high",
         "garment_thigh_high",
         "garment_pantyhose",
-        "garment_velcro_wrap",
-        "garment_custom"
+        "garment_wrap_calf",
+        "garment_wrap_arm",
+        "garment_wrap_foot",
+        "garment_bra"
       ],
       "photo_links": [
         [
@@ -1978,7 +1978,13 @@
     "lip_surgical_markup": "Pre-operative markings",
     "lip_comparison_1": "Before and after",
     "lip_comparison_2": "Before and after — anterior",
-    "lip_comparison_3": "Before and after — posterior"
+    "lip_comparison_3": "Before and after — posterior",
+    "garment_thigh_high": "Thigh-high with silicone band",
+    "garment_pantyhose": "Pantyhose / waist-high",
+    "garment_wrap_calf": "Velcro adjustable wrap — calf",
+    "garment_wrap_arm": "Velcro adjustable wrap — upper limb",
+    "garment_wrap_foot": "Velcro adjustable wrap — foot and ankle",
+    "garment_bra": "Compression bra — trunk and chest wall"
   },
   "review": {
     "lead": "Work top to bottom. Tap a row to mark it done — progress saves on this device. Items marked ▲ are decisions only you can make.",

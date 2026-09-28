@@ -1979,5 +1979,232 @@
     "lip_comparison_1": "Before and after",
     "lip_comparison_2": "Before and after — anterior",
     "lip_comparison_3": "Before and after — posterior"
+  },
+  "review": {
+    "lead": "Work top to bottom. Tap a row to mark it done — progress saves on this device. Items marked ▲ are decisions only you can make.",
+    "groups": [
+      {
+        "h": "Blocking — must resolve before this is shown publicly",
+        "state": "avoid",
+        "items": [
+          [
+            "▲ Patient photo consent",
+            "Nine clinic photos of real patients are on a public URL. Confirm written consent exists for each, and that no identifying feature is visible. If consent is not documented, say so and they come down.",
+            "consent"
+          ],
+          [
+            "▲ Anatomy diagram provenance",
+            "The four green lymphatic diagrams came from the image batch with no source attached. They look like Cancer Research UK figures (CC BY-SA, which is fine if credited). Confirm origin and licence, or I substitute Servier/OpenStax equivalents.",
+            "anat_lic"
+          ],
+          [
+            "▲ Staging photo provenance",
+            "The blue-background staging series and the Stage III photos also arrived without sources. Same question: where from, what licence.",
+            "stage_lic"
+          ]
+        ]
+      },
+      {
+        "h": "Clinical accuracy — please verify against your own practice",
+        "state": "ready",
+        "items": [
+          [
+            "ISL staging wording",
+            "Stages 0–III phrased from the 2023 consensus. Check Stage II early-vs-late pitting language reads correctly to you.",
+            "isl"
+          ],
+          [
+            "▲ Lipedema Stage 4",
+            "Presented as lipo-lymphedema WITH a note that the Lipedema Foundation has dropped the Stage 4 label. Andy asked for four stages. Confirm you are comfortable presenting it this way, or tell me to drop the caveat.",
+            "lip4"
+          ],
+          [
+            "Compression pressure classes",
+            "Class 1 20–30, Class 2 30–40, Class 3 40–50 mmHg. Confirm these match what you actually prescribe.",
+            "classes"
+          ],
+          [
+            "ABI thresholds",
+            "Stated as < 0.8 caution, < 0.5 contraindicated. Confirm.",
+            "abi"
+          ],
+          [
+            "MLD contraindications",
+            "Acute infection, acute DVT, decompensated CHF, acute renal failure. Anything you would add?",
+            "mld_ci"
+          ],
+          [
+            "Resistance training claim",
+            "Deck states progressive resistance training is safe, citing the PAL trial, and that advising limb disuse is outdated. Strong claim — confirm you stand behind it.",
+            "pal"
+          ],
+          [
+            "Phase I parameters",
+            "3–6 weeks, 4–5x/week, bandages 23 hrs/day. Adjust to your actual protocol.",
+            "phase1"
+          ],
+          [
+            "Lipedema prevalence",
+            "Stated as up to ~11% of women. Confirm or soften.",
+            "prev"
+          ],
+          [
+            "Lymph volume figure",
+            "Stated as 2–4 L/day returned to circulation. Confirm.",
+            "vol"
+          ],
+          [
+            "Garment content",
+            "Knee-high, thigh-high, pantyhose, capri, Velcro wraps, flat- vs circular-knit, custom. Written from your direction — check nothing is missing or wrong.",
+            "garm"
+          ],
+          [
+            "Post-PT content",
+            "Gait training, balance therapy, orthopedic pain not relieved by CDT. Also written from your direction.",
+            "postpt"
+          ]
+        ]
+      },
+      {
+        "h": "Practice details",
+        "state": "service",
+        "items": [
+          [
+            "▲ “Since 2002” vs “25 years”",
+            "Your website says both in different places. Deck currently uses 2002 throughout. Which is right?",
+            "years"
+          ],
+          [
+            "Credentials line",
+            "Listed as PT, DPT, CDT, Cert DN, PCES, CFT, FMT. Correct and complete?",
+            "creds"
+          ],
+          [
+            "Address",
+            "260 Pine State Street, Lillington NC 27546 — confirmed as the new clinic.",
+            "addr"
+          ],
+          [
+            "Andie Cahoon",
+            "Mentioned as a CLT in the About section. Include her more prominently, or less?",
+            "andie"
+          ],
+          [
+            "Closing testimonial",
+            "Not currently used. There is a lymphedema patient testimonial on your site — want it as a closing slide?",
+            "testim"
+          ]
+        ]
+      },
+      {
+        "h": "Structure and length",
+        "state": "ready",
+        "items": [
+          [
+            "▲ Slide count",
+            "40 slides. For a tight in-service that is probably long. Three are already flagged optional in the speaker notes.",
+            "count"
+          ],
+          [
+            "Optional slide 1",
+            "“Lymph Load vs. Transport Capacity” — conceptual. Cut if short on time.",
+            "opt1"
+          ],
+          [
+            "Optional slide 2",
+            "“What Else Swells a Limb” — differential table. Cut if the audience is already strong on this.",
+            "opt2"
+          ],
+          [
+            "Optional slide 3",
+            "“PT Management of Lipedema” — cut if lipedema is a lighter touch.",
+            "opt3"
+          ],
+          [
+            "Objectives slide",
+            "Ten objectives listed. Trim to the five you will actually assess?",
+            "objs"
+          ],
+          [
+            "Key takeaways",
+            "Twelve numbered takeaways at the end. Trim?",
+            "takeaways"
+          ],
+          [
+            "Order",
+            "Anatomy → etiology → symptoms → diagnosis → staging → CDT → garments → lipedema → post-PT → red flags. Reorder anything?",
+            "order"
+          ]
+        ]
+      },
+      {
+        "h": "Images",
+        "state": "ready",
+        "items": [
+          [
+            "Photo placement",
+            "32 images placed across staging, skin care, lipedema and treatment slides. Check each sits on the right slide.",
+            "place"
+          ],
+          [
+            "Captions",
+            "Every photo has a caption. Check they are clinically accurate — I wrote them from appearance, not from the chart.",
+            "caps"
+          ],
+          [
+            "Stage 2 photos",
+            "Both photos moved from Stage 1 to Stage 2 as requested. Confirm they are Stage II, not Stage I.",
+            "stage2"
+          ],
+          [
+            "Missing — garment photos",
+            "Five slots empty: knee-high, thigh-high, pantyhose, Velcro wrap, custom. Jobst/Juzo will usually grant education use if asked.",
+            "garm_img"
+          ],
+          [
+            "Missing — new clinic photo",
+            "Nothing of 260 Pine State St. Likely already on the @tbtwnc Instagram.",
+            "clinic_img"
+          ],
+          [
+            "Missing — headshots",
+            "No photo of you or Andie.",
+            "head_img"
+          ],
+          [
+            "Excluded image",
+            "One image carried a visible © Lipedema Simplified watermark and was left out. Email them if you want it.",
+            "excl"
+          ]
+        ]
+      },
+      {
+        "h": "Delivery",
+        "state": "live",
+        "items": [
+          [
+            "Open the site on your phone",
+            "Check it renders and the QR code scans from across a room.",
+            "site"
+          ],
+          [
+            "Run the quiz",
+            "Twelve click-to-reveal questions. Check the answers match how you teach it.",
+            "quiz"
+          ],
+          [
+            "Read the speaker notes",
+            "Detail was deliberately moved out of the slides and into the notes. Check the notes carry what you need.",
+            "notes"
+          ],
+          [
+            "Decide on a question box",
+            "An anonymous audience question box can be added — submissions go privately to your inbox, nothing public.",
+            "qbox"
+          ]
+        ]
+      }
+    ],
+    "footer": "Anything you change, tell Andy and it gets rebuilt — the deck and the website are generated from one file, so nothing has to be edited twice."
   }
 }

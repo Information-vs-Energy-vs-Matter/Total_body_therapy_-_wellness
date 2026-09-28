@@ -241,6 +241,7 @@ def page(title, body, active, depth=0):
            ("Outline", up + PRES + "/outline.html", "outline"),
            ("Quiz", up + PRES + "/quiz.html", "quiz"),
            ("Images", up + "images.html", "images"),
+           ("Review", up + "review.html", "review"),
            ("Capabilities", up + "capabilities.html", "cap")]
     links = "".join(
         f'<a href="{h}" class="{"on" if k == active else ""}">{n}</a>' for n, h, k in nav)
@@ -605,6 +606,62 @@ count();
     return page("Pick the images \u2014 " + M["title"], body, "images", depth=0)
 
 
+def build_review():
+    R = C["review"]
+    tier = {"avoid": ("b-avoid", "Blocking"), "ready": ("b-ready", "Please check"),
+            "service": ("b-service", "Needs your answer"), "live": ("b-live", "Before you present")}
+    out = []
+    for g in R["groups"]:
+        cls, lbl = tier[g["state"]]
+        rows = []
+        for what, why, key in g["items"]:
+            rows.append('<div class="pit" data-k="rv_%s"><div class="bx"></div><div>'
+                        '<div class="pt">%s</div><div class="pw">%s</div></div></div>'
+                        % (html.escape(key), md(what), md(why)))
+        out.append('<section class="card pgrp"><span class="badge %s">%s</span>'
+                   '<h2 class="sec">%s</h2>%s</section>'
+                   % (cls, lbl, md(g["h"]), "".join(rows)))
+    out.append('<section class="card"><div class="note">%s</div></section>' % md(R["footer"]))
+
+    js = """
+<script>
+var K='tbtw_review_v1';
+function load(){try{return JSON.parse(localStorage.getItem(K))||{}}catch(e){return {}}}
+function save(o){try{localStorage.setItem(K,JSON.stringify(o))}catch(e){}}
+function count(){
+  var d=load(),n=document.querySelectorAll('.pit').length,c=0;
+  document.querySelectorAll('.pit').forEach(function(p){if(d[p.dataset.k])c++;});
+  document.getElementById('cnt').textContent=c+' of '+n+' reviewed';
+}
+var st=load();
+document.querySelectorAll('.pit').forEach(function(p){
+  if(st[p.dataset.k])p.classList.add('done');
+  p.addEventListener('click',function(){
+    var d=load();
+    if(d[p.dataset.k]){delete d[p.dataset.k];p.classList.remove('done');}
+    else{d[p.dataset.k]=1;p.classList.add('done');}
+    save(d);count();
+  });
+});
+document.getElementById('reset').addEventListener('click',function(){
+  save({});document.querySelectorAll('.pit').forEach(function(p){p.classList.remove('done')});count();
+});
+count();
+</script>"""
+
+    body = ('<div class="hero"><div class="wrap"><div class="kick">%s</div>'
+            '<h1>Review checklist</h1><p class="sub">%s</p>'
+            '<div class="who"><b id="cnt">0 reviewed</b> &nbsp;&middot;&nbsp; '
+            '<span class="cred">\u25b2 = your decision</span></div></div></div>'
+            '<main class="wrap">%s'
+            '<section class="card"><button type="button" id="reset" '
+            'style="width:100%%;border:1px solid var(--line);background:#fff;color:var(--slate);'
+            'font-weight:700;font-size:14px;padding:12px;border-radius:9px;cursor:pointer;'
+            'font-family:inherit">Reset all checkmarks</button></section></main>%s'
+            % (md(M["org"]), md(R["lead"]), "".join(out), js))
+    return page("Review checklist \u2014 " + M["title"], body, "review", depth=0)
+
+
 def build_hub():
     n = len(C["sections"])
     body = f"""<div class="hero"><div class="wrap">
@@ -649,6 +706,7 @@ def main():
         "index.html": build_hub(),
         "capabilities.html": build_capabilities(),
         "images.html": build_images(),
+        "review.html": build_review(),
         PRES + "/index.html": build_presentation(),
         PRES + "/outline.html": build_outline(),
         PRES + "/quiz.html": build_quiz(),

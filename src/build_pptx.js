@@ -30,6 +30,24 @@ function secPhotos(sec) {
   return out;
 }
 const CAPS = C.photo_captions || {};
+const DIMS = JSON.parse(fs.readFileSync(path.join(HERE, "assets", "dimensions.json"), "utf8"));
+
+/**
+ * Place an image inside a box WITHOUT distorting it.
+ * pptxgenjs `sizing:{type:"contain"}` writes the box extent straight into the
+ * XML, which stretches the picture, so the fit is computed here instead.
+ */
+function fitImage(s, p, bx, by, bw, bh, align) {
+  const d = DIMS[path.basename(p)];
+  if (!d) { s.addImage({ path: p, x: bx, y: by, w: bw, h: bh }); return { x: bx, y: by, w: bw, h: bh }; }
+  const ar = d[0] / d[1];
+  let w = bw, h = bw / ar;
+  if (h > bh) { h = bh; w = bh * ar; }
+  const x = bx + (bw - w) / 2;
+  const y = align === "top" ? by : by + (bh - h) / 2;
+  s.addImage({ path: p, x: x, y: y, w: w, h: h });
+  return { x: x, y: y, w: w, h: h };
+}
 
 /** lay N photos in a row with captions, inside the given box */
 function photoRow(s, list, x, y, w, h) {
@@ -39,10 +57,10 @@ function photoRow(s, list, x, y, w, h) {
     const px = x + i * (cw + gap);
     const cap = CAPS[pr[0]] || "";
     const ih = cap ? h - 0.42 : h;
-    s.addImage({ path: pr[1], x: px, y: y, w: cw, h: ih,
-                 sizing: { type: "contain", w: cw, h: ih } });
+    const box = fitImage(s, pr[1], px, y, cw, ih, "top");
     if (cap) {
-      s.addText(cap, { x: px, y: y + ih + 0.04, w: cw, h: 0.36, fontSize: 9,
+      // caption sits directly under ITS image, not at a shared baseline
+      s.addText(cap, { x: px, y: box.y + box.h + 0.06, w: cw, h: 0.34, fontSize: 9.5,
         italic: true, color: P.slate, align: "center", fontFace: "Calibri",
         margin: 0, valign: "top" });
     }
@@ -301,20 +319,14 @@ function contentSlide(id, opt) {
   if (img && blocks.length > 2) { img = null; imgPath = null; }   // readability wins
 
   if (img && !blocks.length) {
-    s.addImage({
-      path: imgPath, x: MX, y: y, w: CW, h: avail,
-      sizing: { type: "contain", w: CW, h: avail },
-    });
+    fitImage(s, imgPath, MX, y, CW, avail);
   } else if (img) {
     // image right, stacked cards left — size cards to their measured content
     const iw = 5.35;
     const bw = CW - iw - 0.45;
     const gap = 0.18;
     const size = fitStack(blocks, bw - 0.56, avail, gap);
-    s.addImage({
-      path: imgPath, x: W - MX - iw, y: y + 0.1, w: iw, h: Math.min(3.6, avail - 0.2),
-      sizing: { type: "contain", w: iw, h: Math.min(3.6, avail - 0.2) },
-    });
+    fitImage(s, imgPath, W - MX - iw, y + 0.1, iw, Math.min(3.6, avail - 0.2));
     let by = y;
     blocks.forEach((b) => {
       const h = blockH(b, size, bw - 0.56);
@@ -380,10 +392,7 @@ function diagramSlide(id, opt) {
   head(s, sec.kicker, opt.title || sec.title);
   let y = lead(s, sec.lead, 1.72);
   const ih = H - y - 1.0;
-  s.addImage({
-    path: A(opt.image || sec.diagram), x: MX, y: y, w: CW, h: ih,
-    sizing: { type: "contain", w: CW, h: ih },
-  });
+  fitImage(s, A(opt.image || sec.diagram), MX, y, CW, ih);
   if (sec.note) {
     s.addText(clean(sec.note), {
       x: MX, y: H - 0.92, w: CW, h: 0.55, fontSize: 11, italic: true,
@@ -466,10 +475,9 @@ function stageSlide(id) {
       const py = y + i * (ph + 0.14);
       const cap = CAPS[pr[0]] || "";
       const ih = cap ? ph - 0.34 : ph;
-      s.addImage({ path: pr[1], x: W - MX - picW, y: py, w: picW, h: ih,
-                   sizing: { type: "contain", w: picW, h: ih } });
+      const bx2 = fitImage(s, pr[1], W - MX - picW, py, picW, ih, "top");
       if (cap) {
-        s.addText(cap, { x: W - MX - picW, y: py + ih + 0.02, w: picW, h: 0.3,
+        s.addText(cap, { x: W - MX - picW, y: bx2.y + bx2.h + 0.05, w: picW, h: 0.3,
           fontSize: 8.5, italic: true, color: P.slate, align: "center",
           fontFace: "Calibri", margin: 0, valign: "top" });
       }
